@@ -125,7 +125,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 9;
-            this.button2.Text = "Ssave";
+            this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -164,7 +164,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AdminScreen";
-            this.Text = "Form1";
+            this.Text = "ThirdParty";
             this.ResumeLayout(false);
             this.PerformLayout();
 
