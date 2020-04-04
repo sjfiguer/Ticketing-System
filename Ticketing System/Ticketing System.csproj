@@ -53,12 +53,6 @@
     <Compile Include="AdminScreen.Designer.cs">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="BenjaminForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BenjaminForm.Designer.cs">
-      <DependentUpon>BenjaminForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="TicketForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,9 +87,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdminScreen.resx">
       <DependentUpon>AdminScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BenjaminForm.resx">
-      <DependentUpon>BenjaminForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TicketForm.resx">
       <DependentUpon>TicketForm.cs</DependentUpon>
