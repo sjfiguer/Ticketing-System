@@ -53,6 +53,12 @@
     <Compile Include="AdminScreen.Designer.cs">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="TicketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketForm.Designer.cs">
+      <DependentUpon>TicketForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TicketQueue.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdminScreen.resx">
       <DependentUpon>AdminScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketForm.resx">
+      <DependentUpon>TicketForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TicketQueue.resx">
       <DependentUpon>TicketQueue.cs</DependentUpon>
