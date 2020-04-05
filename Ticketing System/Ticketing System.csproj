@@ -53,12 +53,6 @@
     <Compile Include="AdminScreen.Designer.cs">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="GithubTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GithubTest.Designer.cs">
-      <DependentUpon>GithubTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="LoginFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,9 +87,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdminScreen.resx">
       <DependentUpon>AdminScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GithubTest.resx">
-      <DependentUpon>GithubTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
