@@ -107,12 +107,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TicketQueueDatabase.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Tommye Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tommye Test.Designer.cs">
-      <DependentUpon>Tommye Test.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AdminScreen.resx">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </EmbeddedResource>
