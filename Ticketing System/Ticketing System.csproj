@@ -65,6 +65,12 @@
     <Compile Include="NewTicket.Designer.cs">
       <DependentUpon>NewTicket.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuestionSubmission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionSubmission.Designer.cs">
+      <DependentUpon>QuestionSubmission.cs</DependentUpon>
+    </Compile>
     <Compile Include="TicketQueue.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewTicket.resx">
       <DependentUpon>NewTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuestionSubmission.resx">
+      <DependentUpon>QuestionSubmission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TicketQueue.resx">
       <DependentUpon>TicketQueue.cs</DependentUpon>

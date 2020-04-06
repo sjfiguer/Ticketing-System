@@ -28,15 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.dataSet2 = new Ticketing_System.DataSet2();
-            this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ticketTableAdapter = new Ticketing_System.DataSet2TableAdapters.TicketTableAdapter();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -54,8 +50,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -106,20 +101,6 @@
             this.linkLabel1.TabIndex = 18;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "FAQ";
-            // 
-            // dataSet2
-            // 
-            this.dataSet2.DataSetName = "DataSet2";
-            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ticketBindingSource
-            // 
-            this.ticketBindingSource.DataMember = "Ticket";
-            this.ticketBindingSource.DataSource = this.dataSet2;
-            // 
-            // ticketTableAdapter
-            // 
-            this.ticketTableAdapter.ClearBeforeFill = true;
             // 
             // label8
             // 
@@ -265,11 +246,22 @@
             this.button4.Text = "Clear";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // btnExit
+            // 
+            this.btnExit.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(253, 496);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 22;
+            this.btnExit.Text = "Logout";
+            this.btnExit.UseVisualStyleBackColor = true;
+            // 
             // NewTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 548);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label8);
@@ -295,8 +287,6 @@
             this.Name = "NewTicket";
             this.Text = "NewTicketFrm";
             this.Load += new System.EventHandler(this.NewTicket_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,9 +299,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private DataSet2 dataSet2;
-        private System.Windows.Forms.BindingSource ticketBindingSource;
-        private DataSet2TableAdapters.TicketTableAdapter ticketTableAdapter;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label7;
@@ -329,5 +316,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnExit;
     }
 }
