@@ -49,6 +49,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -152,7 +158,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(966, 513);
+            this.label6.Location = new System.Drawing.Point(1027, 506);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(175, 34);
@@ -197,7 +203,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1150, 504);
+            this.comboBox1.Location = new System.Drawing.Point(1218, 510);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(476, 33);
@@ -260,11 +266,79 @@
             this.label9.TabIndex = 27;
             this.label9.Text = "Category";
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(790, 509);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(6);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(196, 31);
+            this.textBox3.TabIndex = 34;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(682, 513);
+            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(77, 25);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "UserID";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Location = new System.Drawing.Point(678, 924);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(6);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(368, 24);
+            this.textBox4.TabIndex = 38;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(514, 942);
+            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(170, 25);
+            this.label11.TabIndex = 37;
+            this.label11.Text = "Your TicketID is:";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(931, 990);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(55, 25);
+            this.linkLabel1.TabIndex = 36;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "FAQ";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.richTextBox2.Location = new System.Drawing.Point(404, 990);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(6);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(926, 88);
+            this.richTextBox2.TabIndex = 35;
+            this.richTextBox2.Text = "Thank you contacting IT Support. Please check out our           page for further " +
+    "information on any issues you are having until someone contacts you.";
+            // 
             // Submit_Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1786, 1098);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox4);
@@ -317,5 +391,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.RichTextBox richTextBox2;
     }
 }
