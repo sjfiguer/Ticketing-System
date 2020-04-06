@@ -16,5 +16,12 @@ namespace Ticketing_System
         {
             InitializeComponent();
         }
+
+        private void TicketQueue_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'ticketQueueDatabase.Ticket' table. You can move, or remove it, as needed.
+            this.ticketTableAdapter.Fill(this.ticketQueueDatabase.Ticket);
+
+        }
     }
 }
