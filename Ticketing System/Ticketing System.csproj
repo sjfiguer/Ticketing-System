@@ -53,6 +53,11 @@
     <Compile Include="AdminScreen.Designer.cs">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="FAQDATABASE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FAQDATABASE.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LoginFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +146,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="FAQDATABASE.xsc">
+      <DependentUpon>FAQDATABASE.xsd</DependentUpon>
+    </None>
+    <None Include="FAQDATABASE.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FAQDATABASE.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FAQDATABASE.xss">
+      <DependentUpon>FAQDATABASE.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
