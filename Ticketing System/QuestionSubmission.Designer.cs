@@ -36,8 +36,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.ticketQueueDatabase = new Ticketing_System.TicketQueueDatabase();
-            this.ticketQueueDatabaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fAQDATABASE = new Ticketing_System.FAQDATABASE();
             this.frequentlyAskedQuestionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.frequentlyAskedQuestionsTableAdapter = new Ticketing_System.FAQDATABASETableAdapters.FrequentlyAskedQuestionsTableAdapter();
@@ -46,8 +44,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ticketQueueDatabase)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ticketQueueDatabaseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fAQDATABASE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frequentlyAskedQuestionsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -110,16 +106,6 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(187, 21);
             this.comboBox2.TabIndex = 19;
-            // 
-            // ticketQueueDatabase
-            // 
-            this.ticketQueueDatabase.DataSetName = "TicketQueueDatabase";
-            this.ticketQueueDatabase.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ticketQueueDatabaseBindingSource
-            // 
-            this.ticketQueueDatabaseBindingSource.DataSource = this.ticketQueueDatabase;
-            this.ticketQueueDatabaseBindingSource.Position = 0;
             // 
             // fAQDATABASE
             // 
@@ -200,8 +186,6 @@
             this.Name = "QuestionSubmission";
             this.Text = "QuestionSubmission";
             this.Load += new System.EventHandler(this.QuestionSubmission_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ticketQueueDatabase)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ticketQueueDatabaseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fAQDATABASE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frequentlyAskedQuestionsBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -218,8 +202,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.BindingSource ticketQueueDatabaseBindingSource;
-        private TicketQueueDatabase ticketQueueDatabase;
         private FAQDATABASE fAQDATABASE;
         private System.Windows.Forms.BindingSource frequentlyAskedQuestionsBindingSource;
         private FAQDATABASETableAdapters.FrequentlyAskedQuestionsTableAdapter frequentlyAskedQuestionsTableAdapter;
