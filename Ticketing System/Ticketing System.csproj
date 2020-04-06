@@ -59,6 +59,12 @@
     <Compile Include="LoginFrm.designer.cs">
       <DependentUpon>LoginFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="test2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test2.Designer.cs">
+      <DependentUpon>test2.cs</DependentUpon>
+    </Compile>
     <Compile Include="TicketQueue.cs">
       <SubType>Form</SubType>
     </Compile>
