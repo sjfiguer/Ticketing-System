@@ -35,53 +35,114 @@ namespace CS_Assignment
         }
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-           
+            // TODO: This line of code loads data into the 'ticketingSystemDataSet.Login' table. You can move, or remove it, as needed.
+            //this.loginTableAdapter.Fill(this.ticketingSystemDataSet.Login);
+
+            SqlConnection connection = new SqlConnection(@"Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
+
+            
+            sql = "SELECT DISTINCT UserType FROM Login";
+            command = new SqlCommand(sql, connection);
+            connection.Open();
+            
+            datareader = command.ExecuteReader();
+            while (datareader.Read())
+            {
+                //loading the items into the combo box based on the database
+                User_Type_cmbox.Items.Add(datareader[0].ToString());
+                // Automatically popuates combo box on form load
+            }
+            
+            //Closes the Database
+            datareader.Close();
+            command.Dispose();
+            connection.Close();
+
 
 
         }
         private void BtnLogin_Click(object sender, EventArgs e)
         {
             //////////////
-            SqlConnection connection = new SqlConnection(@"Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
-            string Authentication = "SELECT * FROM Login WHERE UserID= '" + txtUsername.Text.Trim() + "' and Password = '" + txtPassword.Text.Trim() + "'"; //Data Source=essql1.walton.uark.edu;Initial Catalog=PROJECTS2050;User ID=PROJECTS2050;Password=MV05sts$
-            SqlDataAdapter SDA = new SqlDataAdapter(Authentication, connection);
-            DataTable Logintbl = new DataTable();
-            SDA.Fill(Logintbl);
-            string Admin_Type =  ("SELECT UserType FROM Login WHERE UserType = 'Admin'");
-            //Admin_Type.Fill(DS);
-            
+            connectionstring = (@"Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
+            var cmd = "SELECT * FROM Login WHERE UserID= '" + txtUsername.Text.Trim() + "' and Password = '" + txtPassword.Text.Trim() + "'"; //Data Source=essql1.walton.uark.edu;Initial Catalog=PROJECTS2050;User ID=PROJECTS2050;Password=MV05sts$
+            //SqlDataAdapter SDA = new SqlDataAdapter(Authentication, connection);
+            //DataTable Logintbl = new DataTable();
+            //SDA.Fill(Logintbl);
+
+            connection = new SqlConnection(connectionstring);
+            connection.Open();
+
+            var dataadapter = new SqlDataAdapter(cmd, connection);
+            var ds = new DataSet();
+            dataadapter.Fill(ds);
+            connection.Close();
             
 
-            if (Admin_Type != true)//ADMINS
+            DataTable dt = new DataTable();
+
+
+
+
+            if ((ds.Tables.Count > 0) && (ds.Tables[0].Rows.Count > 0))
             {
                 Form Admin = new TicketInformation();
+                Form Supervisor = new TicketQueue();
+                Form User = new Submit_Ticket();
                 MessageBox.Show("Login Successful");
                 this.Hide();
-                Admin.Show();
-
-                
-            }
-            else {
-            if (Logintbl.Rows.Count == 3)//SUPERVISOR
+                if (User_Type_cmbox.SelectedIndex == 0)//Admin
                 {
-                    Form Supervisor = new TicketQueue();
-                    MessageBox.Show("Login Successful");
-                    this.Hide();
-                    Supervisor.Show();
+                    Admin.Show();
                 }
                 else
                 {
-                    if(Logintbl.Rows.Count >= 4)//USERs
+                    if (User_Type_cmbox.SelectedIndex == 1 )//STAFF
                     {
-                        Form User = new Submit_Ticket();
-                        MessageBox.Show("Login Successful");
-                        this.Hide();
                         User.Show();
                     }
                     else
-                        MessageBox.Show("Authentication not complete.", "Invalid Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    {
+                        if(User_Type_cmbox.SelectedIndex == 2)//STUDENT
+                        {
+                            User.Show();
+                        }
+                        else
+                        {
+                            if (User_Type_cmbox.SelectedIndex == 3)//Supervisor
+                            {
+                                Supervisor.Show();
+                            }
+                            else
+                                MessageBox.Show("Please Choose Status");
+
+                        }
+                    }
                 }
+
+                
             }
+            else
+                MessageBox.Show("Authentication not complete.", "Invalid Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //else {
+            //if (Logintbl.Rows.Count == 3)//SUPERVISOR
+            //    {
+            //        Form Supervisor = new TicketQueue();
+            //        MessageBox.Show("Login Successful");
+            //        this.Hide();
+            //        Supervisor.Show();
+            //    }
+            //    else
+            //    {
+            //        if(Logintbl.Rows.Count >= 4)//USERs
+            //        {
+            //            Form User = new Submit_Ticket();
+            //            MessageBox.Show("Login Successful");
+            //            this.Hide();
+            //            User.Show();
+            //        }
+            
+                
 
             
 

@@ -100,6 +100,11 @@
     <Compile Include="Submit Ticket.Designer.cs">
       <DependentUpon>Submit Ticket.cs</DependentUpon>
     </Compile>
+    <Compile Include="TicketingSystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TicketingSystemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TicketQueue.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +201,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TicketingSystemDataSet.xsc">
+      <DependentUpon>TicketingSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TicketingSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TicketingSystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TicketingSystemDataSet.xss">
+      <DependentUpon>TicketingSystemDataSet.xsd</DependentUpon>
+    </None>
     <None Include="TicketQueueDatabase.xsc">
       <DependentUpon>TicketQueueDatabase.xsd</DependentUpon>
     </None>

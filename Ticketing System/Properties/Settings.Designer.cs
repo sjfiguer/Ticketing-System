@@ -32,5 +32,16 @@ namespace Ticketing_System.Properties {
                 return ((string)(this["ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;Persist Secu" +
+            "rity Info=True;User ID=isys4363a")]
+        public string TicketingSystemConnectionString {
+            get {
+                return ((string)(this["TicketingSystemConnectionString"]));
+            }
+        }
     }
 }
