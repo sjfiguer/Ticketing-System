@@ -62,10 +62,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1652, 63);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox2.Location = new System.Drawing.Point(1101, 40);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(42, 40);
+            this.pictureBox2.Size = new System.Drawing.Size(28, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
@@ -73,10 +73,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(0, -3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1794, 269);
+            this.pictureBox1.Size = new System.Drawing.Size(1196, 172);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -86,22 +86,22 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(732, 429);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(488, 275);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 34);
+            this.label2.Size = new System.Drawing.Size(77, 21);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Log In";
+            this.label2.Text = "Log Out";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(966, 429);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(644, 275);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 34);
+            this.label1.Size = new System.Drawing.Size(49, 21);
             this.label1.TabIndex = 16;
             this.label1.Text = "FAQ";
             // 
@@ -110,10 +110,10 @@
             this.RegistrationLabel.AutoSize = true;
             this.RegistrationLabel.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegistrationLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.RegistrationLabel.Location = new System.Drawing.Point(638, 338);
-            this.RegistrationLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.RegistrationLabel.Location = new System.Drawing.Point(425, 216);
+            this.RegistrationLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RegistrationLabel.Name = "RegistrationLabel";
-            this.RegistrationLabel.Size = new System.Drawing.Size(505, 44);
+            this.RegistrationLabel.Size = new System.Drawing.Size(328, 29);
             this.RegistrationLabel.TabIndex = 15;
             this.RegistrationLabel.Text = "Walton IT Ticketing System";
             // 
@@ -122,10 +122,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(130, 513);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(87, 328);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 34);
+            this.label3.Size = new System.Drawing.Size(64, 21);
             this.label3.TabIndex = 18;
             this.label3.Text = "Name:";
             // 
@@ -134,10 +134,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(130, 596);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Location = new System.Drawing.Point(87, 381);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 34);
+            this.label4.Size = new System.Drawing.Size(65, 21);
             this.label4.TabIndex = 19;
             this.label4.Text = "Email:";
             // 
@@ -146,10 +146,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(130, 683);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Location = new System.Drawing.Point(87, 437);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(540, 34);
+            this.label5.Size = new System.Drawing.Size(346, 21);
             this.label5.TabIndex = 20;
             this.label5.Text = "Please describe the issues you are facing:";
             // 
@@ -158,44 +158,44 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(1027, 506);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Location = new System.Drawing.Point(685, 324);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(175, 34);
+            this.label6.Size = new System.Drawing.Size(112, 21);
             this.label6.TabIndex = 21;
             this.label6.Text = "Department:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(242, 506);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox1.Location = new System.Drawing.Point(161, 324);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(416, 31);
+            this.textBox1.Size = new System.Drawing.Size(279, 22);
             this.textBox1.TabIndex = 22;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(242, 588);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox2.Location = new System.Drawing.Point(161, 376);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(416, 31);
+            this.textBox2.Size = new System.Drawing.Size(279, 22);
             this.textBox2.TabIndex = 23;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(136, 745);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.richTextBox1.Location = new System.Drawing.Point(91, 477);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1490, 181);
+            this.richTextBox1.Size = new System.Drawing.Size(995, 117);
             this.richTextBox1.TabIndex = 24;
             this.richTextBox1.Text = "";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1480, 958);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Location = new System.Drawing.Point(987, 613);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 44);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 25;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
@@ -203,84 +203,84 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1218, 510);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBox1.Location = new System.Drawing.Point(812, 326);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(476, 33);
+            this.comboBox1.Size = new System.Drawing.Size(319, 24);
             this.comboBox1.TabIndex = 26;
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(1546, 602);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(6);
+            this.comboBox3.Location = new System.Drawing.Point(1031, 385);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(196, 33);
+            this.comboBox3.Size = new System.Drawing.Size(132, 24);
             this.comboBox3.TabIndex = 32;
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(1216, 596);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(6);
+            this.comboBox2.Location = new System.Drawing.Point(811, 381);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(196, 33);
+            this.comboBox2.Size = new System.Drawing.Size(132, 24);
             this.comboBox2.TabIndex = 31;
             // 
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(898, 596);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(6);
+            this.comboBox4.Location = new System.Drawing.Point(599, 381);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(196, 33);
+            this.comboBox4.Size = new System.Drawing.Size(132, 24);
             this.comboBox4.TabIndex = 30;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1110, 602);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Location = new System.Drawing.Point(740, 385);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 25);
+            this.label7.Size = new System.Drawing.Size(61, 17);
             this.label7.TabIndex = 29;
             this.label7.Text = "Request";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1428, 602);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label8.Location = new System.Drawing.Point(952, 385);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 25);
+            this.label8.Size = new System.Drawing.Size(56, 17);
             this.label8.TabIndex = 28;
             this.label8.Text = "Priortiy ";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(720, 602);
-            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label9.Location = new System.Drawing.Point(480, 385);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 25);
+            this.label9.Size = new System.Drawing.Size(65, 17);
             this.label9.TabIndex = 27;
             this.label9.Text = "Category";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(790, 509);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(6);
+            this.textBox3.Location = new System.Drawing.Point(527, 326);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(196, 31);
+            this.textBox3.Size = new System.Drawing.Size(132, 22);
             this.textBox3.TabIndex = 34;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(682, 513);
-            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label10.Location = new System.Drawing.Point(455, 328);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(77, 25);
+            this.label10.Size = new System.Drawing.Size(51, 17);
             this.label10.TabIndex = 33;
             this.label10.Text = "UserID";
             // 
@@ -288,29 +288,29 @@
             // 
             this.textBox4.BackColor = System.Drawing.SystemColors.MenuBar;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(678, 924);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(6);
+            this.textBox4.Location = new System.Drawing.Point(452, 591);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(368, 24);
+            this.textBox4.Size = new System.Drawing.Size(245, 15);
             this.textBox4.TabIndex = 38;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(514, 942);
-            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label11.Location = new System.Drawing.Point(343, 603);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(170, 25);
+            this.label11.Size = new System.Drawing.Size(111, 17);
             this.label11.TabIndex = 37;
             this.label11.Text = "Your TicketID is:";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(931, 990);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.linkLabel1.Location = new System.Drawing.Point(621, 634);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(55, 25);
+            this.linkLabel1.Size = new System.Drawing.Size(36, 17);
             this.linkLabel1.TabIndex = 36;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "FAQ";
@@ -320,19 +320,19 @@
             this.richTextBox2.BackColor = System.Drawing.SystemColors.MenuBar;
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox2.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.richTextBox2.Location = new System.Drawing.Point(404, 990);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(6);
+            this.richTextBox2.Location = new System.Drawing.Point(269, 634);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(926, 88);
+            this.richTextBox2.Size = new System.Drawing.Size(617, 56);
             this.richTextBox2.TabIndex = 35;
             this.richTextBox2.Text = "Thank you contacting IT Support. Please check out our           page for further " +
     "information on any issues you are having until someone contacts you.";
             // 
             // Submit_Ticket
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1786, 1098);
+            this.ClientSize = new System.Drawing.Size(1191, 675);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.linkLabel1);
@@ -359,7 +359,7 @@
             this.Controls.Add(this.RegistrationLabel);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Submit_Ticket";
             this.Text = "Submit_Ticket";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

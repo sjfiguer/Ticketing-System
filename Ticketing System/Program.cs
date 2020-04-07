@@ -16,7 +16,8 @@ namespace Ticketing_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminScreen());
+            Application.Run(new Home_Page
+                ());
         }
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using CS_Assignment;
 
 namespace Ticketing_System
 {
@@ -15,6 +17,18 @@ namespace Ticketing_System
         public Home_Page()
         {
             InitializeComponent();
+        }
+
+        public void Home_Page_Load(object sender, EventArgs e)
+        {
+             
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Form Login = new FrmLogin();
+            Login.Show();
+            this.Hide();
         }
     }
 }

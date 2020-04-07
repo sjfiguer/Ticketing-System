@@ -7,20 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CS_Assignment;
 
 namespace Ticketing_System
 {
-    public partial class TicketInformation : Form
+    public partial class Admin_Homepage : Form
     {
-        public TicketInformation()
+        public Admin_Homepage()
         {
             InitializeComponent();
-        }
-
-        private void TicketInformation_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

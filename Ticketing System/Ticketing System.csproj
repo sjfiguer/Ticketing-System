@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin Homepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Homepage.Designer.cs">
+      <DependentUpon>Admin Homepage.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TicketQueueDatabase.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin Homepage.resx">
+      <DependentUpon>Admin Homepage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminScreen.resx">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </EmbeddedResource>
