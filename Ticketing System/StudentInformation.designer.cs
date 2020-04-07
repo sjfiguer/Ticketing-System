@@ -35,11 +35,11 @@
             this.Class_Info = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Completed_Requests = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pending_Requests = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Back_btn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.Finish_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -54,12 +54,12 @@
             this.Class_Info,
             this.Completed_Requests,
             this.Pending_Requests});
-            this.dataGridView1.Location = new System.Drawing.Point(48, 48);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(64, 59);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(478, 251);
+            this.dataGridView1.Size = new System.Drawing.Size(637, 309);
             this.dataGridView1.TabIndex = 0;
             // 
             // First_Name
@@ -104,79 +104,80 @@
             this.Pending_Requests.Name = "Pending_Requests";
             this.Pending_Requests.Width = 200;
             // 
-            // button1
+            // Back_btn
             // 
-            this.button1.Location = new System.Drawing.Point(66, 320);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(73, 22);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Back_btn.Location = new System.Drawing.Point(88, 394);
+            this.Back_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Back_btn.Name = "Back_btn";
+            this.Back_btn.Size = new System.Drawing.Size(97, 27);
+            this.Back_btn.TabIndex = 1;
+            this.Back_btn.Text = "Back";
+            this.Back_btn.UseVisualStyleBackColor = true;
+            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(156, 320);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(208, 394);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(74, 22);
+            this.button2.Size = new System.Drawing.Size(99, 27);
             this.button2.TabIndex = 2;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(246, 320);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Location = new System.Drawing.Point(328, 394);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(77, 22);
+            this.button3.Size = new System.Drawing.Size(103, 27);
             this.button3.TabIndex = 3;
             this.button3.Text = "Insert";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(340, 320);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Location = new System.Drawing.Point(453, 394);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(77, 22);
+            this.button4.Size = new System.Drawing.Size(103, 27);
             this.button4.TabIndex = 4;
             this.button4.Text = "Update";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // Finish_btn
             // 
-            this.button5.Location = new System.Drawing.Point(432, 320);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(82, 22);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Finish";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Finish_btn.Location = new System.Drawing.Point(576, 394);
+            this.Finish_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Finish_btn.Name = "Finish_btn";
+            this.Finish_btn.Size = new System.Drawing.Size(109, 27);
+            this.Finish_btn.TabIndex = 5;
+            this.Finish_btn.Text = "Finish";
+            this.Finish_btn.UseVisualStyleBackColor = true;
+            this.Finish_btn.Click += new System.EventHandler(this.Finish_btn_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(243, 12);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(324, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 13);
+            this.label1.Size = new System.Drawing.Size(131, 17);
             this.label1.TabIndex = 6;
             this.label1.Text = "Student Information";
             // 
             // AdminScreen4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 371);
+            this.ClientSize = new System.Drawing.Size(848, 457);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.Finish_btn);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Back_btn);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminScreen4";
             this.Text = "AdminScreen4";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -195,11 +196,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Class_Info;
         private System.Windows.Forms.DataGridViewTextBoxColumn Completed_Requests;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pending_Requests;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Back_btn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button Finish_btn;
         private System.Windows.Forms.Label label1;
     }
 }

@@ -53,6 +53,7 @@
             this.label2.Size = new System.Drawing.Size(77, 21);
             this.label2.TabIndex = 22;
             this.label2.Text = "Log Out";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -65,6 +66,7 @@
             this.label1.Size = new System.Drawing.Size(49, 21);
             this.label1.TabIndex = 21;
             this.label1.Text = "FAQ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // RegistrationLabel
             // 
@@ -82,7 +84,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(1100, 41);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -93,7 +95,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-1, -2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1196, 172);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -103,7 +105,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(336, 316);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(527, 243);
             this.richTextBox1.TabIndex = 23;
@@ -124,7 +126,7 @@
             // richTextBox2
             // 
             this.richTextBox2.Location = new System.Drawing.Point(336, 618);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(527, 57);
             this.richTextBox2.TabIndex = 25;
@@ -133,7 +135,7 @@
             // richTextBox3
             // 
             this.richTextBox3.Location = new System.Drawing.Point(336, 683);
-            this.richTextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox3.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.Size = new System.Drawing.Size(527, 57);
             this.richTextBox3.TabIndex = 26;
@@ -153,7 +155,7 @@
             this.Controls.Add(this.RegistrationLabel);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Automated_Response_Page";
             this.Text = "Automated_Response_Page";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

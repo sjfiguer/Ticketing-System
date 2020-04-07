@@ -22,5 +22,20 @@ namespace Ticketing_System
         {
 
         }
+
+        private void Tools_btn_Click(object sender, EventArgs e)
+        {
+            Form Admin_Home = new Admin_Homepage();
+            this.Close();
+            Admin_Home.Show();
+
+        }
+
+        private void Exit_btn_Click(object sender, EventArgs e)
+        {
+            Form Home = new Home_Page();
+            this.Hide();
+            Home.Show();
+        }
     }
 }

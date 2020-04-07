@@ -16,5 +16,19 @@ namespace Ticketing_System
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)//LOGOUT
+        {
+            Form Home = new Home_Page();
+            this.Hide();
+            Home.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)//FAQ
+        {
+            Form FAQ = new FAQ();
+            this.Hide();
+            FAQ.Show();
+        }
     }
 }

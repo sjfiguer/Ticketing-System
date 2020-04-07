@@ -16,5 +16,12 @@ namespace Ticketing_System
         {
             InitializeComponent();
         }
+
+        private void Back_btn_Click(object sender, EventArgs e)
+        {
+            Form Admin_Home = new Admin_Homepage();
+            this.Hide();
+            Admin_Home.Show();
+        }
     }
 }

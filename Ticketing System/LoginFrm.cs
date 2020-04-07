@@ -84,7 +84,7 @@ namespace CS_Assignment
 
 
 
-            if ((ds.Tables.Count > 0) && (ds.Tables[0].Rows.Count > 0))
+            if ((ds.Tables.Count > 0) && (ds.Tables[0].Rows.Count > 0) && (txtUsername.Text != "") && (txtPassword.Text != "") && (User_Type_cmbox.SelectedIndex > -1))
             {
                 Form Admin = new TicketInformation();
                 Form Supervisor = new TicketQueue();

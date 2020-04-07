@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CS_Assignment;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace Ticketing_System
         public FAQ()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Form Login = new FrmLogin();
+            this.Close();
+            Login.Show();
         }
     }
 }

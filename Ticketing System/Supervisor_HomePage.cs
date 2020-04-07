@@ -12,18 +12,17 @@ using IT_Ticketing_System__Mock_;
 
 namespace Ticketing_System
 {
-    public partial class Admin_Homepage : Form
+    public partial class Supervisor_HomePage : Form
     {
-        public Admin_Homepage()
+        public Supervisor_HomePage()
         {
             InitializeComponent();
         }
 
-        private void Admin_Homepage_Load(object sender, EventArgs e)
+        private void Supervisor_HomePage_Load(object sender, EventArgs e)
         {
 
         }
-
         private void Third_Party_btn_Click(object sender, EventArgs e)
         {
             Form Third_Party = new AdminScreen();
@@ -47,7 +46,7 @@ namespace Ticketing_System
 
         private void Admin_Home_btn_Click(object sender, EventArgs e)
         {
-            Form Queue = new TicketInformation();
+            Form Queue = new TicketQueue();
             this.Close();
             Queue.Show();
         }
