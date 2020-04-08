@@ -65,7 +65,7 @@ namespace CS_Assignment
         {
             //////////////
             connectionstring = (@"Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
-            var cmd = "SELECT * FROM Login WHERE UserID= '" + txtUsername.Text.Trim() + "' and Password = '" + txtPassword.Text.Trim() + "'"; //Data Source=essql1.walton.uark.edu;Initial Catalog=PROJECTS2050;User ID=PROJECTS2050;Password=MV05sts$
+            var cmd = "SELECT * FROM Login WHERE UserID= '" + txtUsername.Text.Trim() + "' and Password = '" + txtPassword.Text.Trim() + "' and UserType = '" + User_Type_cmbox.SelectedItem.ToString()+"'"; //Data Source=essql1.walton.uark.edu;Initial Catalog=PROJECTS2050;User ID=PROJECTS2050;Password=MV05sts$
             //SqlDataAdapter SDA = new SqlDataAdapter(Authentication, connection);
             //DataTable Logintbl = new DataTable();
             //SDA.Fill(Logintbl);
