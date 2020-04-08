@@ -229,7 +229,7 @@
             this.Tools_btn.TabIndex = 20;
             this.Tools_btn.Text = "Resolution Tools";
             this.Tools_btn.UseVisualStyleBackColor = true;
-            this.Tools_btn.Click += new System.EventHandler(this.Tools_btn_Click);
+             
             // 
             // Logoff_btn
             // 
