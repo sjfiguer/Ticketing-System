@@ -88,12 +88,6 @@
     <Compile Include="LoginFrm.designer.cs">
       <DependentUpon>LoginFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuestionSubmission.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuestionSubmission.Designer.cs">
-      <DependentUpon>QuestionSubmission.cs</DependentUpon>
-    </Compile>
     <Compile Include="Submit Ticket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,9 +153,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuestionSubmission.resx">
-      <DependentUpon>QuestionSubmission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Submit Ticket.resx">
       <DependentUpon>Submit Ticket.cs</DependentUpon>
