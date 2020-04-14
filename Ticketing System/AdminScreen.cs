@@ -15,6 +15,7 @@ namespace Ticketing_System
         public AdminScreen()
         {
             InitializeComponent();
+            //need to add variables and connection string to load comboboxes with vendor information.
         }
 
         private void Back_btn_Click(object sender, EventArgs e)
@@ -22,6 +23,24 @@ namespace Ticketing_System
             Form Admin_Home = new Admin_Homepage();
             this.Hide();
             Admin_Home.Show();
+        }
+
+        private void TPadminIDtxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            TPadminIDtxt.Clear();
+            TPventypeCmb.Items.Clear();
+            TPemailCmb.Items.Clear();
+            MessageBoxTxt.Clear();
+        }
+
+        private void TPventypeCmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,141 +29,143 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TPadminIDtxt = new System.Windows.Forms.TextBox();
+            this.MessageBoxTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.ClearBtn = new System.Windows.Forms.Button();
+            this.SendBtn = new System.Windows.Forms.Button();
             this.Back_btn = new System.Windows.Forms.Button();
+            this.TPventypeCmb = new System.Windows.Forms.ComboBox();
+            this.TPemailCmb = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 42);
+            this.label1.Location = new System.Drawing.Point(230, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 15);
+            this.label1.Size = new System.Drawing.Size(128, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(257, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Category";
+            this.label1.Text = "Administrator ID:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(466, 42);
+            this.label3.Location = new System.Drawing.Point(671, 37);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 15);
+            this.label3.Size = new System.Drawing.Size(99, 20);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Place";
+            this.label3.Text = "Vendor Type";
             // 
-            // textBox1
+            // TPadminIDtxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(121, 39);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.TPadminIDtxt.Location = new System.Drawing.Point(366, 37);
+            this.TPadminIDtxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TPadminIDtxt.Multiline = true;
+            this.TPadminIDtxt.Name = "TPadminIDtxt";
+            this.TPadminIDtxt.Size = new System.Drawing.Size(179, 29);
+            this.TPadminIDtxt.TabIndex = 3;
+            this.TPadminIDtxt.TextChanged += new System.EventHandler(this.TPadminIDtxt_TextChanged);
             // 
-            // textBox2
+            // MessageBoxTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(330, 39);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(564, 35);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(121, 155);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(483, 148);
-            this.textBox4.TabIndex = 6;
+            this.MessageBoxTxt.Location = new System.Drawing.Point(234, 238);
+            this.MessageBoxTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MessageBoxTxt.Multiline = true;
+            this.MessageBoxTxt.Name = "MessageBoxTxt";
+            this.MessageBoxTxt.Size = new System.Drawing.Size(722, 226);
+            this.MessageBoxTxt.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(118, 116);
+            this.label4.Location = new System.Drawing.Point(230, 213);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 15);
+            this.label4.Size = new System.Drawing.Size(78, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Message:";
             // 
-            // button1
+            // ClearBtn
             // 
-            this.button1.Location = new System.Drawing.Point(121, 327);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ClearBtn.Location = new System.Drawing.Point(234, 486);
+            this.ClearBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ClearBtn.Name = "ClearBtn";
+            this.ClearBtn.Size = new System.Drawing.Size(112, 35);
+            this.ClearBtn.TabIndex = 8;
+            this.ClearBtn.Text = "Clear";
+            this.ClearBtn.UseVisualStyleBackColor = true;
+            this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
-            // button2
+            // SendBtn
             // 
-            this.button2.Location = new System.Drawing.Point(295, 327);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(486, 327);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Send";
-            this.button3.UseVisualStyleBackColor = true;
+            this.SendBtn.Location = new System.Drawing.Point(844, 486);
+            this.SendBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SendBtn.Name = "SendBtn";
+            this.SendBtn.Size = new System.Drawing.Size(112, 35);
+            this.SendBtn.TabIndex = 10;
+            this.SendBtn.Text = "Send";
+            this.SendBtn.UseVisualStyleBackColor = true;
             // 
             // Back_btn
             // 
-            this.Back_btn.Location = new System.Drawing.Point(613, 372);
+            this.Back_btn.Location = new System.Drawing.Point(974, 607);
+            this.Back_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Back_btn.Name = "Back_btn";
-            this.Back_btn.Size = new System.Drawing.Size(75, 23);
+            this.Back_btn.Size = new System.Drawing.Size(112, 35);
             this.Back_btn.TabIndex = 11;
             this.Back_btn.Text = "Back";
             this.Back_btn.UseVisualStyleBackColor = true;
             this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
+            // TPventypeCmb
+            // 
+            this.TPventypeCmb.FormattingEnabled = true;
+            this.TPventypeCmb.Location = new System.Drawing.Point(777, 37);
+            this.TPventypeCmb.Name = "TPventypeCmb";
+            this.TPventypeCmb.Size = new System.Drawing.Size(179, 28);
+            this.TPventypeCmb.TabIndex = 16;
+            this.TPventypeCmb.SelectedIndexChanged += new System.EventHandler(this.TPventypeCmb_SelectedIndexChanged);
+            // 
+            // TPemailCmb
+            // 
+            this.TPemailCmb.FormattingEnabled = true;
+            this.TPemailCmb.Location = new System.Drawing.Point(777, 88);
+            this.TPemailCmb.Name = "TPemailCmb";
+            this.TPemailCmb.Size = new System.Drawing.Size(179, 28);
+            this.TPemailCmb.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(671, 96);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(104, 20);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Vendor Email";
+            // 
             // AdminScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 407);
+            this.ClientSize = new System.Drawing.Size(1246, 692);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.TPemailCmb);
+            this.Controls.Add(this.TPventypeCmb);
             this.Controls.Add(this.Back_btn);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.SendBtn);
+            this.Controls.Add(this.ClearBtn);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.MessageBoxTxt);
+            this.Controls.Add(this.TPadminIDtxt);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AdminScreen";
             this.Text = "ThirdParty";
             this.ResumeLayout(false);
@@ -174,17 +176,16 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TPadminIDtxt;
+        private System.Windows.Forms.TextBox MessageBoxTxt;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button ClearBtn;
+        private System.Windows.Forms.Button SendBtn;
         private System.Windows.Forms.Button Back_btn;
+        private System.Windows.Forms.ComboBox TPventypeCmb;
+        private System.Windows.Forms.ComboBox TPemailCmb;
+        private System.Windows.Forms.Label label6;
     }
 }
 
