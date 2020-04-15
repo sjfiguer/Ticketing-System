@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Ticketing_System;
+using CS_Assignment;
 
 namespace IT_Ticketing_System__Mock_
 {
@@ -35,6 +36,13 @@ namespace IT_Ticketing_System__Mock_
             Form Admin_Home = new Admin_Homepage();
             this.Close();
             Admin_Home.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form Add_Student = new Form2();//CreatingAccount Form
+            this.Close();
+            Add_Student.Show();
         }
     }
 }

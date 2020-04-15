@@ -82,7 +82,7 @@
             this.dateIssuedDataGridViewTextBoxColumn,
             this.dateResolvedDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.ticketBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(-55, 79);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 80);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
