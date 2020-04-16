@@ -54,12 +54,12 @@
             this.Class_Info,
             this.Completed_Requests,
             this.Pending_Requests});
-            this.dataGridView1.Location = new System.Drawing.Point(96, 92);
+            this.dataGridView1.Location = new System.Drawing.Point(238, 186);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(956, 483);
+            this.dataGridView1.Size = new System.Drawing.Size(1288, 695);
             this.dataGridView1.TabIndex = 0;
             // 
             // First_Name
@@ -107,7 +107,7 @@
             // Back_btn
             // 
             this.Back_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.Back_btn.Location = new System.Drawing.Point(96, 616);
+            this.Back_btn.Location = new System.Drawing.Point(570, 922);
             this.Back_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Back_btn.Name = "Back_btn";
             this.Back_btn.Size = new System.Drawing.Size(146, 42);
@@ -119,7 +119,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.button2.Location = new System.Drawing.Point(292, 616);
+            this.button2.Location = new System.Drawing.Point(766, 922);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(148, 42);
@@ -130,7 +130,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.button3.Location = new System.Drawing.Point(486, 616);
+            this.button3.Location = new System.Drawing.Point(960, 922);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(154, 42);
@@ -142,7 +142,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.button4.Location = new System.Drawing.Point(688, 616);
+            this.button4.Location = new System.Drawing.Point(1162, 922);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(154, 42);
@@ -153,7 +153,7 @@
             // Finish_btn
             // 
             this.Finish_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.Finish_btn.Location = new System.Drawing.Point(888, 616);
+            this.Finish_btn.Location = new System.Drawing.Point(1362, 922);
             this.Finish_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Finish_btn.Name = "Finish_btn";
             this.Finish_btn.Size = new System.Drawing.Size(164, 42);
@@ -165,11 +165,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.label1.Location = new System.Drawing.Point(462, 23);
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(706, 79);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(275, 34);
+            this.label1.Size = new System.Drawing.Size(427, 50);
             this.label1.TabIndex = 6;
             this.label1.Text = "Student Information";
             // 
@@ -177,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 714);
+            this.ClientSize = new System.Drawing.Size(1786, 1054);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Finish_btn);
             this.Controls.Add(this.button4);
@@ -187,6 +187,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "AdminScreen4";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminScreen4";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
