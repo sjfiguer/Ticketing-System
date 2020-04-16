@@ -42,7 +42,7 @@
             this.Admin_Home_btn.BackColor = System.Drawing.Color.DarkRed;
             this.Admin_Home_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.Admin_Home_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Admin_Home_btn.Location = new System.Drawing.Point(900, 641);
+            this.Admin_Home_btn.Location = new System.Drawing.Point(888, 677);
             this.Admin_Home_btn.Margin = new System.Windows.Forms.Padding(6);
             this.Admin_Home_btn.Name = "Admin_Home_btn";
             this.Admin_Home_btn.Size = new System.Drawing.Size(264, 244);
@@ -56,7 +56,7 @@
             this.Class_Erollment_btn.BackColor = System.Drawing.Color.DarkRed;
             this.Class_Erollment_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.Class_Erollment_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Class_Erollment_btn.Location = new System.Drawing.Point(624, 641);
+            this.Class_Erollment_btn.Location = new System.Drawing.Point(612, 677);
             this.Class_Erollment_btn.Margin = new System.Windows.Forms.Padding(6);
             this.Class_Erollment_btn.Name = "Class_Erollment_btn";
             this.Class_Erollment_btn.Size = new System.Drawing.Size(264, 244);
@@ -70,7 +70,7 @@
             this.Create_Account_btn.BackColor = System.Drawing.Color.DarkRed;
             this.Create_Account_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.Create_Account_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Create_Account_btn.Location = new System.Drawing.Point(900, 385);
+            this.Create_Account_btn.Location = new System.Drawing.Point(888, 421);
             this.Create_Account_btn.Margin = new System.Windows.Forms.Padding(6);
             this.Create_Account_btn.Name = "Create_Account_btn";
             this.Create_Account_btn.Size = new System.Drawing.Size(264, 244);
@@ -84,7 +84,7 @@
             this.Third_Party_btn.BackColor = System.Drawing.Color.DarkRed;
             this.Third_Party_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.Third_Party_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Third_Party_btn.Location = new System.Drawing.Point(624, 385);
+            this.Third_Party_btn.Location = new System.Drawing.Point(612, 421);
             this.Third_Party_btn.Margin = new System.Windows.Forms.Padding(6);
             this.Third_Party_btn.Name = "Third_Party_btn";
             this.Third_Party_btn.Size = new System.Drawing.Size(264, 244);
@@ -99,7 +99,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(-2, 1);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1672, 269);
+            this.pictureBox1.Size = new System.Drawing.Size(1788, 275);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
@@ -108,7 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1670, 1023);
+            this.ClientSize = new System.Drawing.Size(1786, 1054);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Admin_Home_btn);
             this.Controls.Add(this.Class_Erollment_btn);
