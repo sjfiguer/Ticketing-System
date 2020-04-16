@@ -57,11 +57,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.label1.Location = new System.Drawing.Point(15, 65);
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(752, 73);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 34);
+            this.label1.Size = new System.Drawing.Size(292, 50);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ticket Queue";
             // 
@@ -83,8 +83,8 @@
             this.dateIssuedDataGridViewTextBoxColumn,
             this.dateResolvedDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.ticketBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 125);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dataGridView1.Location = new System.Drawing.Point(180, 185);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1446, 600);
@@ -189,8 +189,8 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.button1.Location = new System.Drawing.Point(408, 808);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Location = new System.Drawing.Point(834, 850);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 44);
             this.button1.TabIndex = 2;
@@ -200,8 +200,8 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.button2.Location = new System.Drawing.Point(704, 808);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button2.Location = new System.Drawing.Point(1048, 850);
+            this.button2.Margin = new System.Windows.Forms.Padding(6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(150, 44);
             this.button2.TabIndex = 3;
@@ -211,8 +211,8 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.button3.Location = new System.Drawing.Point(1014, 808);
-            this.button3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button3.Location = new System.Drawing.Point(1254, 850);
+            this.button3.Margin = new System.Windows.Forms.Padding(6);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(150, 44);
             this.button3.TabIndex = 4;
@@ -226,8 +226,8 @@
             // Logoff_btn
             // 
             this.Logoff_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.Logoff_btn.Location = new System.Drawing.Point(1316, 808);
-            this.Logoff_btn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Logoff_btn.Location = new System.Drawing.Point(1464, 850);
+            this.Logoff_btn.Margin = new System.Windows.Forms.Padding(6);
             this.Logoff_btn.Name = "Logoff_btn";
             this.Logoff_btn.Size = new System.Drawing.Size(150, 44);
             this.Logoff_btn.TabIndex = 21;
@@ -239,15 +239,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2564, 959);
+            this.ClientSize = new System.Drawing.Size(1786, 1054);
             this.Controls.Add(this.Logoff_btn);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "TicketQueue";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminScreen1";
             this.Load += new System.EventHandler(this.TicketQueue_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
