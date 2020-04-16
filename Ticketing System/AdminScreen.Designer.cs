@@ -48,28 +48,28 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.label1.Location = new System.Drawing.Point(289, 378);
+            this.label1.Location = new System.Drawing.Point(380, 386);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 34);
+            this.label1.Size = new System.Drawing.Size(163, 34);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Administrator ID:";
+            this.label1.Text = "Admin. ID:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.label3.Location = new System.Drawing.Point(905, 381);
+            this.label3.Location = new System.Drawing.Point(905, 386);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(185, 34);
+            this.label3.Size = new System.Drawing.Size(194, 34);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Vendor Type";
+            this.label3.Text = "Vendor Type:";
             // 
             // TPadminIDtxt
             // 
             this.TPadminIDtxt.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.TPadminIDtxt.Location = new System.Drawing.Point(562, 378);
+            this.TPadminIDtxt.Location = new System.Drawing.Point(542, 386);
             this.TPadminIDtxt.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.TPadminIDtxt.Multiline = true;
             this.TPadminIDtxt.Name = "TPadminIDtxt";
@@ -80,18 +80,18 @@
             // MessageBoxTxt
             // 
             this.MessageBoxTxt.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.MessageBoxTxt.Location = new System.Drawing.Point(386, 630);
+            this.MessageBoxTxt.Location = new System.Drawing.Point(386, 608);
             this.MessageBoxTxt.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.MessageBoxTxt.Multiline = true;
             this.MessageBoxTxt.Name = "MessageBoxTxt";
-            this.MessageBoxTxt.Size = new System.Drawing.Size(961, 282);
+            this.MessageBoxTxt.Size = new System.Drawing.Size(961, 304);
             this.MessageBoxTxt.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.label4.Location = new System.Drawing.Point(380, 590);
+            this.label4.Location = new System.Drawing.Point(380, 568);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(134, 34);
@@ -112,14 +112,16 @@
             // 
             // SendBtn
             // 
+            this.SendBtn.BackColor = System.Drawing.Color.DarkRed;
             this.SendBtn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.SendBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.SendBtn.Location = new System.Drawing.Point(1199, 940);
             this.SendBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SendBtn.Name = "SendBtn";
             this.SendBtn.Size = new System.Drawing.Size(149, 44);
             this.SendBtn.TabIndex = 10;
             this.SendBtn.Text = "Send";
-            this.SendBtn.UseVisualStyleBackColor = true;
+            this.SendBtn.UseVisualStyleBackColor = false;
             // 
             // Back_btn
             // 
@@ -137,8 +139,8 @@
             // 
             this.TPventypeCmb.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.TPventypeCmb.FormattingEnabled = true;
-            this.TPventypeCmb.Location = new System.Drawing.Point(1110, 378);
-            this.TPventypeCmb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TPventypeCmb.Location = new System.Drawing.Point(1110, 383);
+            this.TPventypeCmb.Margin = new System.Windows.Forms.Padding(4);
             this.TPventypeCmb.Name = "TPventypeCmb";
             this.TPventypeCmb.Size = new System.Drawing.Size(237, 42);
             this.TPventypeCmb.TabIndex = 16;
@@ -148,8 +150,8 @@
             // 
             this.TPemailCmb.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.TPemailCmb.FormattingEnabled = true;
-            this.TPemailCmb.Location = new System.Drawing.Point(1110, 442);
-            this.TPemailCmb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TPemailCmb.Location = new System.Drawing.Point(1110, 458);
+            this.TPemailCmb.Margin = new System.Windows.Forms.Padding(4);
             this.TPemailCmb.Name = "TPemailCmb";
             this.TPemailCmb.Size = new System.Drawing.Size(237, 42);
             this.TPemailCmb.TabIndex = 17;
@@ -158,29 +160,30 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.label6.Location = new System.Drawing.Point(894, 445);
+            this.label6.Location = new System.Drawing.Point(905, 461);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(196, 34);
+            this.label6.Size = new System.Drawing.Size(205, 34);
             this.label6.TabIndex = 18;
-            this.label6.Text = "Vendor Email";
+            this.label6.Text = "Vendor Email:";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(-78, -1);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1672, 269);
+            this.pictureBox1.Size = new System.Drawing.Size(1918, 277);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // AdminScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1661, 1156);
+            this.ClientSize = new System.Drawing.Size(1786, 1054);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TPemailCmb);
@@ -195,6 +198,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "AdminScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThirdParty";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
