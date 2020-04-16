@@ -87,7 +87,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(683, 393);
+            this.label2.Location = new System.Drawing.Point(741, 393);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 34);
@@ -100,7 +100,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(908, 393);
+            this.label1.Location = new System.Drawing.Point(922, 393);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 34);
@@ -111,12 +111,12 @@
             // RegistrationLabel
             // 
             this.RegistrationLabel.AutoSize = true;
-            this.RegistrationLabel.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegistrationLabel.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegistrationLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.RegistrationLabel.Location = new System.Drawing.Point(719, 322);
+            this.RegistrationLabel.Location = new System.Drawing.Point(693, 318);
             this.RegistrationLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.RegistrationLabel.Name = "RegistrationLabel";
-            this.RegistrationLabel.Size = new System.Drawing.Size(505, 44);
+            this.RegistrationLabel.Size = new System.Drawing.Size(566, 50);
             this.RegistrationLabel.TabIndex = 15;
             this.RegistrationLabel.Text = "Walton IT Ticketing System";
             // 
@@ -354,7 +354,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.label12.ForeColor = System.Drawing.Color.DarkRed;
-            this.label12.Location = new System.Drawing.Point(1079, 393);
+            this.label12.Location = new System.Drawing.Point(1051, 393);
             this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(180, 34);
