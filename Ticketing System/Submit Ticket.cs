@@ -52,5 +52,10 @@ namespace Ticketing_System
             this.Close();
             Inbox.Show();
         }
+
+        private void Submit_Ticket_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
