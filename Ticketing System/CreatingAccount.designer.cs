@@ -58,10 +58,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.button1.Location = new System.Drawing.Point(877, 961);
+            this.button1.Location = new System.Drawing.Point(917, 961);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 43);
+            this.button1.Size = new System.Drawing.Size(147, 43);
             this.button1.TabIndex = 0;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = true;
@@ -70,10 +70,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.button2.Location = new System.Drawing.Point(682, 961);
+            this.button2.Location = new System.Drawing.Point(722, 961);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(187, 43);
+            this.button2.Size = new System.Drawing.Size(147, 43);
             this.button2.TabIndex = 1;
             this.button2.Text = "Register";
             this.button2.UseVisualStyleBackColor = true;
