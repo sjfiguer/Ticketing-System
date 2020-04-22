@@ -31,12 +31,19 @@ namespace Ticketing_System
             // TODO: This line of code loads data into the 'ticketingSystemDataSet1.Ticket' table. You can move, or remove it, as needed.
             //this.ticketTableAdapter.Fill(this.ticketingSystemDataSet1.Ticket);
             SqlConnection connection = new SqlConnection(@"Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
+            try
+            {
+                sql = "SELECT * FROM Ticket";
+                var dataadapter = new SqlDataAdapter(sql, connection);
+                var ds = new DataSet();
+                dataadapter.Fill(ds);
+                Admin_Queue_DGV.DataSource = ds.Tables[0];
 
-            sql = "SELECT * FROM Ticket";
-            var dataadapter = new SqlDataAdapter(sql, connection);
-            var ds = new DataSet();
-            dataadapter.Fill(ds);
-            Admin_Queue_DGV.DataSource = ds.Tables[0];
+            }
+            catch (Exception ex)// calls the error into message box
+            {
+                MessageBox.Show("Form Error" + ex);
+            }
 
         }
 
@@ -57,6 +64,43 @@ namespace Ticketing_System
 
         private void Update_btn_Click(object sender, EventArgs e)
         {
+            int answer;
+
+            try
+            {
+                string BLCK = Admin_Queue_DGV.CurrentRow.Cells[2].Value.ToString();
+                string TITLE = Admin_Queue_DGV.CurrentRow.Cells[3].Value.ToString();
+                string RUSER = Admin_Queue_DGV.CurrentRow.Cells[5].Value.ToString();
+                string PR = Admin_Queue_DGV.CurrentRow.Cells[7].Value.ToString();
+                string CATID = Admin_Queue_DGV.CurrentRow.Cells[10].Value.ToString();
+                string CAT = Admin_Queue_DGV.CurrentRow.Cells[11].Value.ToString();
+                string DateR = Admin_Queue_DGV.CurrentRow.Cells[9].Value.ToString();
+                sql = "UPDATE Ticket SET Blackout = @Blackout, Title = @Title, RequestUser = @RUser, Priority = @Priority, DateResolved = @DateR, CatID = @CatID, Category = @CAT";
+
+                connection.Open();
+                command = new SqlCommand(sql, connection);
+
+
+                command.Parameters.AddWithValue("@Blackout", BLCK);
+                command.Parameters.AddWithValue("@Title", TITLE);
+                command.Parameters.AddWithValue("@RUser", RUSER);
+                command.Parameters.AddWithValue("@Priority", PR);
+                command.Parameters.AddWithValue("@DateR", DateR);
+                command.Parameters.AddWithValue("@CatID", CATID);
+                command.Parameters.AddWithValue("@CAT", CAT);
+
+                answer = command.ExecuteNonQuery();
+
+                command.Dispose();
+                connection.Close();
+
+                MessageBox.Show("Updated " + answer);
+
+            }
+            catch (Exception ex)// calls the error into message box
+            {
+                MessageBox.Show("Form Error" + ex);
+            }
 
         }
 
@@ -65,41 +109,51 @@ namespace Ticketing_System
             int answer;
             string sql2 = null;
 
-            string TID = Admin_Queue_DGV.CurrentRow.Cells[0].Value.ToString();
-            string UID = Admin_Queue_DGV.CurrentRow.Cells[1].Value.ToString();
-            string BLCK = Admin_Queue_DGV.CurrentRow.Cells[2].Value.ToString();
-            string TITLE = Admin_Queue_DGV.CurrentRow.Cells[3].Value.ToString();
-            string STATUS = "Resolved";//DONT NEED
-            string RUSER = Admin_Queue_DGV.CurrentRow.Cells[5].Value.ToString();
-            string AssignedTo = Admin_Queue_DGV.CurrentRow.Cells[6].Value.ToString();
-            string PR = Admin_Queue_DGV.CurrentRow.Cells[7].Value.ToString();
-            string DATEI = Admin_Queue_DGV.CurrentRow.Cells[8].Value.ToString();
-            string DATER = Admin_Queue_DGV.CurrentRow.Cells[9].Value.ToString();//DONT NEED
-            string CATID = Admin_Queue_DGV.CurrentRow.Cells[10].Value.ToString();
-            string CAT = Admin_Queue_DGV.CurrentRow.Cells[11].Value.ToString();
+            try
+            {
 
-            sql = "UPDATE Ticket SET TicketID = @TicketID, UserID = @UserID, Blackout = @Blackout, Title = @Title, Status = @Status, RequestUser = @RUser, AssignedTo = @AssigneTo, Priority = @Priority, DateIssued = @DateI, DateResolved = @DateR, CatID = @CatID, Category = @CAT";
-            sql2 = "SELECT CURRENT_TIMESTAMP";
-            connection.Open();
-            command = new SqlCommand(sql, connection);
+                string TID = Admin_Queue_DGV.CurrentRow.Cells[0].Value.ToString();
+                string UID = Admin_Queue_DGV.CurrentRow.Cells[1].Value.ToString();
+                string BLCK = Admin_Queue_DGV.CurrentRow.Cells[2].Value.ToString();
+                string TITLE = Admin_Queue_DGV.CurrentRow.Cells[3].Value.ToString();
+                string STATUS = "Resolved";
+                string RUSER = Admin_Queue_DGV.CurrentRow.Cells[5].Value.ToString();
+                string AssignedTo = Admin_Queue_DGV.CurrentRow.Cells[6].Value.ToString();
+                string PR = Admin_Queue_DGV.CurrentRow.Cells[7].Value.ToString();
+                string DATEI = Admin_Queue_DGV.CurrentRow.Cells[8].Value.ToString();
+                string CATID = Admin_Queue_DGV.CurrentRow.Cells[10].Value.ToString();
+                string CAT = Admin_Queue_DGV.CurrentRow.Cells[11].Value.ToString();
 
-            command.Parameters.AddWithValue("@TicketID", TID);
-            command.Parameters.AddWithValue("@UserID", UID);
-            command.Parameters.AddWithValue("@Blackout", BLCK );
-            command.Parameters.AddWithValue("@Title", TITLE);
-            command.Parameters.AddWithValue("@Status", STATUS);
-            command.Parameters.AddWithValue("@RUser", RUSER);
-            command.Parameters.AddWithValue("@AssigneTo", AssignedTo);
-            command.Parameters.AddWithValue("@Priority", PR );
-            command.Parameters.AddWithValue("@DateI", DATEI);
-            command.Parameters.AddWithValue("@DateR", sql2);
-            command.Parameters.AddWithValue("@CatID", CATID);
-            command.Parameters.AddWithValue("@CAT", CAT);
+                sql = "UPDATE Ticket SET TicketID = @TicketID, UserID = @UserID, Blackout = @Blackout, Title = @Title, Status = @Status, RequestUser = @RUser, AssignedTo = @AssigneTo, Priority = @Priority, DateIssued = @DateI, DateResolved = @DateR, CatID = @CatID, Category = @CAT";
+                sql2 = "SELECT CURRENT_TIMESTAMP";
+                connection.Open();
+                command = new SqlCommand(sql, connection);
 
-            answer = command.ExecuteNonQuery();
+                command.Parameters.AddWithValue("@TicketID", TID);
+                command.Parameters.AddWithValue("@UserID", UID);
+                command.Parameters.AddWithValue("@Blackout", BLCK);
+                command.Parameters.AddWithValue("@Title", TITLE);
+                command.Parameters.AddWithValue("@Status", STATUS);
+                command.Parameters.AddWithValue("@RUser", RUSER);
+                command.Parameters.AddWithValue("@AssigneTo", AssignedTo);
+                command.Parameters.AddWithValue("@Priority", PR);
+                command.Parameters.AddWithValue("@DateI", DATEI);
+                command.Parameters.AddWithValue("@DateR", sql2);
+                command.Parameters.AddWithValue("@CatID", CATID);
+                command.Parameters.AddWithValue("@CAT", CAT);
 
-            command.Dispose();
-            connection.Close();
+                answer = command.ExecuteNonQuery();
+
+                command.Dispose();
+                connection.Close();
+
+                MessageBox.Show("Resolved " + answer);
+
+            }
+            catch (Exception ex)// calls the error into message box
+            {
+                MessageBox.Show("Form Error" + ex);
+            }
 
         }
     }
