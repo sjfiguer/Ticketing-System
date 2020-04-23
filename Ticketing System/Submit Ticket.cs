@@ -67,10 +67,11 @@ namespace Ticketing_System
 
             SqlConnection connection = new SqlConnection(@"Data Source=isys4363.walton.uark.edu; Initial Catalog=PROJECTS2050; User ID= isys4363a; PASSWORD= GohogsUA20");
             connection.Open();
-                string sql = null;
+               string sql = null;
                 SqlCommand command = new SqlCommand(sql, connection);
-                
-                command.Parameters.AddWithValue("@UserID", UserIDtxt.Text);
+
+            command.Parameters.AddWithValue("@TicketID", TicketIDtxt.Text);
+            command.Parameters.AddWithValue("@UserID", UserIDtxt.Text);
             command.Parameters.AddWithValue("@Priority", PriorityCB.AllowDrop);
             command.Parameters.AddWithValue("@Category", CategoryCB.AllowDrop);
             command.Parameters.AddWithValue("@Description", DescribeTxt.Text);
