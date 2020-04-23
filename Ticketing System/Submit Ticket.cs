@@ -75,7 +75,7 @@ namespace Ticketing_System
 
             //display a message
 
-            MessageBox.Show("Student has been Added");
+            MessageBox.Show("Your Ticket has been Submitted");
 
         }
 

@@ -41,6 +41,7 @@
             this.ticketingSystemDataSet2 = new Ticketing_System.TicketingSystemDataSet2();
             this.ticketBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ticketTableAdapter1 = new Ticketing_System.TicketingSystemDataSet2TableAdapters.TicketTableAdapter();
+            this.TCK_Info_RTB = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ticketingSystemDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Admin_Queue_DGV)).BeginInit();
@@ -126,6 +127,7 @@
             this.Admin_Queue_DGV.RowTemplate.Height = 24;
             this.Admin_Queue_DGV.Size = new System.Drawing.Size(777, 356);
             this.Admin_Queue_DGV.TabIndex = 20;
+            this.Admin_Queue_DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Admin_Queue_DGV_CellContentClick);
             // 
             // ticketingSystemDataSet2
             // 
@@ -141,12 +143,21 @@
             // 
             this.ticketTableAdapter1.ClearBeforeFill = true;
             // 
+            // TCK_Info_RTB
+            // 
+            this.TCK_Info_RTB.Location = new System.Drawing.Point(54, 475);
+            this.TCK_Info_RTB.Name = "TCK_Info_RTB";
+            this.TCK_Info_RTB.Size = new System.Drawing.Size(373, 135);
+            this.TCK_Info_RTB.TabIndex = 21;
+            this.TCK_Info_RTB.Text = "";
+            // 
             // TicketInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(893, 556);
+            this.Controls.Add(this.TCK_Info_RTB);
             this.Controls.Add(this.Admin_Queue_DGV);
             this.Controls.Add(this.Tools_btn);
             this.Controls.Add(this.Exit_btn);
@@ -181,5 +192,6 @@
         private TicketingSystemDataSet2 ticketingSystemDataSet2;
         private System.Windows.Forms.BindingSource ticketBindingSource1;
         private TicketingSystemDataSet2TableAdapters.TicketTableAdapter ticketTableAdapter1;
+        private System.Windows.Forms.RichTextBox TCK_Info_RTB;
     }
 }
