@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Ticketing_System
 {
@@ -51,9 +52,45 @@ namespace Ticketing_System
             Form Inbox = new Automated_Response_Page();
             this.Close();
             Inbox.Show();
+
+            try 
+            { 
+            int answer;
+
+            SqlConnection connection = new SqlConnection(@"Data Source=isys4363.walton.uark.edu; Initial Catalog=PROJECTS2050; User ID= isys4363a; PASSWORD= GohogsUA20");
+            connection.Open();
+                string sql = null;
+                SqlCommand command = new SqlCommand(sql, connection);
+                command.Parameters.AddWithValue("@UserID", UserIDtxt.Text);
+            command.Parameters.AddWithValue("@Priority", PriorityCB.AllowDrop);
+            command.Parameters.AddWithValue("@Category", CategoryCB.AllowDrop);
+            command.Parameters.AddWithValue("@Description", DescribeTxt.Text);
+
+            answer = command.ExecuteNonQuery();
+
+            //close database
+
+            command.Dispose();
+            connection.Close();
+
+            //display a message
+
+            MessageBox.Show("Student has been Added");
+
         }
 
-        private void Submit_Ticket_Load(object sender, EventArgs e)
+            catch (Exception ex)
+
+            {
+
+                MessageBox.Show("You have encountered an error" + ex);
+
+            }
+
+    //////////////////////////////////////////
+}
+
+private void Submit_Ticket_Load(object sender, EventArgs e)
         {
 
         }

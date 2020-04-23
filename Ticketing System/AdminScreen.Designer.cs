@@ -141,7 +141,7 @@
             this.TPventypeCmb.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.TPventypeCmb.FormattingEnabled = true;
             this.TPventypeCmb.Location = new System.Drawing.Point(555, 199);
-            this.TPventypeCmb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TPventypeCmb.Margin = new System.Windows.Forms.Padding(2);
             this.TPventypeCmb.Name = "TPventypeCmb";
             this.TPventypeCmb.Size = new System.Drawing.Size(120, 24);
             this.TPventypeCmb.TabIndex = 16;
@@ -152,7 +152,7 @@
             this.TPemailCmb.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.TPemailCmb.FormattingEnabled = true;
             this.TPemailCmb.Location = new System.Drawing.Point(555, 238);
-            this.TPemailCmb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TPemailCmb.Margin = new System.Windows.Forms.Padding(2);
             this.TPemailCmb.Name = "TPemailCmb";
             this.TPemailCmb.Size = new System.Drawing.Size(120, 24);
             this.TPemailCmb.TabIndex = 17;
@@ -183,6 +183,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(893, 548);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);

@@ -42,10 +42,9 @@
             this.Admin_Home_btn.BackColor = System.Drawing.Color.DarkRed;
             this.Admin_Home_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.Admin_Home_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Admin_Home_btn.Location = new System.Drawing.Point(888, 677);
-            this.Admin_Home_btn.Margin = new System.Windows.Forms.Padding(6);
+            this.Admin_Home_btn.Location = new System.Drawing.Point(444, 352);
             this.Admin_Home_btn.Name = "Admin_Home_btn";
-            this.Admin_Home_btn.Size = new System.Drawing.Size(264, 244);
+            this.Admin_Home_btn.Size = new System.Drawing.Size(132, 127);
             this.Admin_Home_btn.TabIndex = 7;
             this.Admin_Home_btn.Text = "Queue";
             this.Admin_Home_btn.UseVisualStyleBackColor = false;
@@ -56,10 +55,9 @@
             this.Class_Erollment_btn.BackColor = System.Drawing.Color.DarkRed;
             this.Class_Erollment_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.Class_Erollment_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Class_Erollment_btn.Location = new System.Drawing.Point(612, 677);
-            this.Class_Erollment_btn.Margin = new System.Windows.Forms.Padding(6);
+            this.Class_Erollment_btn.Location = new System.Drawing.Point(306, 352);
             this.Class_Erollment_btn.Name = "Class_Erollment_btn";
-            this.Class_Erollment_btn.Size = new System.Drawing.Size(264, 244);
+            this.Class_Erollment_btn.Size = new System.Drawing.Size(132, 127);
             this.Class_Erollment_btn.TabIndex = 6;
             this.Class_Erollment_btn.Text = "Student Info";
             this.Class_Erollment_btn.UseVisualStyleBackColor = false;
@@ -70,10 +68,9 @@
             this.Create_Account_btn.BackColor = System.Drawing.Color.DarkRed;
             this.Create_Account_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.Create_Account_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Create_Account_btn.Location = new System.Drawing.Point(888, 421);
-            this.Create_Account_btn.Margin = new System.Windows.Forms.Padding(6);
+            this.Create_Account_btn.Location = new System.Drawing.Point(444, 219);
             this.Create_Account_btn.Name = "Create_Account_btn";
-            this.Create_Account_btn.Size = new System.Drawing.Size(264, 244);
+            this.Create_Account_btn.Size = new System.Drawing.Size(132, 127);
             this.Create_Account_btn.TabIndex = 5;
             this.Create_Account_btn.Text = "Create Account";
             this.Create_Account_btn.UseVisualStyleBackColor = false;
@@ -84,10 +81,9 @@
             this.Third_Party_btn.BackColor = System.Drawing.Color.DarkRed;
             this.Third_Party_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.Third_Party_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Third_Party_btn.Location = new System.Drawing.Point(612, 421);
-            this.Third_Party_btn.Margin = new System.Windows.Forms.Padding(6);
+            this.Third_Party_btn.Location = new System.Drawing.Point(306, 219);
             this.Third_Party_btn.Name = "Third_Party_btn";
-            this.Third_Party_btn.Size = new System.Drawing.Size(264, 244);
+            this.Third_Party_btn.Size = new System.Drawing.Size(132, 127);
             this.Third_Party_btn.TabIndex = 4;
             this.Third_Party_btn.Text = "3rd Party Complaint";
             this.Third_Party_btn.UseVisualStyleBackColor = false;
@@ -96,25 +92,25 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1788, 275);
+            this.pictureBox1.Size = new System.Drawing.Size(894, 143);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
             // Admin_Homepage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1786, 1054);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(722, 458);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Admin_Home_btn);
             this.Controls.Add(this.Class_Erollment_btn);
             this.Controls.Add(this.Create_Account_btn);
             this.Controls.Add(this.Third_Party_btn);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Admin_Homepage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_Homepage";

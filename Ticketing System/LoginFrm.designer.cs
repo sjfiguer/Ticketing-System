@@ -55,20 +55,18 @@
             this.UsernameLB.AutoSize = true;
             this.UsernameLB.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameLB.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.UsernameLB.Location = new System.Drawing.Point(602, 505);
-            this.UsernameLB.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.UsernameLB.Location = new System.Drawing.Point(301, 263);
             this.UsernameLB.Name = "UsernameLB";
-            this.UsernameLB.Size = new System.Drawing.Size(183, 40);
+            this.UsernameLB.Size = new System.Drawing.Size(90, 20);
             this.UsernameLB.TabIndex = 0;
             this.UsernameLB.Text = "Username:";
             // 
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(808, 508);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtUsername.Location = new System.Drawing.Point(404, 264);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(326, 37);
+            this.txtUsername.Size = new System.Drawing.Size(165, 22);
             this.txtUsername.TabIndex = 1;
             // 
             // PasswordLB
@@ -76,20 +74,18 @@
             this.PasswordLB.AutoSize = true;
             this.PasswordLB.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordLB.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.PasswordLB.Location = new System.Drawing.Point(602, 605);
-            this.PasswordLB.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.PasswordLB.Location = new System.Drawing.Point(301, 315);
             this.PasswordLB.Name = "PasswordLB";
-            this.PasswordLB.Size = new System.Drawing.Size(174, 40);
+            this.PasswordLB.Size = new System.Drawing.Size(87, 20);
             this.PasswordLB.TabIndex = 2;
             this.PasswordLB.Text = "Password:";
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(808, 605);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPassword.Location = new System.Drawing.Point(404, 315);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(326, 37);
+            this.txtPassword.Size = new System.Drawing.Size(165, 22);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -98,10 +94,9 @@
             this.BtnLogin.BackColor = System.Drawing.Color.DarkRed;
             this.BtnLogin.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLogin.ForeColor = System.Drawing.SystemColors.Control;
-            this.BtnLogin.Location = new System.Drawing.Point(907, 796);
-            this.BtnLogin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.BtnLogin.Location = new System.Drawing.Point(454, 414);
             this.BtnLogin.Name = "BtnLogin";
-            this.BtnLogin.Size = new System.Drawing.Size(209, 75);
+            this.BtnLogin.Size = new System.Drawing.Size(104, 39);
             this.BtnLogin.TabIndex = 5;
             this.BtnLogin.Text = "Login";
             this.BtnLogin.UseVisualStyleBackColor = false;
@@ -112,10 +107,9 @@
             // 
             this.btnExit.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnExit.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(621, 796);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnExit.Location = new System.Drawing.Point(310, 414);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(209, 75);
+            this.btnExit.Size = new System.Drawing.Size(104, 39);
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -126,20 +120,18 @@
             this.RegistrationLabel.AutoSize = true;
             this.RegistrationLabel.Font = new System.Drawing.Font("Mongolian Baiti", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegistrationLabel.ForeColor = System.Drawing.Color.DarkRed;
-            this.RegistrationLabel.Location = new System.Drawing.Point(567, 395);
-            this.RegistrationLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.RegistrationLabel.Location = new System.Drawing.Point(284, 205);
             this.RegistrationLabel.Name = "RegistrationLabel";
-            this.RegistrationLabel.Size = new System.Drawing.Size(614, 63);
+            this.RegistrationLabel.Size = new System.Drawing.Size(310, 31);
             this.RegistrationLabel.TabIndex = 6;
             this.RegistrationLabel.Text = "Welcome Please Log In!";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-2, -8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1794, 269);
+            this.pictureBox1.Size = new System.Drawing.Size(897, 140);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -148,10 +140,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1650, 60);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox2.Location = new System.Drawing.Point(825, 31);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(42, 40);
+            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -160,10 +151,10 @@
             // User_Type_cmbox
             // 
             this.User_Type_cmbox.FormattingEnabled = true;
-            this.User_Type_cmbox.Location = new System.Drawing.Point(808, 709);
-            this.User_Type_cmbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.User_Type_cmbox.Location = new System.Drawing.Point(404, 369);
+            this.User_Type_cmbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.User_Type_cmbox.Name = "User_Type_cmbox";
-            this.User_Type_cmbox.Size = new System.Drawing.Size(326, 33);
+            this.User_Type_cmbox.Size = new System.Drawing.Size(165, 21);
             this.User_Type_cmbox.TabIndex = 4;
             // 
             // label1
@@ -171,10 +162,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(614, 700);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(307, 364);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 40);
+            this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "Status:";
             // 
@@ -194,10 +184,11 @@
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1786, 1054);
+            this.ClientSize = new System.Drawing.Size(722, 458);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.User_Type_cmbox);
             this.Controls.Add(this.pictureBox2);
@@ -209,7 +200,6 @@
             this.Controls.Add(this.PasswordLB);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.UsernameLB);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
