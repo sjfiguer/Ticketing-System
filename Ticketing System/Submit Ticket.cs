@@ -13,6 +13,14 @@ namespace Ticketing_System
 {
     public partial class Submit_Ticket : Form
     {
+        string connectionstring = null;
+        string sql = null;
+        SqlConnection connection;
+        SqlCommand command;
+        SqlDataReader datareader;
+        DataSet DS;
+
+
         public Submit_Ticket()
         {
             InitializeComponent();
@@ -61,6 +69,7 @@ namespace Ticketing_System
             connection.Open();
                 string sql = null;
                 SqlCommand command = new SqlCommand(sql, connection);
+                
                 command.Parameters.AddWithValue("@UserID", UserIDtxt.Text);
             command.Parameters.AddWithValue("@Priority", PriorityCB.AllowDrop);
             command.Parameters.AddWithValue("@Category", CategoryCB.AllowDrop);
@@ -91,6 +100,70 @@ namespace Ticketing_System
 }
 
 private void Submit_Ticket_Load(object sender, EventArgs e)
+        {
+
+            SqlConnection connection = new SqlConnection("Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
+
+            sql = "SELECT DISTINCT Department FROM Users";
+            command = new SqlCommand(sql, connection);
+            connection.Open();
+
+            datareader = command.ExecuteReader();
+            while (datareader.Read())
+            {
+                //loading the items into the combo box based on the database
+                DepartmentCB.Items.Add(datareader[0].ToString());
+                // Automatically popuates combo box on form load
+            }
+
+            //Closes the Database
+            datareader.Close();
+            command.Dispose();
+            connection.Close();
+            // ABOVE FILLS DEPARTMENT CMB
+
+            string sql2 = null;
+
+            sql2 = "SELECT DISTINCT Category FROM Category";
+            command = new SqlCommand(sql2, connection);
+            connection.Open();
+
+            datareader = command.ExecuteReader();
+            while (datareader.Read())
+            {
+                //loading the items into the combo box based on the database
+                CategoryCB.Items.Add(datareader[0].ToString());
+                // Automatically popuates combo box on form load
+            }
+
+            //Closes the Database
+            datareader.Close();
+            command.Dispose();
+            connection.Close();
+            //ABOVE FILLS CATEGORY CB
+
+            string sql3 = null;
+            sql3 = "SELECT DISTINCT Priority FROM Ticket";
+            command = new SqlCommand(sql3, connection);
+            connection.Open();
+
+            datareader = command.ExecuteReader();
+            while (datareader.Read())
+            {
+                //loading the items into the combo box based on the database
+                PriorityCB.Items.Add(datareader[0].ToString());
+                // Automatically popuates combo box on form load
+            }
+
+            //Closes the Database
+            datareader.Close();
+            command.Dispose();
+            connection.Close();
+            //ABOVE FILLS PRIORITY CB
+
+        }
+
+        private void DepartmentCB_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

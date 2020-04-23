@@ -44,9 +44,7 @@
             this.Submit_btn = new System.Windows.Forms.Button();
             this.DepartmentCB = new System.Windows.Forms.ComboBox();
             this.PriorityCB = new System.Windows.Forms.ComboBox();
-            this.RequestCB = new System.Windows.Forms.ComboBox();
             this.CategoryCB = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.UserIDtxt = new System.Windows.Forms.TextBox();
@@ -177,7 +175,7 @@
             // 
             // DescribeTxt
             // 
-            this.DescribeTxt.Location = new System.Drawing.Point(94, 385);
+            this.DescribeTxt.Location = new System.Drawing.Point(67, 389);
             this.DescribeTxt.Name = "DescribeTxt";
             this.DescribeTxt.Size = new System.Drawing.Size(780, 96);
             this.DescribeTxt.TabIndex = 24;
@@ -196,55 +194,40 @@
             // 
             // DepartmentCB
             // 
+            this.DepartmentCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DepartmentCB.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.DepartmentCB.FormattingEnabled = true;
             this.DepartmentCB.Location = new System.Drawing.Point(634, 260);
             this.DepartmentCB.Name = "DepartmentCB";
             this.DepartmentCB.Size = new System.Drawing.Size(240, 24);
             this.DepartmentCB.TabIndex = 26;
+            this.DepartmentCB.SelectedIndexChanged += new System.EventHandler(this.DepartmentCB_SelectedIndexChanged);
             // 
             // PriorityCB
             // 
+            this.PriorityCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PriorityCB.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.PriorityCB.FormattingEnabled = true;
-            this.PriorityCB.Location = new System.Drawing.Point(774, 310);
+            this.PriorityCB.Location = new System.Drawing.Point(634, 309);
             this.PriorityCB.Name = "PriorityCB";
             this.PriorityCB.Size = new System.Drawing.Size(100, 24);
             this.PriorityCB.TabIndex = 32;
             // 
-            // RequestCB
-            // 
-            this.RequestCB.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.RequestCB.FormattingEnabled = true;
-            this.RequestCB.Location = new System.Drawing.Point(599, 311);
-            this.RequestCB.Name = "RequestCB";
-            this.RequestCB.Size = new System.Drawing.Size(100, 24);
-            this.RequestCB.TabIndex = 31;
-            // 
             // CategoryCB
             // 
+            this.CategoryCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CategoryCB.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.CategoryCB.FormattingEnabled = true;
             this.CategoryCB.Location = new System.Drawing.Point(410, 309);
             this.CategoryCB.Name = "CategoryCB";
-            this.CategoryCB.Size = new System.Drawing.Size(100, 24);
+            this.CategoryCB.Size = new System.Drawing.Size(156, 24);
             this.CategoryCB.TabIndex = 30;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.label7.Location = new System.Drawing.Point(534, 313);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 16);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "Request";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.label8.Location = new System.Drawing.Point(712, 313);
+            this.label8.Location = new System.Drawing.Point(572, 312);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 16);
             this.label8.TabIndex = 28;
@@ -349,9 +332,7 @@
             this.Controls.Add(this.UserIDtxt);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.PriorityCB);
-            this.Controls.Add(this.RequestCB);
             this.Controls.Add(this.CategoryCB);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.DepartmentCB);
@@ -396,9 +377,7 @@
         private System.Windows.Forms.Button Submit_btn;
         private System.Windows.Forms.ComboBox DepartmentCB;
         private System.Windows.Forms.ComboBox PriorityCB;
-        private System.Windows.Forms.ComboBox RequestCB;
         private System.Windows.Forms.ComboBox CategoryCB;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox UserIDtxt;
