@@ -34,6 +34,7 @@
             this.Create_Account_btn = new System.Windows.Forms.Button();
             this.Third_Party_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,12 +96,26 @@
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkRed;
+            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(332, 468);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(270, 49);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Analytics";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Supervisor_HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(722, 458);
+            this.ClientSize = new System.Drawing.Size(779, 577);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Admin_Home_btn);
             this.Controls.Add(this.Student_Info_btn);
@@ -123,5 +138,6 @@
         private System.Windows.Forms.Button Create_Account_btn;
         private System.Windows.Forms.Button Third_Party_btn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

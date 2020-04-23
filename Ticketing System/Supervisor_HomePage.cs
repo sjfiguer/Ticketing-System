@@ -50,5 +50,10 @@ namespace Ticketing_System
             this.Close();
             Queue.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://app.powerbi.com/groups/me/reports/618df352-8ee7-4173-bb74-0fd98443d5e8/ReportSection?noSignUpCheck=1");
+        }
     }
 }
