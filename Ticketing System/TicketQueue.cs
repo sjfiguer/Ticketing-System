@@ -8,11 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CS_Assignment;
+using System.Data.SqlClient;
 
 namespace Ticketing_System
 {
     public partial class TicketQueue : Form
     {
+        string connectionstring = null;
+        string sql = null;
+        SqlConnection connection;
+        SqlCommand command;
+        SqlDataReader datareader;
+        DataSet DS;
+
+
         public TicketQueue()
         {
             InitializeComponent();
@@ -41,6 +50,9 @@ namespace Ticketing_System
 
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
+            int answer;
+            string sql2 = null;
+
             try
             {
 
