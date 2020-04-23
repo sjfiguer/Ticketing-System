@@ -38,21 +38,14 @@
             this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ticketTableAdapter = new Ticketing_System.TicketingSystemDataSet1TableAdapters.TicketTableAdapter();
             this.Admin_Queue_DGV = new System.Windows.Forms.DataGridView();
-            this.ticketIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.blackoutDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.requestUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.assignedToDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priorityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateIssuedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateResolvedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.catIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketingSystemDataSet2 = new Ticketing_System.TicketingSystemDataSet2();
+            this.ticketBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ticketTableAdapter1 = new Ticketing_System.TicketingSystemDataSet2TableAdapters.TicketTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ticketingSystemDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Admin_Queue_DGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketingSystemDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -125,22 +118,7 @@
             // 
             // Admin_Queue_DGV
             // 
-            this.Admin_Queue_DGV.AutoGenerateColumns = false;
             this.Admin_Queue_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Admin_Queue_DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ticketIDDataGridViewTextBoxColumn,
-            this.userIDDataGridViewTextBoxColumn,
-            this.blackoutDataGridViewImageColumn,
-            this.titleDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn,
-            this.requestUserDataGridViewTextBoxColumn,
-            this.assignedToDataGridViewTextBoxColumn,
-            this.priorityDataGridViewTextBoxColumn,
-            this.dateIssuedDataGridViewTextBoxColumn,
-            this.dateResolvedDataGridViewTextBoxColumn,
-            this.catIDDataGridViewTextBoxColumn,
-            this.categoryDataGridViewTextBoxColumn});
-            this.Admin_Queue_DGV.DataSource = this.ticketBindingSource;
             this.Admin_Queue_DGV.Location = new System.Drawing.Point(54, 97);
             this.Admin_Queue_DGV.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Admin_Queue_DGV.Name = "Admin_Queue_DGV";
@@ -149,102 +127,19 @@
             this.Admin_Queue_DGV.Size = new System.Drawing.Size(777, 356);
             this.Admin_Queue_DGV.TabIndex = 20;
             // 
-            // ticketIDDataGridViewTextBoxColumn
+            // ticketingSystemDataSet2
             // 
-            this.ticketIDDataGridViewTextBoxColumn.DataPropertyName = "TicketID";
-            this.ticketIDDataGridViewTextBoxColumn.HeaderText = "TicketID";
-            this.ticketIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ticketIDDataGridViewTextBoxColumn.Name = "ticketIDDataGridViewTextBoxColumn";
-            this.ticketIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ticketIDDataGridViewTextBoxColumn.Width = 125;
+            this.ticketingSystemDataSet2.DataSetName = "TicketingSystemDataSet2";
+            this.ticketingSystemDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // userIDDataGridViewTextBoxColumn
+            // ticketBindingSource1
             // 
-            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
-            this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
-            this.userIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
-            this.userIDDataGridViewTextBoxColumn.Width = 125;
+            this.ticketBindingSource1.DataMember = "Ticket";
+            this.ticketBindingSource1.DataSource = this.ticketingSystemDataSet2;
             // 
-            // blackoutDataGridViewImageColumn
+            // ticketTableAdapter1
             // 
-            this.blackoutDataGridViewImageColumn.DataPropertyName = "Blackout";
-            this.blackoutDataGridViewImageColumn.HeaderText = "Blackout";
-            this.blackoutDataGridViewImageColumn.MinimumWidth = 6;
-            this.blackoutDataGridViewImageColumn.Name = "blackoutDataGridViewImageColumn";
-            this.blackoutDataGridViewImageColumn.Width = 125;
-            // 
-            // titleDataGridViewTextBoxColumn
-            // 
-            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
-            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
-            this.titleDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
-            this.titleDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // requestUserDataGridViewTextBoxColumn
-            // 
-            this.requestUserDataGridViewTextBoxColumn.DataPropertyName = "RequestUser";
-            this.requestUserDataGridViewTextBoxColumn.HeaderText = "RequestUser";
-            this.requestUserDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.requestUserDataGridViewTextBoxColumn.Name = "requestUserDataGridViewTextBoxColumn";
-            this.requestUserDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // assignedToDataGridViewTextBoxColumn
-            // 
-            this.assignedToDataGridViewTextBoxColumn.DataPropertyName = "AssignedTo";
-            this.assignedToDataGridViewTextBoxColumn.HeaderText = "AssignedTo";
-            this.assignedToDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.assignedToDataGridViewTextBoxColumn.Name = "assignedToDataGridViewTextBoxColumn";
-            this.assignedToDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // priorityDataGridViewTextBoxColumn
-            // 
-            this.priorityDataGridViewTextBoxColumn.DataPropertyName = "Priority";
-            this.priorityDataGridViewTextBoxColumn.HeaderText = "Priority";
-            this.priorityDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.priorityDataGridViewTextBoxColumn.Name = "priorityDataGridViewTextBoxColumn";
-            this.priorityDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dateIssuedDataGridViewTextBoxColumn
-            // 
-            this.dateIssuedDataGridViewTextBoxColumn.DataPropertyName = "DateIssued";
-            this.dateIssuedDataGridViewTextBoxColumn.HeaderText = "DateIssued";
-            this.dateIssuedDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateIssuedDataGridViewTextBoxColumn.Name = "dateIssuedDataGridViewTextBoxColumn";
-            this.dateIssuedDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dateResolvedDataGridViewTextBoxColumn
-            // 
-            this.dateResolvedDataGridViewTextBoxColumn.DataPropertyName = "DateResolved";
-            this.dateResolvedDataGridViewTextBoxColumn.HeaderText = "DateResolved";
-            this.dateResolvedDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateResolvedDataGridViewTextBoxColumn.Name = "dateResolvedDataGridViewTextBoxColumn";
-            this.dateResolvedDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // catIDDataGridViewTextBoxColumn
-            // 
-            this.catIDDataGridViewTextBoxColumn.DataPropertyName = "CatID";
-            this.catIDDataGridViewTextBoxColumn.HeaderText = "CatID";
-            this.catIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.catIDDataGridViewTextBoxColumn.Name = "catIDDataGridViewTextBoxColumn";
-            this.catIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // categoryDataGridViewTextBoxColumn
-            // 
-            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
-            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
-            this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
-            this.categoryDataGridViewTextBoxColumn.Width = 125;
+            this.ticketTableAdapter1.ClearBeforeFill = true;
             // 
             // TicketInformation
             // 
@@ -265,6 +160,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ticketingSystemDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Admin_Queue_DGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketingSystemDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,17 +178,8 @@
         private System.Windows.Forms.BindingSource ticketBindingSource;
         private TicketingSystemDataSet1TableAdapters.TicketTableAdapter ticketTableAdapter;
         private System.Windows.Forms.DataGridView Admin_Queue_DGV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ticketIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn blackoutDataGridViewImageColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn requestUserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn assignedToDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priorityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateIssuedDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateResolvedDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn catIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
+        private TicketingSystemDataSet2 ticketingSystemDataSet2;
+        private System.Windows.Forms.BindingSource ticketBindingSource1;
+        private TicketingSystemDataSet2TableAdapters.TicketTableAdapter ticketTableAdapter1;
     }
 }
