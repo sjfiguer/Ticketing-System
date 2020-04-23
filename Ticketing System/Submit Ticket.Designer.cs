@@ -52,6 +52,8 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.Department = new System.Windows.Forms.Label();
+            this.DepartmentCB = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -184,7 +186,7 @@
             this.PriorityCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PriorityCB.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.PriorityCB.FormattingEnabled = true;
-            this.PriorityCB.Location = new System.Drawing.Point(526, 306);
+            this.PriorityCB.Location = new System.Drawing.Point(684, 314);
             this.PriorityCB.Name = "PriorityCB";
             this.PriorityCB.Size = new System.Drawing.Size(100, 24);
             this.PriorityCB.TabIndex = 32;
@@ -194,7 +196,7 @@
             this.CategoryCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CategoryCB.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.CategoryCB.FormattingEnabled = true;
-            this.CategoryCB.Location = new System.Drawing.Point(244, 306);
+            this.CategoryCB.Location = new System.Drawing.Point(438, 314);
             this.CategoryCB.Name = "CategoryCB";
             this.CategoryCB.Size = new System.Drawing.Size(156, 24);
             this.CategoryCB.TabIndex = 30;
@@ -203,7 +205,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.label8.Location = new System.Drawing.Point(461, 309);
+            this.label8.Location = new System.Drawing.Point(619, 317);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 16);
             this.label8.TabIndex = 28;
@@ -213,7 +215,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.label9.Location = new System.Drawing.Point(172, 309);
+            this.label9.Location = new System.Drawing.Point(366, 317);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 16);
             this.label9.TabIndex = 27;
@@ -294,12 +296,34 @@
             this.label12.Text = "Ticket Inbox";
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
+            // Department
+            // 
+            this.Department.AutoSize = true;
+            this.Department.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.Department.Location = new System.Drawing.Point(32, 317);
+            this.Department.Name = "Department";
+            this.Department.Size = new System.Drawing.Size(147, 16);
+            this.Department.TabIndex = 40;
+            this.Department.Text = "Customer Department";
+            // 
+            // DepartmentCB
+            // 
+            this.DepartmentCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DepartmentCB.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.DepartmentCB.FormattingEnabled = true;
+            this.DepartmentCB.Location = new System.Drawing.Point(193, 312);
+            this.DepartmentCB.Name = "DepartmentCB";
+            this.DepartmentCB.Size = new System.Drawing.Size(156, 24);
+            this.DepartmentCB.TabIndex = 41;
+            // 
             // Submit_Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(894, 612);
+            this.ClientSize = new System.Drawing.Size(894, 595);
+            this.Controls.Add(this.DepartmentCB);
+            this.Controls.Add(this.Department);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.TicketIDtxt);
             this.Controls.Add(this.label11);
@@ -359,5 +383,7 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label Department;
+        private System.Windows.Forms.ComboBox DepartmentCB;
     }
 }
