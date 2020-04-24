@@ -39,7 +39,7 @@ namespace Ticketing_System
             this.Close();
             FAQ.Show();
 
-        }
+        } 
 
         private void label12_Click(object sender, EventArgs e)//INBOX
         {
@@ -65,11 +65,11 @@ namespace Ticketing_System
             { 
             int answer;
 
-            SqlConnection connection = new SqlConnection(@"Data Source=isys4363.walton.uark.edu; Initial Catalog=PROJECTS2050; User ID= isys4363a; PASSWORD= GohogsUA20");
-            connection.Open();
+                SqlConnection connection = new SqlConnection("Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
+                connection.Open();
                string sql = null;
                 SqlCommand command = new SqlCommand(sql, connection);
-
+                   
             command.Parameters.AddWithValue("@TicketID", TicketIDtxt.Text);
             command.Parameters.AddWithValue("@UserID", UserIDtxt.Text);
             command.Parameters.AddWithValue("@Priority", PriorityCB.AllowDrop);
