@@ -40,7 +40,7 @@ namespace IT_Ticketing_System__Mock_
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form Add_Student = new Form2();//CreatingAccount Form
+            Form Add_Student = new RegisterForm();//CreatingAccount Form
             this.Close();
             Add_Student.Show();
         }
