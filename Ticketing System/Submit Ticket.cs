@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Globalization;
+using CS_Assignment;
 
 namespace Ticketing_System
 {
@@ -25,6 +26,7 @@ namespace Ticketing_System
         public Submit_Ticket()
         {
             InitializeComponent();
+            LoginIDlbl.Text = FrmLogin.LoginIDInfo2;
         }
 
         private void label2_Click(object sender, EventArgs e)//LOGOFF
@@ -67,9 +69,12 @@ namespace Ticketing_System
             int answer;
                 string sql2 = null;
                 SqlConnection connection = new SqlConnection("Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
+                SqlCommand command = new SqlCommand(sql, connection);
                 sql2 = "SELECT CatID from Category where Category = '" + CategoryCB.Text.ToString() + "'";
 
 
+
+                
                 string UID = UserIDtxt.ToString();
                 string Status = "Active";
                 string AssignedTo = "";
@@ -84,7 +89,6 @@ namespace Ticketing_System
                 sql = "INSERT INTO Ticket VALUES ( @UserID,  @Status, @AssignedTo,  @Priority,  @DateIssued,  @DateR,  @CATID, @Category, @Description, @AdminID)";
                 connection.Open();
                
-                SqlCommand command = new SqlCommand(sql, connection);
                 SqlCommand command2 = new SqlCommand(sql2, connection);
 
                // command.Parameters.AddWithValue("@TicketID", TicketIDtxt.Text);
@@ -125,7 +129,7 @@ namespace Ticketing_System
 
 private void Submit_Ticket_Load(object sender, EventArgs e)
         {
-
+            LoginIDlbl.Text = FrmLogin.LoginIDInfo2;
             SqlConnection connection = new SqlConnection("Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
 
             sql = "SELECT DISTINCT Department FROM Users";
@@ -217,6 +221,62 @@ private void Submit_Ticket_Load(object sender, EventArgs e)
             command.Dispose();
             connection.Close();
 
+            sql = "SELECT REPLACE(FirstName, ' ', '') + ' ' + LastName FROM Users Where LoginID ='" + LoginIDlbl.Text.ToString() + "'";// check in database
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            datareader = command.ExecuteReader();
+            while (datareader.Read())
+            {
+                Nametxt.Text = datareader[0].ToString();
+                
+            }
+
+            datareader.Close();
+            command.Dispose();
+            connection.Close();
+
+            sql = "select Email FROM Users where LoginID ='" + LoginIDlbl.Text.ToString() + "'";// check in database
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            datareader = command.ExecuteReader();
+            while (datareader.Read())
+            {
+                Emailtxt.Text = datareader[0].ToString();
+
+            }
+
+            datareader.Close();
+            command.Dispose();
+            connection.Close();
+
+            sql = "select Department FROM Users where LoginID ='" + LoginIDlbl.Text.ToString() + "'";// check in database
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            datareader = command.ExecuteReader();
+            while (datareader.Read())
+            {
+                DepartmentCB.Text = datareader[0].ToString();
+
+            }
+
+            datareader.Close();
+            command.Dispose();
+            connection.Close();
+
+            sql = "select UserID FROM Users where LoginID ='" + LoginIDlbl.Text.ToString() + "'";// check in database
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            datareader = command.ExecuteReader();
+            while (datareader.Read())
+            {
+                UserIDtxt.Text = datareader[0].ToString();
+
+            }
+
+            datareader.Close();
+            command.Dispose();
+            connection.Close();
+
 
         }
 
@@ -228,20 +288,38 @@ private void Submit_Ticket_Load(object sender, EventArgs e)
         private void CategoryCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             SqlConnection connection = new SqlConnection("Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
-            sql = "SELECT CatID from Category where Category = '" + CategoryCB.Text.ToString() + "'";
-            connection.Open();
 
-            SqlCommand command = new SqlCommand(sql, connection);
+            sql = "SELECT CatID from Category where Category = '" + CategoryCB.Text.ToString() + "'";// check in database
+            connection.Open();
+            command = new SqlCommand(sql, connection);
             datareader = command.ExecuteReader();
             while (datareader.Read())
             {
-                CATIDtxt.Text = datareader[0].ToString(); 
-               
+                int counter = Convert.ToInt32(datareader[0].ToString());
+
+                CATIDtxt.Text = counter.ToString(); ;
             }
-            //Closes the Database
             datareader.Close();
             command.Dispose();
             connection.Close();
+
+
+
+
+            //sql = "SELECT CatID from Category where Category = '" + CategoryCB.Text.ToString() + "'";
+            //connection.Open();
+
+            //SqlCommand command = new SqlCommand(sql, connection);
+            //datareader = command.ExecuteReader();
+            //while (datareader.Read())
+            //{
+            //    CATIDtxt.Text = datareader[0].ToString(); 
+
+            //}
+            ////Closes the Database
+            //datareader.Close();
+            //command.Dispose();
+            //connection.Close();
         }
     }
 }

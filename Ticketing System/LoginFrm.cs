@@ -13,6 +13,7 @@ using Ticketing_System;
 
 namespace CS_Assignment
 {
+    
     public partial class FrmLogin : Form
     {
         /////////////////////////Testing Github
@@ -22,11 +23,13 @@ namespace CS_Assignment
         SqlCommand command;
         SqlDataReader datareader;
         DataSet DS;
+        public static string LoginIDInfo2 = "";
         ////////////////////
 
         public FrmLogin()
         {
             InitializeComponent();
+           
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -106,13 +109,16 @@ namespace CS_Assignment
                     {
                         if (User_Type_cmbox.SelectedIndex == 1)//STAFF
                         {
-                            User.Show();
+                        LoginIDInfo2 = LoginIDtxt.Text;
+                        User.Show();
+
                         }
                         else
                         {
                             if (User_Type_cmbox.SelectedIndex == 2)//STUDENT
                             {
-                                User.Show();
+                            LoginIDInfo2 = LoginIDtxt.Text;
+                            User.Show();
                             }
                             else
                             {
@@ -131,16 +137,16 @@ namespace CS_Assignment
                 }
                 else
                     MessageBox.Show("Authentication not complete.", "Invalid Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
             
-           
+
+            
 
 
 
 
-
-
-
-            }
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -152,7 +158,31 @@ namespace CS_Assignment
 
         }
 
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
 
+            connectionstring = (@"Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
+            connection = new SqlConnection(connectionstring);
+            var cmd = "SELECT LoginID FROM Login WHERE UserID= '" + txtUsername.Text.Trim() + "'";
+            connection.Open();
+            command = new SqlCommand(cmd, connection);
+            datareader = command.ExecuteReader();
+            while (datareader.Read())
+            {
+                LoginIDtxt.Text = datareader[0].ToString(); //The 0 indicates the first attribute in my select statement but it's n-1
+
+            }
+            //Closes the Database
+            datareader.Close();
+            command.Dispose();
+            connection.Close();
+
+        }
+
+        public string LoginIDInfo
+        {
+            get { return LoginIDtxt.Text; }
+        }
 
 
 

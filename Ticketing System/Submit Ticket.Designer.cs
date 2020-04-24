@@ -56,6 +56,7 @@
             this.DepartmentCB = new System.Windows.Forms.ComboBox();
             this.Datetxt = new System.Windows.Forms.TextBox();
             this.CATIDtxt = new System.Windows.Forms.TextBox();
+            this.LoginIDlbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -153,6 +154,7 @@
             this.Nametxt.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.Nametxt.Location = new System.Drawing.Point(94, 263);
             this.Nametxt.Name = "Nametxt";
+            this.Nametxt.ReadOnly = true;
             this.Nametxt.Size = new System.Drawing.Size(210, 26);
             this.Nametxt.TabIndex = 22;
             // 
@@ -161,6 +163,7 @@
             this.Emailtxt.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.Emailtxt.Location = new System.Drawing.Point(634, 263);
             this.Emailtxt.Name = "Emailtxt";
+            this.Emailtxt.ReadOnly = true;
             this.Emailtxt.Size = new System.Drawing.Size(210, 26);
             this.Emailtxt.TabIndex = 23;
             // 
@@ -229,6 +232,7 @@
             this.UserIDtxt.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.UserIDtxt.Location = new System.Drawing.Point(410, 263);
             this.UserIDtxt.Name = "UserIDtxt";
+            this.UserIDtxt.ReadOnly = true;
             this.UserIDtxt.Size = new System.Drawing.Size(100, 26);
             this.UserIDtxt.TabIndex = 34;
             // 
@@ -325,18 +329,33 @@
             this.Datetxt.Location = new System.Drawing.Point(797, 144);
             this.Datetxt.Name = "Datetxt";
             this.Datetxt.ReadOnly = true;
-            this.Datetxt.Size = new System.Drawing.Size(100, 20);
+            this.Datetxt.Size = new System.Drawing.Size(72, 20);
             this.Datetxt.TabIndex = 42;
+            this.Datetxt.Text = "DATE";
             // 
             // CATIDtxt
             // 
             this.CATIDtxt.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.CATIDtxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CATIDtxt.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.CATIDtxt.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.CATIDtxt.Location = new System.Drawing.Point(0, 547);
             this.CATIDtxt.Name = "CATIDtxt";
             this.CATIDtxt.ReadOnly = true;
-            this.CATIDtxt.Size = new System.Drawing.Size(100, 26);
+            this.CATIDtxt.Size = new System.Drawing.Size(100, 19);
             this.CATIDtxt.TabIndex = 43;
+            this.CATIDtxt.Text = "CATID";
+            // 
+            // LoginIDlbl
+            // 
+            this.LoginIDlbl.AutoSize = true;
+            this.LoginIDlbl.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.LoginIDlbl.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.LoginIDlbl.Location = new System.Drawing.Point(294, 550);
+            this.LoginIDlbl.Name = "LoginIDlbl";
+            this.LoginIDlbl.Size = new System.Drawing.Size(63, 16);
+            this.LoginIDlbl.TabIndex = 45;
+            this.LoginIDlbl.Text = "LoginID";
             // 
             // Submit_Ticket
             // 
@@ -344,6 +363,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(894, 595);
+            this.Controls.Add(this.LoginIDlbl);
             this.Controls.Add(this.CATIDtxt);
             this.Controls.Add(this.Datetxt);
             this.Controls.Add(this.DepartmentCB);
@@ -411,5 +431,6 @@
         private System.Windows.Forms.ComboBox DepartmentCB;
         private System.Windows.Forms.TextBox Datetxt;
         private System.Windows.Forms.TextBox CATIDtxt;
+        private System.Windows.Forms.Label LoginIDlbl;
     }
 }

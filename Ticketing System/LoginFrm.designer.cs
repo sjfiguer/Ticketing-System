@@ -44,6 +44,7 @@
             this.ticketingSystemDataSet = new Ticketing_System.TicketingSystemDataSet();
             this.loginBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.loginTableAdapter = new Ticketing_System.TicketingSystemDataSetTableAdapters.LoginTableAdapter();
+            this.LoginIDtxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketingSystemDataSet)).BeginInit();
@@ -88,6 +89,7 @@
             this.txtPassword.Size = new System.Drawing.Size(165, 22);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // BtnLogin
             // 
@@ -152,7 +154,7 @@
             // 
             this.User_Type_cmbox.FormattingEnabled = true;
             this.User_Type_cmbox.Location = new System.Drawing.Point(404, 369);
-            this.User_Type_cmbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.User_Type_cmbox.Margin = new System.Windows.Forms.Padding(2);
             this.User_Type_cmbox.Name = "User_Type_cmbox";
             this.User_Type_cmbox.Size = new System.Drawing.Size(165, 21);
             this.User_Type_cmbox.TabIndex = 4;
@@ -182,6 +184,17 @@
             // 
             this.loginTableAdapter.ClearBeforeFill = true;
             // 
+            // LoginIDtxt
+            // 
+            this.LoginIDtxt.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.LoginIDtxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LoginIDtxt.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.LoginIDtxt.Location = new System.Drawing.Point(79, 426);
+            this.LoginIDtxt.Name = "LoginIDtxt";
+            this.LoginIDtxt.ReadOnly = true;
+            this.LoginIDtxt.Size = new System.Drawing.Size(100, 13);
+            this.LoginIDtxt.TabIndex = 43;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +202,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(722, 458);
+            this.Controls.Add(this.LoginIDtxt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.User_Type_cmbox);
             this.Controls.Add(this.pictureBox2);
@@ -230,6 +244,7 @@
         private Ticketing_System.TicketingSystemDataSet ticketingSystemDataSet;
         private System.Windows.Forms.BindingSource loginBindingSource;
         private Ticketing_System.TicketingSystemDataSetTableAdapters.LoginTableAdapter loginTableAdapter;
+        private System.Windows.Forms.TextBox LoginIDtxt;
     }
 }
 
