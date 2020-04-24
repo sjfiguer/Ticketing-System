@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using CS_Assignment;
+using IT_Ticketing_System__Mock_;
 
 namespace Ticketing_System
 {
@@ -29,6 +30,23 @@ namespace Ticketing_System
             Form Login = new FrmLogin();
             Login.Show();
             this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBecomeStudent_Click(object sender, EventArgs e)
+        {
+            RegisterForm register = new RegisterForm();
+            register.ShowDialog();
+        }
+
+        private void btnBecomeSupporter_Click(object sender, EventArgs e)
+        {
+            RegisterForm register = new RegisterForm();
+            register.ShowDialog();
         }
     }
 }

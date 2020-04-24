@@ -33,7 +33,7 @@ namespace Ticketing_System
 
         private void Create_Account_btn_Click(object sender, EventArgs e)
         {
-            Form Create_Account = new Form2();
+            Form Create_Account = new RegisterForm();
             this.Hide();
             Create_Account.Show();
         }
