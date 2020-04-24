@@ -42,6 +42,7 @@
             this.ticketBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ticketTableAdapter1 = new Ticketing_System.TicketingSystemDataSet2TableAdapters.TicketTableAdapter();
             this.TCK_Info_RTB = new System.Windows.Forms.RichTextBox();
+            this.Datetxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ticketingSystemDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Admin_Queue_DGV)).BeginInit();
@@ -151,12 +152,22 @@
             this.TCK_Info_RTB.TabIndex = 21;
             this.TCK_Info_RTB.Text = "";
             // 
+            // Datetxt
+            // 
+            this.Datetxt.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Datetxt.Location = new System.Drawing.Point(764, 12);
+            this.Datetxt.Name = "Datetxt";
+            this.Datetxt.ReadOnly = true;
+            this.Datetxt.Size = new System.Drawing.Size(100, 20);
+            this.Datetxt.TabIndex = 22;
+            // 
             // TicketInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(893, 556);
+            this.Controls.Add(this.Datetxt);
             this.Controls.Add(this.TCK_Info_RTB);
             this.Controls.Add(this.Admin_Queue_DGV);
             this.Controls.Add(this.Tools_btn);
@@ -193,5 +204,6 @@
         private System.Windows.Forms.BindingSource ticketBindingSource1;
         private TicketingSystemDataSet2TableAdapters.TicketTableAdapter ticketTableAdapter1;
         private System.Windows.Forms.RichTextBox TCK_Info_RTB;
+        private System.Windows.Forms.TextBox Datetxt;
     }
 }

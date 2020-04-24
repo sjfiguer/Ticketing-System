@@ -54,6 +54,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.Department = new System.Windows.Forms.Label();
             this.DepartmentCB = new System.Windows.Forms.ComboBox();
+            this.Datetxt = new System.Windows.Forms.TextBox();
+            this.CATIDtxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -200,6 +202,7 @@
             this.CategoryCB.Name = "CategoryCB";
             this.CategoryCB.Size = new System.Drawing.Size(156, 24);
             this.CategoryCB.TabIndex = 30;
+            this.CategoryCB.SelectedIndexChanged += new System.EventHandler(this.CategoryCB_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -316,12 +319,33 @@
             this.DepartmentCB.Size = new System.Drawing.Size(156, 24);
             this.DepartmentCB.TabIndex = 41;
             // 
+            // Datetxt
+            // 
+            this.Datetxt.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Datetxt.Location = new System.Drawing.Point(797, 144);
+            this.Datetxt.Name = "Datetxt";
+            this.Datetxt.ReadOnly = true;
+            this.Datetxt.Size = new System.Drawing.Size(100, 20);
+            this.Datetxt.TabIndex = 42;
+            // 
+            // CATIDtxt
+            // 
+            this.CATIDtxt.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.CATIDtxt.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.CATIDtxt.Location = new System.Drawing.Point(0, 547);
+            this.CATIDtxt.Name = "CATIDtxt";
+            this.CATIDtxt.ReadOnly = true;
+            this.CATIDtxt.Size = new System.Drawing.Size(100, 26);
+            this.CATIDtxt.TabIndex = 43;
+            // 
             // Submit_Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(894, 595);
+            this.Controls.Add(this.CATIDtxt);
+            this.Controls.Add(this.Datetxt);
             this.Controls.Add(this.DepartmentCB);
             this.Controls.Add(this.Department);
             this.Controls.Add(this.label12);
@@ -385,5 +409,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label Department;
         private System.Windows.Forms.ComboBox DepartmentCB;
+        private System.Windows.Forms.TextBox Datetxt;
+        private System.Windows.Forms.TextBox CATIDtxt;
     }
 }

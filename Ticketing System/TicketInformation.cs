@@ -41,6 +41,21 @@ namespace Ticketing_System
                 dataadapter.Fill(ds);
                 Admin_Queue_DGV.DataSource = ds.Tables[0];
 
+                sql = "SELECT CONVERT(varchar, getdate(), 1) ";
+                connection.Open();
+                command = new SqlCommand(sql, connection);
+                datareader = command.ExecuteReader();
+                while (datareader.Read())
+                {
+                    Datetxt.Text = datareader[0].ToString(); //The 0 indicates the first attribute in my select statement but it's n-1
+                    
+                }
+                //Closes the Database
+                datareader.Close();
+                command.Dispose();
+                connection.Close();
+
+
             }
             catch (Exception ex)// calls the error into message box
             {
@@ -87,7 +102,7 @@ namespace Ticketing_System
                 string AID = Admin_Queue_DGV.CurrentRow.Cells[10].Value.ToString();
 
 
-                sql = "UPDATE Ticket SET Priority = @Priority, Description = @Description WHERE TicketID = @TID ";
+                sql = "UPDATE Ticket SET Priority = @Priority, DateResolved = @DateR, Description = @Description WHERE TicketID = @TID ";
 
                 connection.Open();
                 command = new SqlCommand(sql, connection);
@@ -99,7 +114,7 @@ namespace Ticketing_System
                 //command.Parameters.AddWithValue("@AssigneTo", AssignedTo); Status = @Status, AssignedTo = @AssigneTo,
                 command.Parameters.AddWithValue("@Priority", PR);
                 //command.Parameters.AddWithValue("@DateI", DATEI); , DateIssued = @DateI DateResolved = @DateR, CatID = @CatID, Category = @CAT, 
-                //command.Parameters.AddWithValue("@DateR", DATER);
+                command.Parameters.AddWithValue("@DateR", DATER);
                 //command.Parameters.AddWithValue("@CatID", CATID);
                 //command.Parameters.AddWithValue("@CAT", CAT);
                 command.Parameters.AddWithValue("@Description", DESCRIPTION);
@@ -141,35 +156,36 @@ namespace Ticketing_System
                 string TID = Admin_Queue_DGV.CurrentRow.Cells[0].Value.ToString();
                 //string UID = Admin_Queue_DGV.CurrentRow.Cells[1].Value.ToString();
                 string STATUS = "Resolved";
-                //string AssignedTo = Admin_Queue_DGV.CurrentRow.Cells[3].Value.ToString();
-                //string PR = Admin_Queue_DGV.CurrentRow.Cells[4].Value.ToString();
-                //string DATEI = Admin_Queue_DGV.CurrentRow.Cells[5].Value.ToString();
-                //string CATID = Admin_Queue_DGV.CurrentRow.Cells[7].Value.ToString();
-                //string CAT = Admin_Queue_DGV.CurrentRow.Cells[8].Value.ToString();
-                //string DESCRIPTION = Admin_Queue_DGV.CurrentRow.Cells[9].Value.ToString();
-                //string AID = Admin_Queue_DGV.CurrentRow.Cells[10].Value.ToString();
-              
-                
-                
-                
+            //string AssignedTo = Admin_Queue_DGV.CurrentRow.Cells[3].Value.ToString();
+            //string PR = Admin_Queue_DGV.CurrentRow.Cells[4].Value.ToString();
+            //string DATEI = Admin_Queue_DGV.CurrentRow.Cells[5].Value.ToString();
+            //string CATID = Admin_Queue_DGV.CurrentRow.Cells[7].Value.ToString();
+            //string CAT = Admin_Queue_DGV.CurrentRow.Cells[8].Value.ToString();
+            //string DESCRIPTION = Admin_Queue_DGV.CurrentRow.Cells[9].Value.ToString();
+            //string AID = Admin_Queue_DGV.CurrentRow.Cells[10].Value.ToString();
+            string DATER = Datetxt.Text.ToString();
 
-                sql = "UPDATE Ticket SET  Status = @Status, AssignedTo = @AssigneTo, Priority = @Priority, DateIssued = @DateI, DateResolved = @DateR, CatID = @CatID, Category = @CAT, Description = @Description, AdminID = @AID WHERE TicketID = @TicketID ";
-                sql2 = "SELECT FORMAT(getdate(),'MM/dd/yy')";
-                connection.Open();
+
+
+
+
+                sql = "UPDATE Ticket SET  Status = @Status,  DateResolved = @DateR WHERE TicketID = @TicketID ";
+                 
+            connection.Open();
                 command = new SqlCommand(sql, connection);
 
                command.Parameters.AddWithValue("@TicketID", TID);
                 //command.Parameters.AddWithValue("@UserID", UID);UserID = @UserID, TicketID = @TicketID,
                 command.Parameters.AddWithValue("@Status", STATUS);
-                //command.Parameters.AddWithValue("@AssigneTo", AssignedTo);
-                //command.Parameters.AddWithValue("@Priority", PR);
-                //command.Parameters.AddWithValue("@DateI", DATEI);
-                command.Parameters.AddWithValue("@DateR", sql2);
-                //command.Parameters.AddWithValue("@CatID", CATID);
-                //command.Parameters.AddWithValue("@CAT", CAT);
-                //command.Parameters.AddWithValue("@Description", DESCRIPTION);
-                //command.Parameters.AddWithValue("@AID", AID);
-                answer = command.ExecuteNonQuery();
+            //command.Parameters.AddWithValue("@AssigneTo", AssignedTo); AssignedTo = @AssigneTo, Priority = @Priority, DateIssued = @DateI,
+            //command.Parameters.AddWithValue("@Priority", PR);
+            //command.Parameters.AddWithValue("@DateI", DATEI);
+            command.Parameters.AddWithValue("@DateR", DATER); ; 
+            //command.Parameters.AddWithValue("@CatID", CATID); , CatID = @CatID, Category = @CAT, Description = @Description, AdminID = @AID
+            //command.Parameters.AddWithValue("@CAT", CAT);
+            //command.Parameters.AddWithValue("@Description", DESCRIPTION);
+            //command.Parameters.AddWithValue("@AID", AID);
+            answer = command.ExecuteNonQuery();
 
                 command.Dispose();
                 connection.Close();

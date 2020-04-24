@@ -59,5 +59,10 @@ namespace IT_Ticketing_System__Mock_
             txtaccounttype.Text = txtdepartment.Text = txtfirstname.Text = txtfirstname.Text = txtcontact.Text = txtaddress.Text = txtemail.Text = txtpassword.Text
                 = txtconfirmpassword.Text = "";
         }
+
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

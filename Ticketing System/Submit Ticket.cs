@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace Ticketing_System
 {
@@ -64,19 +65,41 @@ namespace Ticketing_System
             try 
             { 
             int answer;
-
+                string sql2 = null;
                 SqlConnection connection = new SqlConnection("Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
-                connection.Open();
-               string sql = null;
-                SqlCommand command = new SqlCommand(sql, connection);
-                   
-            command.Parameters.AddWithValue("@TicketID", TicketIDtxt.Text);
-            command.Parameters.AddWithValue("@UserID", UserIDtxt.Text);
-            command.Parameters.AddWithValue("@Priority", PriorityCB.AllowDrop);
-            command.Parameters.AddWithValue("@Category", CategoryCB.AllowDrop);
-            command.Parameters.AddWithValue("@Description", DescribeTxt.Text);
+                sql2 = "SELECT CatID from Category where Category = '" + CategoryCB.Text.ToString() + "'";
 
-            answer = command.ExecuteNonQuery();
+
+                string UID = UserIDtxt.ToString();
+                string Status = "Active";
+                string AssignedTo = "";
+                string PR = PriorityCB.ToString();
+                string DATEI = Datetxt.Text.ToString();
+                string DATER = "Ongoing";
+                string CATID = CATIDtxt.ToString();
+                string CAT =CategoryCB.ToString();
+                string Description = DescribeTxt.Text.ToString();
+                string AdminID = "";
+                Convert.ToInt32(CAT);
+                sql = "INSERT INTO Ticket VALUES ( @UserID,  @Status, @AssignedTo,  @Priority,  @DateIssued,  @DateR,  @CATID, @Category, @Description, @AdminID)";
+                connection.Open();
+               
+                SqlCommand command = new SqlCommand(sql, connection);
+                SqlCommand command2 = new SqlCommand(sql2, connection);
+
+               // command.Parameters.AddWithValue("@TicketID", TicketIDtxt.Text);
+            command.Parameters.AddWithValue("@UserID", UserIDtxt.Text);
+                command.Parameters.AddWithValue("@Status", Status); //
+                command.Parameters.AddWithValue("@AssignedTo", AssignedTo);
+                command.Parameters.AddWithValue("@Priority", PR);
+                command.Parameters.AddWithValue("@DateIssued",DATEI);
+                command.Parameters.AddWithValue("@DateR", DATER);
+                command.Parameters.AddWithValue("@CATID", CATID);
+                command.Parameters.AddWithValue("@Category", CAT);
+                command.Parameters.AddWithValue("@Description", Description);
+                command.Parameters.AddWithValue("@AdminID", AdminID);
+
+                answer = command.ExecuteNonQuery();
 
             //close database
 
@@ -162,11 +185,63 @@ private void Submit_Ticket_Load(object sender, EventArgs e)
             connection.Close();
             //ABOVE FILLS PRIORITY CB
 
+            sql = "SELECT CONVERT(varchar, getdate(), 1) ";
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            datareader = command.ExecuteReader();
+            while (datareader.Read())
+            {
+                Datetxt.Text = datareader[0].ToString(); //The 0 indicates the first attribute in my select statement but it's n-1
+
+            }
+            //Closes the Database
+            datareader.Close();
+            command.Dispose();
+            connection.Close();
+
+            
+            sql = "SELECT TOP 1 TicketID FROM Ticket ORDER BY TicketID desc";// check in database
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            datareader = command.ExecuteReader();
+            while (datareader.Read())
+            {
+                int counter = Convert.ToInt32(datareader[0].ToString());
+                counter = counter + 1;
+                TicketIDtxt.Text = counter.ToString();
+            }
+
+
+            //Closes the Database
+            datareader.Close();
+            command.Dispose();
+            connection.Close();
+
+
         }
 
         private void DepartmentCB_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void CategoryCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlConnection connection = new SqlConnection("Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
+            sql = "SELECT CatID from Category where Category = '" + CategoryCB.Text.ToString() + "'";
+            connection.Open();
+
+            SqlCommand command = new SqlCommand(sql, connection);
+            datareader = command.ExecuteReader();
+            while (datareader.Read())
+            {
+                CATIDtxt.Text = datareader[0].ToString(); 
+               
+            }
+            //Closes the Database
+            datareader.Close();
+            command.Dispose();
+            connection.Close();
         }
     }
 }
