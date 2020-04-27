@@ -44,7 +44,6 @@
             this.dateResolvedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ticketQueueDatabase = new Ticketing_System.TicketQueueDatabase();
-            this.SelectBtn = new System.Windows.Forms.Button();
             this.AssignBtn = new System.Windows.Forms.Button();
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.ticketTableAdapter = new Ticketing_System.TicketQueueDatabaseTableAdapters.TicketTableAdapter();
@@ -84,10 +83,10 @@
             this.dateIssuedDataGridViewTextBoxColumn,
             this.dateResolvedDataGridViewTextBoxColumn});
             this.TicketQueueDG.DataSource = this.ticketBindingSource;
-            this.TicketQueueDG.Location = new System.Drawing.Point(90, 96);
+            this.TicketQueueDG.Location = new System.Drawing.Point(3, 96);
             this.TicketQueueDG.Name = "TicketQueueDG";
             this.TicketQueueDG.RowHeadersWidth = 51;
-            this.TicketQueueDG.Size = new System.Drawing.Size(723, 312);
+            this.TicketQueueDG.Size = new System.Drawing.Size(810, 312);
             this.TicketQueueDG.TabIndex = 1;
             // 
             // Column1
@@ -186,21 +185,10 @@
             this.ticketQueueDatabase.DataSetName = "TicketQueueDatabase";
             this.ticketQueueDatabase.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // SelectBtn
-            // 
-            this.SelectBtn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.SelectBtn.Location = new System.Drawing.Point(417, 442);
-            this.SelectBtn.Name = "SelectBtn";
-            this.SelectBtn.Size = new System.Drawing.Size(75, 23);
-            this.SelectBtn.TabIndex = 2;
-            this.SelectBtn.Text = "Select";
-            this.SelectBtn.UseVisualStyleBackColor = true;
-            this.SelectBtn.Click += new System.EventHandler(this.SelectBtn_Click);
-            // 
             // AssignBtn
             // 
             this.AssignBtn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.AssignBtn.Location = new System.Drawing.Point(524, 442);
+            this.AssignBtn.Location = new System.Drawing.Point(446, 442);
             this.AssignBtn.Name = "AssignBtn";
             this.AssignBtn.Size = new System.Drawing.Size(75, 23);
             this.AssignBtn.TabIndex = 3;
@@ -211,7 +199,7 @@
             // DeleteBtn
             // 
             this.DeleteBtn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.DeleteBtn.Location = new System.Drawing.Point(627, 442);
+            this.DeleteBtn.Location = new System.Drawing.Point(581, 442);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(75, 23);
             this.DeleteBtn.TabIndex = 4;
@@ -225,7 +213,7 @@
             // Logoff_btn
             // 
             this.Logoff_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.Logoff_btn.Location = new System.Drawing.Point(732, 442);
+            this.Logoff_btn.Location = new System.Drawing.Point(717, 442);
             this.Logoff_btn.Name = "Logoff_btn";
             this.Logoff_btn.Size = new System.Drawing.Size(75, 23);
             this.Logoff_btn.TabIndex = 21;
@@ -268,7 +256,6 @@
             this.Controls.Add(this.Logoff_btn);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.AssignBtn);
-            this.Controls.Add(this.SelectBtn);
             this.Controls.Add(this.TicketQueueDG);
             this.Controls.Add(this.label1);
             this.Name = "TicketQueue";
@@ -287,7 +274,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView TicketQueueDG;
-        private System.Windows.Forms.Button SelectBtn;
         private System.Windows.Forms.Button AssignBtn;
         private System.Windows.Forms.Button DeleteBtn;
         private TicketQueueDatabase ticketQueueDatabase;

@@ -113,7 +113,71 @@ namespace Ticketing_System
 
         private void AssignBtn_Click(object sender, EventArgs e)
         {
+            {
+                int answer;
+                SqlConnection connection = new SqlConnection("Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
 
+                try
+                {
+
+                    string TID = TicketQueueDG.CurrentRow.Cells[0].Value.ToString();
+
+                    //string TID = TicketQueueDG.CurrentRow.Cells[0].Value.ToString();
+                    //string UID = TicketQueueDG.CurrentRow.Cells[1].Value.ToString();
+                    string STATUS = TicketQueueDG.CurrentRow.Cells[2].Value.ToString();
+                    string AssignedTo = TicketQueueDG.CurrentRow.Cells[3].Value.ToString();
+                    string PR = TicketQueueDG.CurrentRow.Cells[4].Value.ToString();
+                    string DATEI = TicketQueueDG.CurrentRow.Cells[5].Value.ToString();
+                    string DATER = TicketQueueDG.CurrentRow.Cells[6].Value.ToString();
+                    string CATID = TicketQueueDG.CurrentRow.Cells[7].Value.ToString();
+                    string CAT = TicketQueueDG.CurrentRow.Cells[8].Value.ToString();
+                    string DESCRIPTION = TicketQueueDG.CurrentRow.Cells[9].Value.ToString();
+                    string AID = TicketQueueDG.CurrentRow.Cells[10].Value.ToString();
+
+
+                    sql = "UPDATE Ticket SET AssignedTo = AssignedTo = @AssignedTo, @Priority, DateResolved = @DateR, Description = @Description WHERE TicketID = @TID ";
+
+
+
+                    connection.Open();
+                    command = new SqlCommand(sql, connection);
+
+
+                    command.Parameters.AddWithValue("@TID", TID);
+                    //command.Parameters.AddWithValue("@UserID", UID);TicketID = @TicketID, UserID = @UserID,
+                    //command.Parameters.AddWithValue("@Status", STATUS);
+                    command.Parameters.AddWithValue("@AssigneTo", AssignedTo); 
+                    command.Parameters.AddWithValue("@Priority", PR);
+                    //command.Parameters.AddWithValue("@DateI", DATEI); , DateIssued = @DateI DateResolved = @DateR, CatID = @CatID, Category = @CAT, 
+                    command.Parameters.AddWithValue("@DateR", DATER);
+                    //command.Parameters.AddWithValue("@CatID", CATID);
+                    //command.Parameters.AddWithValue("@CAT", CAT);
+                    command.Parameters.AddWithValue("@Description", DESCRIPTION);
+                    //command.Parameters.AddWithValue("@AID", AID); , AdminID = @AID
+
+
+                    answer = command.ExecuteNonQuery();
+
+                    command.Dispose();
+                    connection.Close();
+
+                    MessageBox.Show("Assigned To " + answer);
+
+                    sql = "SELECT * FROM Ticket";
+                    var dataadapter = new SqlDataAdapter(sql, connection);
+                    var ds = new DataSet();
+                    dataadapter.Fill(ds);
+                    TicketQueueDG.DataSource = ds.Tables[0];
+                    TicketQueueDG.Update();
+                    TicketQueueDG.Refresh(); // REFRESHES DGV
+
+                }
+                catch (Exception ex)// calls the error into message box
+                {
+                    MessageBox.Show("Form Error" + ex);
+                }
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
