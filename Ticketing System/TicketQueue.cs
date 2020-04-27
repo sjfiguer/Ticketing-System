@@ -31,7 +31,8 @@ namespace Ticketing_System
         {
             // TODO: This line of code loads data into the 'ticketQueueDatabase.Ticket' table. You can move, or remove it, as needed.
             //this.ticketTableAdapter.Fill(this.ticketQueueDatabase.Ticket);
-            
+            connectionstring = "Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20";
+            connection = new SqlConnection(connectionstring);
         }
 
           
@@ -43,146 +44,56 @@ namespace Ticketing_System
             Home.Show();
         }
 
-        private void SelectBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
-            int answer;
-            string sql2 = null;
-
-
-            sql = "SELECT * FROM Ticket";
-            var dataadapter = new SqlDataAdapter(sql, connection);
-            var ds = new DataSet();
-            dataadapter.Fill(ds);
-            TicketQueueDG.DataSource = ds.Tables[0];
-            TicketQueueDG.Update();
-            TicketQueueDG.Refresh(); // REFRESHES DGV
-
-
-            //try
-            //{
-
-            //    string TID = TicketQueueDG.CurrentRow.Cells[0].Value.ToString();
-            //    string UID = TicketQueueDG.CurrentRow.Cells[1].Value.ToString();
-            //    string BLCK = TicketQueueDG.CurrentRow.Cells[2].Value.ToString();
-            //    string TITLE = TicketQueueDG.CurrentRow.Cells[3].Value.ToString();
-            //    string STATUS = "Refreah";
-            //    string RUSER = TicketQueueDG.CurrentRow.Cells[5].Value.ToString();
-            //    string AssignedTo = TicketQueueDG.CurrentRow.Cells[6].Value.ToString();
-            //    string PR = TicketQueueDG.CurrentRow.Cells[7].Value.ToString();
-            //    string DATEI = TicketQueueDG.CurrentRow.Cells[8].Value.ToString();
-            //    string CATID = TicketQueueDG.CurrentRow.Cells[10].Value.ToString();
-            //    string CAT = TicketQueueDG.CurrentRow.Cells[11].Value.ToString();
-
-            //    sql = "Refresh Ticket SET TicketID = @TicketID, UserID = @UserID, Blackout = @Blackout, Title = @Title, Status = @Status, RequestUser = @RUser, AssignedTo = @AssigneTo, Priority = @Priority, DateIssued = @DateI, DateResolved = @DateR, CatID = @CatID, Category = @CAT";
-
-            //    connection.Open();
-            //    command = new SqlCommand(sql, connection);
-
-            //    command.Parameters.AddWithValue("@TicketID", TID);
-            //    command.Parameters.AddWithValue("@UserID", UID);
-            //    command.Parameters.AddWithValue("@Blackout", BLCK);
-            //    command.Parameters.AddWithValue("@Title", TITLE);
-            //    command.Parameters.AddWithValue("@Status", STATUS);
-            //    command.Parameters.AddWithValue("@RUser", RUSER);
-            //    command.Parameters.AddWithValue("@AssigneTo", AssignedTo);
-            //    command.Parameters.AddWithValue("@Priority", PR);
-            //    command.Parameters.AddWithValue("@DateI", DATEI);
-            //    command.Parameters.AddWithValue("@DateR", sql2);
-            //    command.Parameters.AddWithValue("@CatID", CATID);
-            //    command.Parameters.AddWithValue("@CAT", CAT);
-
-            //    answer = command.ExecuteNonQuery();
-
-            //    command.Dispose();
-            //    connection.Close();
-
-            //    MessageBox.Show("Resolved " + answer);
-
-            //}
-            //catch (Exception ex)// calls the error into message box
-            //{
-            //    MessageBox.Show("Form Error" + ex);
-            //}
-
-        }
-
-        private void AssignBtn_Click(object sender, EventArgs e)
-        {
-            {
-                int answer;
-                SqlConnection connection = new SqlConnection("Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
-
-                try
-                {
-
-                    string TID = TicketQueueDG.CurrentRow.Cells[0].Value.ToString();
-
-                    //string TID = TicketQueueDG.CurrentRow.Cells[0].Value.ToString();
-                    //string UID = TicketQueueDG.CurrentRow.Cells[1].Value.ToString();
-                    string STATUS = TicketQueueDG.CurrentRow.Cells[2].Value.ToString();
-                    string AssignedTo = TicketQueueDG.CurrentRow.Cells[3].Value.ToString();
-                    string PR = TicketQueueDG.CurrentRow.Cells[4].Value.ToString();
-                    string DATEI = TicketQueueDG.CurrentRow.Cells[5].Value.ToString();
-                    string DATER = TicketQueueDG.CurrentRow.Cells[6].Value.ToString();
-                    string CATID = TicketQueueDG.CurrentRow.Cells[7].Value.ToString();
-                    string CAT = TicketQueueDG.CurrentRow.Cells[8].Value.ToString();
-                    string DESCRIPTION = TicketQueueDG.CurrentRow.Cells[9].Value.ToString();
-                    string AID = TicketQueueDG.CurrentRow.Cells[10].Value.ToString();
-
-
-                    sql = "UPDATE Ticket SET AssignedTo = AssignedTo = @AssignedTo, @Priority, DateResolved = @DateR, Description = @Description WHERE TicketID = @TID ";
-
-
-
-                    connection.Open();
-                    command = new SqlCommand(sql, connection);
-
-
-                    command.Parameters.AddWithValue("@TID", TID);
-                    //command.Parameters.AddWithValue("@UserID", UID);TicketID = @TicketID, UserID = @UserID,
-                    //command.Parameters.AddWithValue("@Status", STATUS);
-                    command.Parameters.AddWithValue("@AssigneTo", AssignedTo); 
-                    command.Parameters.AddWithValue("@Priority", PR);
-                    //command.Parameters.AddWithValue("@DateI", DATEI); , DateIssued = @DateI DateResolved = @DateR, CatID = @CatID, Category = @CAT, 
-                    command.Parameters.AddWithValue("@DateR", DATER);
-                    //command.Parameters.AddWithValue("@CatID", CATID);
-                    //command.Parameters.AddWithValue("@CAT", CAT);
-                    command.Parameters.AddWithValue("@Description", DESCRIPTION);
-                    //command.Parameters.AddWithValue("@AID", AID); , AdminID = @AID
-
-
-                    answer = command.ExecuteNonQuery();
-
-                    command.Dispose();
-                    connection.Close();
-
-                    MessageBox.Show("Assigned To " + answer);
-
-                    sql = "SELECT * FROM Ticket";
-                    var dataadapter = new SqlDataAdapter(sql, connection);
-                    var ds = new DataSet();
-                    dataadapter.Fill(ds);
-                    TicketQueueDG.DataSource = ds.Tables[0];
-                    TicketQueueDG.Update();
-                    TicketQueueDG.Refresh(); // REFRESHES DGV
-
-                }
-                catch (Exception ex)// calls the error into message box
-                {
-                    MessageBox.Show("Form Error" + ex);
-                }
-
-            }
+            TicketQueueDG.DataSource = null;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://app.powerbi.com/groups/me/reports/618df352-8ee7-4173-bb74-0fd98443d5e8/ReportSection?noSignUpCheck=1");
+        }
+
+        private void TicketQueueDG_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void ticketdg_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            int answer;
+            string reg = TicketQueueDG.CurrentRow.Cells[0].Value.ToString();
+            //grab any data needed
+            sql = "DELETE FROM Ticket WHERE TicketID = @TicketID";
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+
+            command.Parameters.AddWithValue("@TicketID", reg);
+
+            answer = command.ExecuteNonQuery();
+            //Close the database
+            command.Dispose();
+            connection.Close();
+
+            //display a message
+            MessageBox.Show("You deleted " + answer + " row");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SqlConnection connection = new SqlConnection("Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
+
+            connection.Open();
+            SqlDataAdapter sql = new SqlDataAdapter("SELECT * FROM Ticket", connection);
+            DataTable dtbl = new DataTable();
+            sql.Fill(dtbl);
+
+            TicketQueueDG.DataSource = dtbl;
         }
     }
 }
