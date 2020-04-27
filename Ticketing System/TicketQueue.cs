@@ -53,52 +53,72 @@ namespace Ticketing_System
             int answer;
             string sql2 = null;
 
-            try
-            {
 
-                string TID = TicketQueueDG.CurrentRow.Cells[0].Value.ToString();
-                string UID = TicketQueueDG.CurrentRow.Cells[1].Value.ToString();
-                string BLCK = TicketQueueDG.CurrentRow.Cells[2].Value.ToString();
-                string TITLE = TicketQueueDG.CurrentRow.Cells[3].Value.ToString();
-                string STATUS = "Refreah";
-                string RUSER = TicketQueueDG.CurrentRow.Cells[5].Value.ToString();
-                string AssignedTo = TicketQueueDG.CurrentRow.Cells[6].Value.ToString();
-                string PR = TicketQueueDG.CurrentRow.Cells[7].Value.ToString();
-                string DATEI = TicketQueueDG.CurrentRow.Cells[8].Value.ToString();
-                string CATID = TicketQueueDG.CurrentRow.Cells[10].Value.ToString();
-                string CAT = TicketQueueDG.CurrentRow.Cells[11].Value.ToString();
+            sql = "SELECT * FROM Ticket";
+            var dataadapter = new SqlDataAdapter(sql, connection);
+            var ds = new DataSet();
+            dataadapter.Fill(ds);
+            TicketQueueDG.DataSource = ds.Tables[0];
+            TicketQueueDG.Update();
+            TicketQueueDG.Refresh(); // REFRESHES DGV
 
-                sql = "Refresh Ticket SET TicketID = @TicketID, UserID = @UserID, Blackout = @Blackout, Title = @Title, Status = @Status, RequestUser = @RUser, AssignedTo = @AssigneTo, Priority = @Priority, DateIssued = @DateI, DateResolved = @DateR, CatID = @CatID, Category = @CAT";
-                
-                connection.Open();
-                command = new SqlCommand(sql, connection);
 
-                command.Parameters.AddWithValue("@TicketID", TID);
-                command.Parameters.AddWithValue("@UserID", UID);
-                command.Parameters.AddWithValue("@Blackout", BLCK);
-                command.Parameters.AddWithValue("@Title", TITLE);
-                command.Parameters.AddWithValue("@Status", STATUS);
-                command.Parameters.AddWithValue("@RUser", RUSER);
-                command.Parameters.AddWithValue("@AssigneTo", AssignedTo);
-                command.Parameters.AddWithValue("@Priority", PR);
-                command.Parameters.AddWithValue("@DateI", DATEI);
-                command.Parameters.AddWithValue("@DateR", sql2);
-                command.Parameters.AddWithValue("@CatID", CATID);
-                command.Parameters.AddWithValue("@CAT", CAT);
+            //try
+            //{
 
-                answer = command.ExecuteNonQuery();
+            //    string TID = TicketQueueDG.CurrentRow.Cells[0].Value.ToString();
+            //    string UID = TicketQueueDG.CurrentRow.Cells[1].Value.ToString();
+            //    string BLCK = TicketQueueDG.CurrentRow.Cells[2].Value.ToString();
+            //    string TITLE = TicketQueueDG.CurrentRow.Cells[3].Value.ToString();
+            //    string STATUS = "Refreah";
+            //    string RUSER = TicketQueueDG.CurrentRow.Cells[5].Value.ToString();
+            //    string AssignedTo = TicketQueueDG.CurrentRow.Cells[6].Value.ToString();
+            //    string PR = TicketQueueDG.CurrentRow.Cells[7].Value.ToString();
+            //    string DATEI = TicketQueueDG.CurrentRow.Cells[8].Value.ToString();
+            //    string CATID = TicketQueueDG.CurrentRow.Cells[10].Value.ToString();
+            //    string CAT = TicketQueueDG.CurrentRow.Cells[11].Value.ToString();
 
-                command.Dispose();
-                connection.Close();
+            //    sql = "Refresh Ticket SET TicketID = @TicketID, UserID = @UserID, Blackout = @Blackout, Title = @Title, Status = @Status, RequestUser = @RUser, AssignedTo = @AssigneTo, Priority = @Priority, DateIssued = @DateI, DateResolved = @DateR, CatID = @CatID, Category = @CAT";
 
-                MessageBox.Show("Resolved " + answer);
+            //    connection.Open();
+            //    command = new SqlCommand(sql, connection);
 
-            }
-            catch (Exception ex)// calls the error into message box
-            {
-                MessageBox.Show("Form Error" + ex);
-            }
+            //    command.Parameters.AddWithValue("@TicketID", TID);
+            //    command.Parameters.AddWithValue("@UserID", UID);
+            //    command.Parameters.AddWithValue("@Blackout", BLCK);
+            //    command.Parameters.AddWithValue("@Title", TITLE);
+            //    command.Parameters.AddWithValue("@Status", STATUS);
+            //    command.Parameters.AddWithValue("@RUser", RUSER);
+            //    command.Parameters.AddWithValue("@AssigneTo", AssignedTo);
+            //    command.Parameters.AddWithValue("@Priority", PR);
+            //    command.Parameters.AddWithValue("@DateI", DATEI);
+            //    command.Parameters.AddWithValue("@DateR", sql2);
+            //    command.Parameters.AddWithValue("@CatID", CATID);
+            //    command.Parameters.AddWithValue("@CAT", CAT);
 
+            //    answer = command.ExecuteNonQuery();
+
+            //    command.Dispose();
+            //    connection.Close();
+
+            //    MessageBox.Show("Resolved " + answer);
+
+            //}
+            //catch (Exception ex)// calls the error into message box
+            //{
+            //    MessageBox.Show("Form Error" + ex);
+            //}
+
+        }
+
+        private void AssignBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://app.powerbi.com/groups/me/reports/618df352-8ee7-4173-bb74-0fd98443d5e8/ReportSection?noSignUpCheck=1");
         }
     }
 }

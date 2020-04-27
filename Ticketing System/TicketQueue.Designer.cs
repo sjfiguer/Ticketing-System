@@ -50,6 +50,7 @@
             this.ticketTableAdapter = new Ticketing_System.TicketQueueDatabaseTableAdapters.TicketTableAdapter();
             this.Logoff_btn = new System.Windows.Forms.Button();
             this.RefreshBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TicketQueueDG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketQueueDatabase)).BeginInit();
@@ -205,6 +206,7 @@
             this.AssignBtn.TabIndex = 3;
             this.AssignBtn.Text = "Assign";
             this.AssignBtn.UseVisualStyleBackColor = true;
+            this.AssignBtn.Click += new System.EventHandler(this.AssignBtn_Click);
             // 
             // DeleteBtn
             // 
@@ -242,12 +244,26 @@
             this.RefreshBtn.UseVisualStyleBackColor = true;
             this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkRed;
+            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(12, 429);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(270, 49);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Analytics";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TicketQueue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(924, 523);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.Logoff_btn);
             this.Controls.Add(this.DeleteBtn);
@@ -290,5 +306,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateResolvedDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button Logoff_btn;
         private System.Windows.Forms.Button RefreshBtn;
+        private System.Windows.Forms.Button button1;
     }
 }

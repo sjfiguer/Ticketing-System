@@ -152,6 +152,7 @@
             // 
             // User_Type_cmbox
             // 
+            this.User_Type_cmbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.User_Type_cmbox.FormattingEnabled = true;
             this.User_Type_cmbox.Location = new System.Drawing.Point(404, 369);
             this.User_Type_cmbox.Margin = new System.Windows.Forms.Padding(2);
