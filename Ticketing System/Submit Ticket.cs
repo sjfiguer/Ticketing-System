@@ -177,23 +177,7 @@ namespace Ticketing_System
             command.Dispose();
             connection.Close();
 
-            sql = "SELECT UserID FROM Users WHERE LoginID ='" + LoginIDlbl.Text.ToString() + "' ";
-            var dataadapter = new SqlDataAdapter(sql, connection);
-            var ds = new DataSet();
-            dataadapter.Fill(ds);
-            UserIDDGV.DataSource = ds.Tables[0];
            
-            datareader.Close();
-            command.Dispose();
-            connection.Close();
-
-
-            sql = "SELECT CatID FROM Category WHERE Category ='" + CategoryCB.Text.ToString() + "' ";
-            var dataadapter2 = new SqlDataAdapter(sql, connection);
-            var ds2 = new DataSet();
-            dataadapter.Fill(ds2);
-            CatIDDGV.DataSource = ds2.Tables[0];
-
 
         }
 

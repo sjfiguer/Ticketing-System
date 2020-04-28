@@ -15,7 +15,11 @@ namespace IT_Ticketing_System__Mock_
 {
     public partial class RegisterForm : Form
     {
-        string connectionString = @"Data Source=isys4363.walton.uark.edu; Initial Catalog=PROJECTS2050; User ID= isys4363a; PASSWORD= GohogsUA20";
+        string connectionstring = null;
+        string sql = null;
+        SqlConnection connection;
+        SqlCommand command;
+        SqlDataReader datareader;
 
         public RegisterForm()
         {
@@ -32,37 +36,43 @@ namespace IT_Ticketing_System__Mock_
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (txtpassword.Text != txtconfirmpassword.Text)
-                MessageBox.Show("Your Passwords do not match. Please try again.");
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
-            {
-                int answer;
-                sqlCon.Open();
-                SqlCommand sqlCmd = new SqlCommand("UserAdd", sqlCon);
-                sqlCmd.CommandType = CommandType.StoredProcedure;
-                sqlCmd.Parameters.AddWithValue("@First_Name", txtfirstname.Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@Last_Name", txtlastname.Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@Contact", txtcontact.Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@Address", txtaddress.Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@Email", txtemail.Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@Password", txtpassword.Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@Department", txtdepartment.Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@AccountType", txtaccounttype.Text.Trim());
+            ///////////////////////////////////////////////////////////////////////////////////////////////
+            int answer;
+            //grab any data needed
+            sql = "INSERT INTO Login VALUES (@UserID,@Password,@UserType,@First_Name,@Last_Name,@Contact,@Address,@Email)";
+            connection.Open();
+            command = new SqlCommand(sql, connection);
 
-                answer = sqlCmd.ExecuteNonQuery();
-                MessageBox.Show("You have been Registered!");
-                Clear();
-            }
-        }
-        void Clear()
-        {
-            txtaccounttype.Text = txtdepartment.Text = txtfirstname.Text = txtfirstname.Text = txtcontact.Text = txtaddress.Text = txtemail.Text = txtpassword.Text
-                = txtconfirmpassword.Text = "";
+            //parameters are designed to enhance a sql statement from objects in the code
+            command.Parameters.AddWithValue("@UserID", txtstudentid.Text);
+            command.Parameters.AddWithValue("@Password", txtpassword.Text);
+            command.Parameters.AddWithValue("@UserType", txtdepartment.Text);
+            command.Parameters.AddWithValue("@First_Name", txtfirstname.Text);
+            command.Parameters.AddWithValue("@Last_Name", txtlastname.Text);
+            command.Parameters.AddWithValue("@Contact", txtcontact.Text);
+            command.Parameters.AddWithValue("@Address", txtaddress.Text);
+            command.Parameters.AddWithValue("@Email", txtemail.Text);
+
+            answer = command.ExecuteNonQuery();
+            //Close the database
+            command.Dispose();
+            connection.Close();
+
+            //display a message
+            MessageBox.Show("You added " + answer + " row");
+            //////////////////////////////////////////////////////////////////////////////////////////////
         }
 
         private void RegisterForm_Load(object sender, EventArgs e)
         {
-
+            connectionstring = "Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20";
+            connection = new SqlConnection(connectionstring);
+            sql = "SELECT LoginID FROM Login";
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            command.Dispose();
+            connection.Close();
         }
     }
 }
+
