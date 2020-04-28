@@ -265,30 +265,45 @@ namespace Ticketing_System
                 string sql2 = null;
                 sql = "SELECT CatID from Category where Category = '" + CategoryCB.ToString() + "'";
 
-                sql2 = "INSERT INTO Ticket VALUES (@Name @UserID,  @Status, @AssignedTo,  @Priority,  @DateIssued,  @DateR,  @CATID, @Category, @Description, @AdminID)";
+                sql2 = "INSERT INTO Ticket VALUES (@UserID, @Status, @AssignedTo,  @Priority,  @DateIssued,  @DateR, @CatID, @Category, @Description, @AdminID) ";
                 connection.Open();
-
-            string UID = UserIDtxt.Text.ToString();
-            string CATID = CATIDtxt.Text.ToString();
+            string UID2 = "";
+            string CatID2 = "";
 
             command = new SqlCommand(sql2, connection);
-            
-                command.Parameters.AddWithValue("@UserID", int.Parse(UID));
-                command.Parameters.AddWithValue("@Status", "Active"); //
+
+            command.Parameters.AddWithValue("@UserID", UID2);
+            command.Parameters.AddWithValue("@Status", "Active"); //
                 command.Parameters.AddWithValue("@AssignedTo", "");
                 command.Parameters.AddWithValue("@Priority", PriorityCB.SelectedItem.ToString());
                 command.Parameters.AddWithValue("@DateIssued", Datetxt.Text);
                 command.Parameters.AddWithValue("@DateR", "Ongoing");
-                command.Parameters.AddWithValue("@CATID", int.Parse(CATID));
-                command.Parameters.AddWithValue("@Category", CategoryCB.SelectedItem.ToString());
+            command.Parameters.AddWithValue("@CatID", CatID2);
+            command.Parameters.AddWithValue("@Category", CategoryCB.SelectedItem.ToString());
                 command.Parameters.AddWithValue("@Description", DescribeTxt.Text);
                 command.Parameters.AddWithValue("@AdminID", "");
+               
 
-
-                answer = command.ExecuteNonQuery();
+            answer = command.ExecuteNonQuery();
                 command.Dispose();
                 connection.Close();
-                MessageBox.Show("Your Ticket has been Submitted and added to our que. Your ticket will be resolved shortly.");
+                
+
+            connection = new SqlConnection(connectionstring);
+            sql = "UPDATE Ticket SET UserID = @UserID ,  @CATID";
+            string UID = UserIDtxt.Text.ToString();
+
+            string CATID = CATIDtxt.Text.ToString();
+
+            command.Parameters.AddWithValue("@UserID", UID);
+            command.Parameters.AddWithValue("@CATID", CATID);
+
+            answer = command.ExecuteNonQuery();
+            command.Dispose();
+            connection.Close();
+
+
+            MessageBox.Show("Your Ticket has been Submitted and added to our que. Your ticket will be resolved shortly.");
             //}
             //catch (Exception ex)
             //{
