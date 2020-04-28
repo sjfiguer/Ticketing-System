@@ -154,7 +154,6 @@
             this.LastNametxt.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.LastNametxt.Location = new System.Drawing.Point(114, 259);
             this.LastNametxt.Name = "LastNametxt";
-            this.LastNametxt.ReadOnly = true;
             this.LastNametxt.Size = new System.Drawing.Size(272, 26);
             this.LastNametxt.TabIndex = 22;
             // 
@@ -163,7 +162,6 @@
             this.Emailtxt.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.Emailtxt.Location = new System.Drawing.Point(659, 259);
             this.Emailtxt.Name = "Emailtxt";
-            this.Emailtxt.ReadOnly = true;
             this.Emailtxt.Size = new System.Drawing.Size(210, 26);
             this.Emailtxt.TabIndex = 23;
             // 
@@ -232,7 +230,6 @@
             this.UserIDtxt.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.UserIDtxt.Location = new System.Drawing.Point(498, 259);
             this.UserIDtxt.Name = "UserIDtxt";
-            this.UserIDtxt.ReadOnly = true;
             this.UserIDtxt.Size = new System.Drawing.Size(100, 26);
             this.UserIDtxt.TabIndex = 34;
             // 
@@ -362,7 +359,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(893, 548);
+            this.ClientSize = new System.Drawing.Size(924, 600);
             this.Controls.Add(this.LoginIDlbl);
             this.Controls.Add(this.CATIDtxt);
             this.Controls.Add(this.Datetxt);

@@ -254,9 +254,7 @@ namespace Ticketing_System
 
         private void Submit_btn_Click(object sender, EventArgs e)//NEEDS MORE CODE NAVIGATIONAL ONLY NOW
         {
-            Form Inbox = new Automated_Response_Page();
-            this.Close();
-            Inbox.Show();
+
 
             //try
             //{
@@ -307,6 +305,9 @@ namespace Ticketing_System
 
 
             MessageBox.Show("Your Ticket has been Submitted and added to our que. Your ticket will be resolved shortly.");
+            Form Inbox = new Automated_Response_Page();
+            this.Close();
+            Inbox.Show();
             //}
             //catch (Exception ex)
             //{
