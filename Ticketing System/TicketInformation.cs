@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using CS_Assignment;
 
 namespace Ticketing_System
 {
@@ -33,6 +34,7 @@ namespace Ticketing_System
             // TODO: This line of code loads data into the 'ticketingSystemDataSet1.Ticket' table. You can move, or remove it, as needed.
             //this.ticketTableAdapter.Fill(this.ticketingSystemDataSet1.Ticket);
             SqlConnection connection = new SqlConnection(@"Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
+            
             try
             {
                 sql = "SELECT * FROM Ticket";
@@ -99,7 +101,7 @@ namespace Ticketing_System
                 string CATID = Admin_Queue_DGV.CurrentRow.Cells[7].Value.ToString();
                 string CAT = Admin_Queue_DGV.CurrentRow.Cells[8].Value.ToString();
                 string DESCRIPTION = TCK_Info_RTB.Text;
-                string AID = Admin_Queue_DGV.CurrentRow.Cells[10].Value.ToString();
+                
 
 
                 sql = "UPDATE Ticket SET Priority = @Priority, DateResolved = @DateR, Description = @Description WHERE TicketID = @TID ";
@@ -136,13 +138,13 @@ namespace Ticketing_System
                 Admin_Queue_DGV.Update();
                 Admin_Queue_DGV.Refresh(); // REFRESHES DGV
 
-            }
+        }
             catch (Exception ex)// calls the error into message box
             {
                 MessageBox.Show("Form Error" + ex);
             }
 
-        }
+}
 
         private void Resolved_btn_Click(object sender, EventArgs e)
         {

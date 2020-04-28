@@ -54,20 +54,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(512, 40);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(384, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 29);
+            this.label1.Size = new System.Drawing.Size(193, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ticket Information";
             // 
             // Update_btn
             // 
             this.Update_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.Update_btn.Location = new System.Drawing.Point(577, 600);
-            this.Update_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Update_btn.Location = new System.Drawing.Point(433, 488);
             this.Update_btn.Name = "Update_btn";
-            this.Update_btn.Size = new System.Drawing.Size(100, 33);
+            this.Update_btn.Size = new System.Drawing.Size(75, 27);
             this.Update_btn.TabIndex = 15;
             this.Update_btn.Text = "Update";
             this.Update_btn.UseVisualStyleBackColor = true;
@@ -76,10 +74,9 @@
             // Resolved_btn
             // 
             this.Resolved_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.Resolved_btn.Location = new System.Drawing.Point(879, 600);
-            this.Resolved_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Resolved_btn.Location = new System.Drawing.Point(659, 488);
             this.Resolved_btn.Name = "Resolved_btn";
-            this.Resolved_btn.Size = new System.Drawing.Size(100, 33);
+            this.Resolved_btn.Size = new System.Drawing.Size(75, 27);
             this.Resolved_btn.TabIndex = 17;
             this.Resolved_btn.Text = "Resolved";
             this.Resolved_btn.UseVisualStyleBackColor = true;
@@ -88,10 +85,9 @@
             // Exit_btn
             // 
             this.Exit_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.Exit_btn.Location = new System.Drawing.Point(1008, 600);
-            this.Exit_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Exit_btn.Location = new System.Drawing.Point(756, 488);
             this.Exit_btn.Name = "Exit_btn";
-            this.Exit_btn.Size = new System.Drawing.Size(100, 33);
+            this.Exit_btn.Size = new System.Drawing.Size(75, 27);
             this.Exit_btn.TabIndex = 18;
             this.Exit_btn.Text = "Logoff";
             this.Exit_btn.UseVisualStyleBackColor = true;
@@ -100,10 +96,9 @@
             // Tools_btn
             // 
             this.Tools_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.Tools_btn.Location = new System.Drawing.Point(697, 600);
-            this.Tools_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Tools_btn.Location = new System.Drawing.Point(523, 488);
             this.Tools_btn.Name = "Tools_btn";
-            this.Tools_btn.Size = new System.Drawing.Size(151, 33);
+            this.Tools_btn.Size = new System.Drawing.Size(113, 27);
             this.Tools_btn.TabIndex = 19;
             this.Tools_btn.Text = "Home Page";
             this.Tools_btn.UseVisualStyleBackColor = true;
@@ -126,12 +121,12 @@
             // Admin_Queue_DGV
             // 
             this.Admin_Queue_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Admin_Queue_DGV.Location = new System.Drawing.Point(72, 120);
-            this.Admin_Queue_DGV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Admin_Queue_DGV.Location = new System.Drawing.Point(54, 98);
+            this.Admin_Queue_DGV.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Admin_Queue_DGV.Name = "Admin_Queue_DGV";
             this.Admin_Queue_DGV.RowHeadersWidth = 51;
             this.Admin_Queue_DGV.RowTemplate.Height = 24;
-            this.Admin_Queue_DGV.Size = new System.Drawing.Size(1036, 438);
+            this.Admin_Queue_DGV.Size = new System.Drawing.Size(777, 356);
             this.Admin_Queue_DGV.TabIndex = 20;
             this.Admin_Queue_DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Admin_Queue_DGV_CellContentClick);
             // 
@@ -151,29 +146,27 @@
             // 
             // TCK_Info_RTB
             // 
-            this.TCK_Info_RTB.Location = new System.Drawing.Point(72, 584);
-            this.TCK_Info_RTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TCK_Info_RTB.Location = new System.Drawing.Point(54, 474);
             this.TCK_Info_RTB.Name = "TCK_Info_RTB";
-            this.TCK_Info_RTB.Size = new System.Drawing.Size(496, 165);
+            this.TCK_Info_RTB.Size = new System.Drawing.Size(373, 135);
             this.TCK_Info_RTB.TabIndex = 21;
             this.TCK_Info_RTB.Text = "";
             // 
             // Datetxt
             // 
             this.Datetxt.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Datetxt.Location = new System.Drawing.Point(1019, 15);
-            this.Datetxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Datetxt.Location = new System.Drawing.Point(764, 12);
             this.Datetxt.Name = "Datetxt";
             this.Datetxt.ReadOnly = true;
-            this.Datetxt.Size = new System.Drawing.Size(132, 22);
+            this.Datetxt.Size = new System.Drawing.Size(100, 20);
             this.Datetxt.TabIndex = 22;
             // 
             // TicketInformation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1191, 675);
+            this.ClientSize = new System.Drawing.Size(910, 548);
             this.Controls.Add(this.Datetxt);
             this.Controls.Add(this.TCK_Info_RTB);
             this.Controls.Add(this.Admin_Queue_DGV);
@@ -182,7 +175,6 @@
             this.Controls.Add(this.Resolved_btn);
             this.Controls.Add(this.Update_btn);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TicketInformation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminScreen2";
