@@ -362,7 +362,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(910, 565);
+            this.ClientSize = new System.Drawing.Size(893, 548);
             this.Controls.Add(this.LoginIDlbl);
             this.Controls.Add(this.CATIDtxt);
             this.Controls.Add(this.Datetxt);
