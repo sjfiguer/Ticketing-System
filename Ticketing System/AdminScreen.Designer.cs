@@ -86,6 +86,7 @@
             this.MessageBoxTxt.Name = "MessageBoxTxt";
             this.MessageBoxTxt.Size = new System.Drawing.Size(482, 160);
             this.MessageBoxTxt.TabIndex = 6;
+            this.MessageBoxTxt.TextChanged += new System.EventHandler(this.MessageBoxTxt_TextChanged);
             // 
             // label4
             // 

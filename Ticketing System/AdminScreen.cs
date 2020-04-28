@@ -111,5 +111,10 @@ namespace Ticketing_System
                 MessageBox.Show("Success! Your message has been sent and catalogued in the database. Please allow 3-5 days for reply.");
             }
         }
+
+        private void MessageBoxTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

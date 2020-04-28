@@ -288,7 +288,7 @@ namespace Ticketing_System
                 answer = command.ExecuteNonQuery();
                 command.Dispose();
                 connection.Close();
-                MessageBox.Show("Your Ticket has been Submitted.");
+                MessageBox.Show("Your Ticket has been Submitted and added to our que. Your ticket will be resolved shortly.");
             //}
             //catch (Exception ex)
             //{
