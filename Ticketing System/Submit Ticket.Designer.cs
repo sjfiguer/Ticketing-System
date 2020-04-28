@@ -34,10 +34,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.RegistrationLabel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.LastName = new System.Windows.Forms.Label();
+            this.Email = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.Nametxt = new System.Windows.Forms.TextBox();
+            this.LastNametxt = new System.Windows.Forms.TextBox();
             this.Emailtxt = new System.Windows.Forms.TextBox();
             this.DescribeTxt = new System.Windows.Forms.RichTextBox();
             this.Submit_btn = new System.Windows.Forms.Button();
@@ -57,6 +57,8 @@
             this.Datetxt = new System.Windows.Forms.TextBox();
             this.CATIDtxt = new System.Windows.Forms.TextBox();
             this.LoginIDlbl = new System.Windows.Forms.Label();
+            this.FirstNametxt = new System.Windows.Forms.TextBox();
+            this.FirstName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -116,27 +118,27 @@
             this.RegistrationLabel.TabIndex = 15;
             this.RegistrationLabel.Text = "Walton IT Ticketing System";
             // 
-            // label3
+            // LastName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(32, 262);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 16);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Name:";
+            this.LastName.AutoSize = true;
+            this.LastName.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.LastName.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.LastName.Location = new System.Drawing.Point(32, 262);
+            this.LastName.Name = "LastName";
+            this.LastName.Size = new System.Drawing.Size(77, 16);
+            this.LastName.TabIndex = 18;
+            this.LastName.Text = "Last Name";
             // 
-            // label4
+            // Email
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(566, 263);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 16);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Email:";
+            this.Email.AutoSize = true;
+            this.Email.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.Email.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Email.Location = new System.Drawing.Point(604, 263);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(45, 16);
+            this.Email.TabIndex = 19;
+            this.Email.Text = "Email";
             // 
             // label5
             // 
@@ -149,19 +151,19 @@
             this.label5.TabIndex = 20;
             this.label5.Text = "Please describe the issues you are facing:";
             // 
-            // Nametxt
+            // LastNametxt
             // 
-            this.Nametxt.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.Nametxt.Location = new System.Drawing.Point(94, 263);
-            this.Nametxt.Name = "Nametxt";
-            this.Nametxt.ReadOnly = true;
-            this.Nametxt.Size = new System.Drawing.Size(210, 26);
-            this.Nametxt.TabIndex = 22;
+            this.LastNametxt.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.LastNametxt.Location = new System.Drawing.Point(114, 259);
+            this.LastNametxt.Name = "LastNametxt";
+            this.LastNametxt.ReadOnly = true;
+            this.LastNametxt.Size = new System.Drawing.Size(107, 26);
+            this.LastNametxt.TabIndex = 22;
             // 
             // Emailtxt
             // 
             this.Emailtxt.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.Emailtxt.Location = new System.Drawing.Point(634, 263);
+            this.Emailtxt.Location = new System.Drawing.Point(659, 259);
             this.Emailtxt.Name = "Emailtxt";
             this.Emailtxt.ReadOnly = true;
             this.Emailtxt.Size = new System.Drawing.Size(210, 26);
@@ -230,7 +232,7 @@
             // UserIDtxt
             // 
             this.UserIDtxt.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.UserIDtxt.Location = new System.Drawing.Point(410, 263);
+            this.UserIDtxt.Location = new System.Drawing.Point(498, 259);
             this.UserIDtxt.Name = "UserIDtxt";
             this.UserIDtxt.ReadOnly = true;
             this.UserIDtxt.Size = new System.Drawing.Size(100, 26);
@@ -240,7 +242,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.label10.Location = new System.Drawing.Point(336, 262);
+            this.label10.Location = new System.Drawing.Point(435, 263);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 16);
             this.label10.TabIndex = 33;
@@ -357,12 +359,34 @@
             this.LoginIDlbl.TabIndex = 45;
             this.LoginIDlbl.Text = "LoginID";
             // 
+            // FirstNametxt
+            // 
+            this.FirstNametxt.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.FirstNametxt.Location = new System.Drawing.Point(310, 259);
+            this.FirstNametxt.Name = "FirstNametxt";
+            this.FirstNametxt.ReadOnly = true;
+            this.FirstNametxt.Size = new System.Drawing.Size(109, 26);
+            this.FirstNametxt.TabIndex = 47;
+            // 
+            // FirstName
+            // 
+            this.FirstName.AutoSize = true;
+            this.FirstName.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.FirstName.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FirstName.Location = new System.Drawing.Point(227, 263);
+            this.FirstName.Name = "FirstName";
+            this.FirstName.Size = new System.Drawing.Size(78, 16);
+            this.FirstName.TabIndex = 46;
+            this.FirstName.Text = "First Name";
+            // 
             // Submit_Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(928, 614);
+            this.Controls.Add(this.FirstNametxt);
+            this.Controls.Add(this.FirstName);
             this.Controls.Add(this.LoginIDlbl);
             this.Controls.Add(this.CATIDtxt);
             this.Controls.Add(this.Datetxt);
@@ -382,10 +406,10 @@
             this.Controls.Add(this.Submit_btn);
             this.Controls.Add(this.DescribeTxt);
             this.Controls.Add(this.Emailtxt);
-            this.Controls.Add(this.Nametxt);
+            this.Controls.Add(this.LastNametxt);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Email);
+            this.Controls.Add(this.LastName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RegistrationLabel);
@@ -409,10 +433,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label RegistrationLabel;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LastName;
+        private System.Windows.Forms.Label Email;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox Nametxt;
+        private System.Windows.Forms.TextBox LastNametxt;
         private System.Windows.Forms.TextBox Emailtxt;
         private System.Windows.Forms.RichTextBox DescribeTxt;
         private System.Windows.Forms.Button Submit_btn;
@@ -432,5 +456,7 @@
         private System.Windows.Forms.TextBox Datetxt;
         private System.Windows.Forms.TextBox CATIDtxt;
         private System.Windows.Forms.Label LoginIDlbl;
+        private System.Windows.Forms.TextBox FirstNametxt;
+        private System.Windows.Forms.Label FirstName;
     }
 }

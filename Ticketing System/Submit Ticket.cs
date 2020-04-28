@@ -127,7 +127,7 @@ namespace Ticketing_System
             datareader = command.ExecuteReader();
             while (datareader.Read())
             {
-                Nametxt.Text = datareader[0].ToString();
+                LastNametxt.Text = datareader[0].ToString();
 
             }
 
@@ -265,7 +265,7 @@ namespace Ticketing_System
                 string sql2 = null;
                 sql = "SELECT CatID from Category where Category = '" + CategoryCB.ToString() + "'";
 
-                sql2 = "INSERT INTO Ticket VALUES (@UserID,  @Status, @AssignedTo,  @Priority,  @DateIssued,  @DateR,  @CATID, @Category, @Description, @AdminID)";
+                sql2 = "INSERT INTO Ticket VALUES (@Name @UserID,  @Status, @AssignedTo,  @Priority,  @DateIssued,  @DateR,  @CATID, @Category, @Description, @AdminID)";
                 connection.Open();
 
             string UID = UserIDtxt.Text.ToString();
