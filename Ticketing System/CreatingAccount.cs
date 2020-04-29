@@ -46,7 +46,7 @@ namespace IT_Ticketing_System__Mock_
             //parameters are designed to enhance a sql statement from objects in the code
             command.Parameters.AddWithValue("@UserID", txtstudentid.Text);
             command.Parameters.AddWithValue("@Password", txtpassword.Text);
-            command.Parameters.AddWithValue("@UserType", txtaccounttype.SelectedItem.ToString());
+            command.Parameters.AddWithValue("@UserType", AccountTypecb.SelectedItem.ToString());
             command.Parameters.AddWithValue("@First_Name", txtfirstname.Text);
             command.Parameters.AddWithValue("@Last_Name", txtlastname.Text);
             command.Parameters.AddWithValue("@Contact", txtcontact.Text);
@@ -81,7 +81,7 @@ namespace IT_Ticketing_System__Mock_
             while (datareader.Read())
             {
                 //loading the items into the combo box based on the database
-                txtaccounttype.Items.Add(datareader[0].ToString());
+                AccountTypecb.Items.Add(datareader[0].ToString());
                 // Automatically popuates combo box on form load
             }
 

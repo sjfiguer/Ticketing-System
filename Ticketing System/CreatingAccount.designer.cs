@@ -40,7 +40,6 @@
             this.txtemail = new System.Windows.Forms.TextBox();
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.txtconfirmpassword = new System.Windows.Forms.TextBox();
-            this.txtaccounttype = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@
             this.studentidlbl = new System.Windows.Forms.Label();
             this.txtstudentid = new System.Windows.Forms.TextBox();
             this.Back = new System.Windows.Forms.Button();
+            this.AccountTypecb = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,21 +166,6 @@
             this.txtconfirmpassword.Size = new System.Drawing.Size(173, 20);
             this.txtconfirmpassword.TabIndex = 14;
             // 
-            // txtaccounttype
-            // 
-            this.txtaccounttype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtaccounttype.FormattingEnabled = true;
-            this.txtaccounttype.Items.AddRange(new object[] {
-            "Administrator",
-            "Staff",
-            "Student"});
-            this.txtaccounttype.Location = new System.Drawing.Point(394, 168);
-            this.txtaccounttype.Margin = new System.Windows.Forms.Padding(2);
-            this.txtaccounttype.Name = "txtaccounttype";
-            this.txtaccounttype.Size = new System.Drawing.Size(173, 21);
-            this.txtaccounttype.TabIndex = 7;
-            this.txtaccounttype.SelectedIndexChanged += new System.EventHandler(this.txtaccounttype_SelectedIndexChanged);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -282,12 +267,22 @@
             this.Back.UseVisualStyleBackColor = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
+            // AccountTypecb
+            // 
+            this.AccountTypecb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AccountTypecb.FormattingEnabled = true;
+            this.AccountTypecb.Location = new System.Drawing.Point(394, 167);
+            this.AccountTypecb.Name = "AccountTypecb";
+            this.AccountTypecb.Size = new System.Drawing.Size(173, 21);
+            this.AccountTypecb.TabIndex = 25;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(893, 548);
+            this.Controls.Add(this.AccountTypecb);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.txtstudentid);
             this.Controls.Add(this.studentidlbl);
@@ -297,7 +292,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtaccounttype);
             this.Controls.Add(this.txtconfirmpassword);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.txtemail);
@@ -334,7 +328,6 @@
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.TextBox txtconfirmpassword;
-        private System.Windows.Forms.ComboBox txtaccounttype;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
@@ -345,5 +338,6 @@
         private System.Windows.Forms.Label studentidlbl;
         private System.Windows.Forms.TextBox txtstudentid;
         private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.ComboBox AccountTypecb;
     }
 }
