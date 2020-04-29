@@ -377,6 +377,9 @@ namespace Ticketing_System
             //////////////////////////////////////////
         }
 
+        private void TicketIDtxt_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

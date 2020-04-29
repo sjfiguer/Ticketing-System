@@ -143,7 +143,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(32, 355);
+            this.label5.Location = new System.Drawing.Point(74, 358);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(266, 16);
             this.label5.TabIndex = 20;
@@ -247,19 +247,22 @@
             // 
             this.TicketIDtxt.BackColor = System.Drawing.SystemColors.MenuBar;
             this.TicketIDtxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TicketIDtxt.Location = new System.Drawing.Point(202, 491);
+            this.TicketIDtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.TicketIDtxt.Location = new System.Drawing.Point(188, 204);
+            this.TicketIDtxt.Multiline = true;
             this.TicketIDtxt.Name = "TicketIDtxt";
-            this.TicketIDtxt.Size = new System.Drawing.Size(184, 13);
+            this.TicketIDtxt.Size = new System.Drawing.Size(110, 22);
             this.TicketIDtxt.TabIndex = 38;
+            this.TicketIDtxt.TextChanged += new System.EventHandler(this.TicketIDtxt_TextChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Mongolian Baiti", 10F);
+            this.label11.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.label11.ForeColor = System.Drawing.Color.DarkRed;
-            this.label11.Location = new System.Drawing.Point(91, 490);
+            this.label11.Location = new System.Drawing.Point(62, 205);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(108, 15);
+            this.label11.Size = new System.Drawing.Size(120, 16);
             this.label11.TabIndex = 37;
             this.label11.Text = "Your TicketID is:";
             // 
@@ -323,10 +326,13 @@
             // Datetxt
             // 
             this.Datetxt.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Datetxt.Location = new System.Drawing.Point(797, 144);
+            this.Datetxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Datetxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Datetxt.Location = new System.Drawing.Point(65, 169);
+            this.Datetxt.Multiline = true;
             this.Datetxt.Name = "Datetxt";
             this.Datetxt.ReadOnly = true;
-            this.Datetxt.Size = new System.Drawing.Size(72, 20);
+            this.Datetxt.Size = new System.Drawing.Size(141, 33);
             this.Datetxt.TabIndex = 42;
             this.Datetxt.Text = "DATE";
             // 
@@ -335,7 +341,7 @@
             this.CATIDtxt.BackColor = System.Drawing.SystemColors.MenuBar;
             this.CATIDtxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CATIDtxt.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.CATIDtxt.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.CATIDtxt.ForeColor = System.Drawing.Color.Transparent;
             this.CATIDtxt.Location = new System.Drawing.Point(0, 547);
             this.CATIDtxt.Name = "CATIDtxt";
             this.CATIDtxt.ReadOnly = true;
@@ -347,8 +353,8 @@
             // 
             this.LoginIDlbl.AutoSize = true;
             this.LoginIDlbl.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.LoginIDlbl.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.LoginIDlbl.Location = new System.Drawing.Point(294, 550);
+            this.LoginIDlbl.ForeColor = System.Drawing.Color.Transparent;
+            this.LoginIDlbl.Location = new System.Drawing.Point(304, 544);
             this.LoginIDlbl.Name = "LoginIDlbl";
             this.LoginIDlbl.Size = new System.Drawing.Size(63, 16);
             this.LoginIDlbl.TabIndex = 45;
