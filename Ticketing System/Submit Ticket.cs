@@ -247,9 +247,9 @@ namespace Ticketing_System
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)//FAQ HYPERLINK
         {
-            Form FAQ = new FAQ();
-            this.Close();
-            FAQ.Show();
+            //Form FAQ = new FAQ();
+            //this.Close();
+            //FAQ.Show();
         }
 
         private void Submit_btn_Click(object sender, EventArgs e)//NEEDS MORE CODE NAVIGATIONAL ONLY NOW
