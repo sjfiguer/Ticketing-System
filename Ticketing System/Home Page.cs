@@ -27,9 +27,7 @@ namespace Ticketing_System
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Form Login = new FrmLogin();
-            Login.Show();
-            this.Hide();
+           
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -47,6 +45,13 @@ namespace Ticketing_System
         {
             RegisterForm register = new RegisterForm();
             register.ShowDialog();
+        }
+
+        private void SupportBtn_Click(object sender, EventArgs e)
+        {
+            Form Login = new FrmLogin();
+            Login.Show();
+            this.Hide();
         }
     }
 }

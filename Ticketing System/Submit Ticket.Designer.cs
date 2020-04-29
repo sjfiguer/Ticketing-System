@@ -219,7 +219,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.label9.Location = new System.Drawing.Point(366, 317);
+            this.label9.Location = new System.Drawing.Point(348, 317);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 16);
             this.label9.TabIndex = 27;
@@ -228,7 +228,7 @@
             // UserIDtxt
             // 
             this.UserIDtxt.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.UserIDtxt.Location = new System.Drawing.Point(498, 259);
+            this.UserIDtxt.Location = new System.Drawing.Point(477, 259);
             this.UserIDtxt.Name = "UserIDtxt";
             this.UserIDtxt.Size = new System.Drawing.Size(100, 26);
             this.UserIDtxt.TabIndex = 34;
@@ -237,7 +237,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.label10.Location = new System.Drawing.Point(435, 263);
+            this.label10.Location = new System.Drawing.Point(416, 262);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 16);
             this.label10.TabIndex = 33;
@@ -304,18 +304,18 @@
             // 
             this.Department.AutoSize = true;
             this.Department.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.Department.Location = new System.Drawing.Point(32, 317);
+            this.Department.Location = new System.Drawing.Point(64, 317);
             this.Department.Name = "Department";
-            this.Department.Size = new System.Drawing.Size(147, 16);
+            this.Department.Size = new System.Drawing.Size(75, 16);
             this.Department.TabIndex = 40;
-            this.Department.Text = "Customer Department";
+            this.Department.Text = "User Type";
             // 
             // DepartmentCB
             // 
             this.DepartmentCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DepartmentCB.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.DepartmentCB.FormattingEnabled = true;
-            this.DepartmentCB.Location = new System.Drawing.Point(193, 312);
+            this.DepartmentCB.Location = new System.Drawing.Point(162, 314);
             this.DepartmentCB.Name = "DepartmentCB";
             this.DepartmentCB.Size = new System.Drawing.Size(156, 24);
             this.DepartmentCB.TabIndex = 41;

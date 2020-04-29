@@ -33,7 +33,7 @@ namespace Ticketing_System
             LoginIDlbl.Text = FrmLogin.LoginIDInfo2;
             SqlConnection connection = new SqlConnection("Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
 
-            sql = "SELECT DISTINCT Department FROM Users";
+            sql = "SELECT DISTINCT UserType FROM Login";
             command = new SqlCommand(sql, connection);
             connection.Open();
 
@@ -121,7 +121,7 @@ namespace Ticketing_System
             command.Dispose();
             connection.Close();
 
-            sql = "SELECT REPLACE(FirstName, ' ', '') + ' ' + LastName FROM Users Where LoginID ='" + LoginIDlbl.Text.ToString() + "'";// check in database
+            sql = "SELECT REPLACE(First_Name, ' ', '') + ' ' + Last_Name FROM Login Where LoginID ='" + LoginIDlbl.Text.ToString() + "'";// check in database
             connection.Open();
             command = new SqlCommand(sql, connection);
             datareader = command.ExecuteReader();
@@ -135,7 +135,7 @@ namespace Ticketing_System
             command.Dispose();
             connection.Close();
 
-            sql = "select Email FROM Users where LoginID ='" + LoginIDlbl.Text.ToString() + "'";// check in database
+            sql = "select Email FROM Login where LoginID ='" + LoginIDlbl.Text.ToString() + "'";// check in database
             connection.Open();
             command = new SqlCommand(sql, connection);
             datareader = command.ExecuteReader();
@@ -149,7 +149,7 @@ namespace Ticketing_System
             command.Dispose();
             connection.Close();
 
-            sql = "select Department FROM Users where LoginID ='" + LoginIDlbl.Text.ToString() + "'";// check in database
+            sql = "select UserType FROM Login where LoginID ='" + LoginIDlbl.Text.ToString() + "'";// check in database
             connection.Open();
             command = new SqlCommand(sql, connection);
             datareader = command.ExecuteReader();
@@ -163,7 +163,7 @@ namespace Ticketing_System
             command.Dispose();
             connection.Close();
 
-            sql = "select UserID FROM Users where LoginID ='" + LoginIDlbl.Text.ToString() + "'";// check in database
+            sql = "select UserID FROM Login where LoginID ='" + LoginIDlbl.Text.ToString() + "'";// check in database
             connection.Open();
             command = new SqlCommand(sql, connection);
             datareader = command.ExecuteReader();

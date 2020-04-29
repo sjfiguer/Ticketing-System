@@ -58,10 +58,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(998, 56);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(499, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(292, 50);
+            this.label1.Size = new System.Drawing.Size(155, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ticket Queue";
             // 
@@ -82,11 +81,10 @@
             this.Category,
             this.Description});
             this.TicketQueueDG.DataSource = this.ticketBindingSource;
-            this.TicketQueueDG.Location = new System.Drawing.Point(24, 152);
-            this.TicketQueueDG.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TicketQueueDG.Location = new System.Drawing.Point(12, 79);
             this.TicketQueueDG.Name = "TicketQueueDG";
             this.TicketQueueDG.RowHeadersWidth = 51;
-            this.TicketQueueDG.Size = new System.Drawing.Size(2142, 558);
+            this.TicketQueueDG.Size = new System.Drawing.Size(1071, 290);
             this.TicketQueueDG.TabIndex = 1;
             this.TicketQueueDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TicketQueueDG_CellContentClick);
             // 
@@ -187,10 +185,9 @@
             // DeleteBtn
             // 
             this.DeleteBtn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.DeleteBtn.Location = new System.Drawing.Point(1202, 850);
-            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.DeleteBtn.Location = new System.Drawing.Point(601, 442);
             this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(150, 44);
+            this.DeleteBtn.Size = new System.Drawing.Size(75, 23);
             this.DeleteBtn.TabIndex = 4;
             this.DeleteBtn.Text = "Delete";
             this.DeleteBtn.UseVisualStyleBackColor = true;
@@ -203,10 +200,9 @@
             // Logoff_btn
             // 
             this.Logoff_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.Logoff_btn.Location = new System.Drawing.Point(2016, 850);
-            this.Logoff_btn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Logoff_btn.Location = new System.Drawing.Point(1008, 442);
             this.Logoff_btn.Name = "Logoff_btn";
-            this.Logoff_btn.Size = new System.Drawing.Size(150, 44);
+            this.Logoff_btn.Size = new System.Drawing.Size(75, 23);
             this.Logoff_btn.TabIndex = 21;
             this.Logoff_btn.Text = "Logoff";
             this.Logoff_btn.UseVisualStyleBackColor = true;
@@ -215,10 +211,9 @@
             // RefreshBtn
             // 
             this.RefreshBtn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.RefreshBtn.Location = new System.Drawing.Point(963, 850);
-            this.RefreshBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.RefreshBtn.Location = new System.Drawing.Point(482, 442);
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(150, 44);
+            this.RefreshBtn.Size = new System.Drawing.Size(75, 23);
             this.RefreshBtn.TabIndex = 22;
             this.RefreshBtn.Text = "Refresh";
             this.RefreshBtn.UseVisualStyleBackColor = true;
@@ -229,10 +224,9 @@
             this.button1.BackColor = System.Drawing.Color.DarkRed;
             this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(24, 825);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Location = new System.Drawing.Point(12, 429);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(540, 94);
+            this.button1.Size = new System.Drawing.Size(270, 49);
             this.button1.TabIndex = 25;
             this.button1.Text = "Analytics";
             this.button1.UseVisualStyleBackColor = false;
@@ -241,10 +235,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.button2.Location = new System.Drawing.Point(2016, 80);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button2.Location = new System.Drawing.Point(1008, 42);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 44);
+            this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 26;
             this.button2.Text = "Display";
             this.button2.UseVisualStyleBackColor = true;
@@ -252,10 +245,10 @@
             // 
             // TicketQueue
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1786, 1054);
+            this.ClientSize = new System.Drawing.Size(971, 551);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.RefreshBtn);
@@ -263,7 +256,6 @@
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.TicketQueueDG);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "TicketQueue";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminScreen1";

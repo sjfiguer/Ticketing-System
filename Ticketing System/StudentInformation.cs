@@ -44,5 +44,10 @@ namespace IT_Ticketing_System__Mock_
             this.Close();
             Add_Student.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
