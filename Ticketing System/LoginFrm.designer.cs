@@ -112,7 +112,6 @@
             this.BtnLogin.UseVisualStyleBackColor = false;
             this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             this.BtnLogin.Enter += new System.EventHandler(this.BtnLogin_Click);
-            this.BtnLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Enter);
             this.BtnLogin.MouseEnter += new System.EventHandler(this.BtnLogin_Click);
             // 
             // btnExit
@@ -173,6 +172,7 @@
             this.User_Type_cmbox.Name = "User_Type_cmbox";
             this.User_Type_cmbox.Size = new System.Drawing.Size(219, 24);
             this.User_Type_cmbox.TabIndex = 4;
+            this.User_Type_cmbox.SelectedIndexChanged += new System.EventHandler(this.User_Type_cmbox_SelectedIndexChanged);
             // 
             // label1
             // 

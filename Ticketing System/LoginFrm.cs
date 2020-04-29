@@ -199,6 +199,11 @@ namespace CS_Assignment
             this.Hide();
             FAQ_Page.Show();
         }
+
+        private void User_Type_cmbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
