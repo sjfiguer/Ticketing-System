@@ -50,6 +50,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.studentidlbl = new System.Windows.Forms.Label();
             this.txtstudentid = new System.Windows.Forms.TextBox();
+            this.Back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Location = new System.Drawing.Point(394, 482);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(74, 22);
             this.button1.TabIndex = 17;
@@ -73,7 +74,7 @@
             this.button2.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
             this.button2.Location = new System.Drawing.Point(491, 482);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(74, 22);
             this.button2.TabIndex = 18;
@@ -128,7 +129,7 @@
             // txtfirstname
             // 
             this.txtfirstname.Location = new System.Drawing.Point(394, 199);
-            this.txtfirstname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtfirstname.Margin = new System.Windows.Forms.Padding(2);
             this.txtfirstname.Name = "txtfirstname";
             this.txtfirstname.Size = new System.Drawing.Size(173, 20);
             this.txtfirstname.TabIndex = 8;
@@ -136,7 +137,7 @@
             // txtlastname
             // 
             this.txtlastname.Location = new System.Drawing.Point(394, 228);
-            this.txtlastname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtlastname.Margin = new System.Windows.Forms.Padding(2);
             this.txtlastname.Name = "txtlastname";
             this.txtlastname.Size = new System.Drawing.Size(173, 20);
             this.txtlastname.TabIndex = 9;
@@ -144,7 +145,7 @@
             // txtemail
             // 
             this.txtemail.Location = new System.Drawing.Point(394, 288);
-            this.txtemail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtemail.Margin = new System.Windows.Forms.Padding(2);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(173, 20);
             this.txtemail.TabIndex = 11;
@@ -152,7 +153,7 @@
             // txtpassword
             // 
             this.txtpassword.Location = new System.Drawing.Point(394, 323);
-            this.txtpassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(173, 20);
             this.txtpassword.TabIndex = 13;
@@ -160,7 +161,7 @@
             // txtconfirmpassword
             // 
             this.txtconfirmpassword.Location = new System.Drawing.Point(394, 352);
-            this.txtconfirmpassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtconfirmpassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtconfirmpassword.Name = "txtconfirmpassword";
             this.txtconfirmpassword.Size = new System.Drawing.Size(173, 20);
             this.txtconfirmpassword.TabIndex = 14;
@@ -174,7 +175,7 @@
             "Staff",
             "Student"});
             this.txtaccounttype.Location = new System.Drawing.Point(394, 168);
-            this.txtaccounttype.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtaccounttype.Margin = new System.Windows.Forms.Padding(2);
             this.txtaccounttype.Name = "txtaccounttype";
             this.txtaccounttype.Size = new System.Drawing.Size(173, 21);
             this.txtaccounttype.TabIndex = 7;
@@ -226,7 +227,7 @@
             // txtcontact
             // 
             this.txtcontact.Location = new System.Drawing.Point(394, 382);
-            this.txtcontact.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcontact.Margin = new System.Windows.Forms.Padding(2);
             this.txtcontact.Name = "txtcontact";
             this.txtcontact.Size = new System.Drawing.Size(173, 20);
             this.txtcontact.TabIndex = 15;
@@ -234,7 +235,7 @@
             // txtaddress
             // 
             this.txtaddress.Location = new System.Drawing.Point(394, 413);
-            this.txtaddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtaddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtaddress.Multiline = true;
             this.txtaddress.Name = "txtaddress";
             this.txtaddress.Size = new System.Drawing.Size(173, 50);
@@ -265,10 +266,21 @@
             // txtstudentid
             // 
             this.txtstudentid.Location = new System.Drawing.Point(394, 259);
-            this.txtstudentid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtstudentid.Margin = new System.Windows.Forms.Padding(2);
             this.txtstudentid.Name = "txtstudentid";
             this.txtstudentid.Size = new System.Drawing.Size(173, 20);
             this.txtstudentid.TabIndex = 10;
+            // 
+            // Back
+            // 
+            this.Back.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.Back.Location = new System.Drawing.Point(416, 509);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(113, 27);
+            this.Back.TabIndex = 24;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // RegisterForm
             // 
@@ -276,6 +288,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(893, 548);
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.txtstudentid);
             this.Controls.Add(this.studentidlbl);
             this.Controls.Add(this.txtaddress);
@@ -297,7 +310,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Creating an Account";
@@ -331,5 +344,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label studentidlbl;
         private System.Windows.Forms.TextBox txtstudentid;
+        private System.Windows.Forms.Button Back;
     }
 }

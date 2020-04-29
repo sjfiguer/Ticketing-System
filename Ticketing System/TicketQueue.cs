@@ -95,5 +95,13 @@ namespace Ticketing_System
 
             TicketQueueDG.DataSource = dtbl;
         }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            Form Admin_Home = new Admin_Homepage();
+            this.Close();
+            Admin_Home.Show();
+
+        }
     }
 }

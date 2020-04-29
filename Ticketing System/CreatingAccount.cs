@@ -95,6 +95,14 @@ namespace IT_Ticketing_System__Mock_
         {
 
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            Form Admin_Home = new Admin_Homepage();
+            this.Close();
+            Admin_Home.Show();
+
+        }
     }
 }
 
