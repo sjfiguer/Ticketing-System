@@ -184,6 +184,34 @@ namespace CS_Assignment
             get { return LoginIDtxt.Text; }
         }
 
+        private void Enter(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                connectionstring = (@"Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
+                string Credentials = "SELECT * FROM Login WHERE UserID = '" + UserIDtxt.Text.Trim() + "' and Password = '" + PsswrdTxt.Text.Trim() + "'";
+                SqlDataAdapter SDA = new SqlDataAdapter(Credentials, connection);
+                DataTable LoginTbl = new DataTable();
+                SDA.Fill(LoginTbl);
+
+                if (LoginTbl.Rows.Count == 1)
+                {
+                    LogInPagepnl.Hide();
+                    StudentPnl.Show();
+                    menuStrip.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Credentials not found. Please try again.", "Invalid Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                //Performs same function as if clicking on login button. I'm sure there was an easier way of doing this, but this is what I could make work.
+            }
+        }
+
+    }
+    }
+
 
 
         /////////////
