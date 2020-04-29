@@ -38,7 +38,7 @@ namespace CS_Assignment
         }
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'ticketingSystemDataSet.Login' table. You can move, or remove it, as needed.
+            // This line of code loads data into the 'ticketingSystemDataSet.Login' table. You can move, or remove it, as needed.
             //this.loginTableAdapter.Fill(this.ticketingSystemDataSet.Login);
 
             SqlConnection connection = new SqlConnection(@"Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
