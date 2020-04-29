@@ -30,9 +30,9 @@ namespace Ticketing_System
 
         private void Back_btn_Click(object sender, EventArgs e)
         {
-            Form Admin_Home = new Admin_Homepage();
-            this.Hide();
-            Admin_Home.Show();
+            //Form Admin_Home = new Admin_Homepage();
+            //this.Hide();
+            //Admin_Home.Show();
         }
 
         private void TPadminIDtxt_TextChanged(object sender, EventArgs e)
@@ -115,6 +115,13 @@ namespace Ticketing_System
         private void MessageBoxTxt_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void backbtn_Click(object sender, EventArgs e)
+        {
+            Form Admin_Home = new Admin_Homepage();
+            this.Hide();
+            Admin_Home.Show();
         }
     }
 }

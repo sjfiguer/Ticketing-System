@@ -24,14 +24,13 @@ namespace Ticketing_System
         public TicketInformation()
         {
             InitializeComponent();
-            
         }
 
         private void TicketInformation_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'ticketingSystemDataSet2.Ticket' table. You can move, or remove it, as needed.
+            // This line of code loads data into the 'ticketingSystemDataSet2.Ticket' table. You can move, or remove it, as needed.
             //this.ticketTableAdapter1.Fill(this.ticketingSystemDataSet2.Ticket);
-            // TODO: This line of code loads data into the 'ticketingSystemDataSet1.Ticket' table. You can move, or remove it, as needed.
+            // This line of code loads data into the 'ticketingSystemDataSet1.Ticket' table. You can move, or remove it, as needed.
             //this.ticketTableAdapter.Fill(this.ticketingSystemDataSet1.Ticket);
             SqlConnection connection = new SqlConnection(@"Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
             
@@ -49,15 +48,12 @@ namespace Ticketing_System
                 datareader = command.ExecuteReader();
                 while (datareader.Read())
                 {
-                    Datetxt.Text = datareader[0].ToString(); //The 0 indicates the first attribute in my select statement but it's n-1
-                    
+                    Datetxt.Text = datareader[0].ToString(); //The 0 indicates the first attribute in my select statement but it's n-1  
                 }
                 //Closes the Database
                 datareader.Close();
                 command.Dispose();
                 connection.Close();
-
-
             }
             catch (Exception ex)// calls the error into message box
             {
@@ -71,7 +67,6 @@ namespace Ticketing_System
             Form Admin_Home = new Admin_Homepage();
             this.Close();
             Admin_Home.Show();
-
         }
 
         private void Exit_btn_Click(object sender, EventArgs e)
@@ -88,7 +83,6 @@ namespace Ticketing_System
 
             try
             {
-
                 string TID = Admin_Queue_DGV.CurrentRow.Cells[0].Value.ToString();
 
                 //string TID = Admin_Queue_DGV.CurrentRow.Cells[0].Value.ToString();
@@ -102,18 +96,15 @@ namespace Ticketing_System
                 string CAT = Admin_Queue_DGV.CurrentRow.Cells[8].Value.ToString();
                 string DESCRIPTION = TCK_Info_RTB.Text;
                 
-
-
-                sql = "UPDATE Ticket SET Priority = @Priority, DateResolved = @DateR, Description = @Description WHERE TicketID = @TID ";
+                sql = "UPDATE Ticket SET Status = @Status, AssignedTo = @AssignedTo, Priority = @Priority, DateResolved = @DateR, Description = @Description WHERE TicketID = @TID ";
 
                 connection.Open();
                 command = new SqlCommand(sql, connection);
 
-
                 command.Parameters.AddWithValue("@TID", TID);
                 //command.Parameters.AddWithValue("@UserID", UID);TicketID = @TicketID, UserID = @UserID,
-                //command.Parameters.AddWithValue("@Status", STATUS);
-                //command.Parameters.AddWithValue("@AssigneTo", AssignedTo); Status = @Status, AssignedTo = @AssigneTo,
+                command.Parameters.AddWithValue("@Status", STATUS);
+                command.Parameters.AddWithValue("@AssignedTo", AssignedTo); /*Status = @Status, AssignedTo = @AssigneTo,*/
                 command.Parameters.AddWithValue("@Priority", PR);
                 //command.Parameters.AddWithValue("@DateI", DATEI); , DateIssued = @DateI DateResolved = @DateR, CatID = @CatID, Category = @CAT, 
                 command.Parameters.AddWithValue("@DateR", DATER);
@@ -121,7 +112,6 @@ namespace Ticketing_System
                 //command.Parameters.AddWithValue("@CAT", CAT);
                 command.Parameters.AddWithValue("@Description", DESCRIPTION);
                 //command.Parameters.AddWithValue("@AID", AID); , AdminID = @AID
-
 
                 answer = command.ExecuteNonQuery();
 
@@ -166,9 +156,6 @@ namespace Ticketing_System
             //string DESCRIPTION = Admin_Queue_DGV.CurrentRow.Cells[9].Value.ToString();
             //string AID = Admin_Queue_DGV.CurrentRow.Cells[10].Value.ToString();
             string DATER = Datetxt.Text.ToString();
-
-
-
 
 
                 sql = "UPDATE Ticket SET  Status = @Status,  DateResolved = @DateR WHERE TicketID = @TicketID ";

@@ -49,5 +49,12 @@ namespace Ticketing_System
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form Login_Page = new FrmLogin();
+            this.Hide();
+            Login_Page.Show();
+        }
     }
 }

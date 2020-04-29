@@ -59,12 +59,6 @@
     <Compile Include="AdminScreen.Designer.cs">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Automated Response Page.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Automated Response Page.Designer.cs">
-      <DependentUpon>Automated Response Page.cs</DependentUpon>
-    </Compile>
     <Compile Include="FAQ.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,12 +121,6 @@
     <Compile Include="TicketInformation.Designer.cs">
       <DependentUpon>TicketInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentInformation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StudentInformation.designer.cs">
-      <DependentUpon>StudentInformation.cs</DependentUpon>
-    </Compile>
     <Compile Include="CreatingAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,9 +139,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminScreen.resx">
       <DependentUpon>AdminScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Automated Response Page.resx">
-      <DependentUpon>Automated Response Page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FAQ.resx">
       <DependentUpon>FAQ.cs</DependentUpon>
@@ -175,9 +160,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TicketInformation.resx">
       <DependentUpon>TicketInformation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StudentInformation.resx">
-      <DependentUpon>StudentInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreatingAccount.resx">
       <DependentUpon>CreatingAccount.cs</DependentUpon>

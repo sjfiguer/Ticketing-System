@@ -40,9 +40,9 @@ namespace Ticketing_System
 
         private void Class_Erollment_btn_Click(object sender, EventArgs e)
         {
-            Form Student_Info = new AdminScreen4();
+            Form Ticket_Information = new TicketInformation();
             this.Hide();
-            Student_Info.Show();
+            Ticket_Information.Show();
         }
 
         private void Admin_Home_btn_Click(object sender, EventArgs e)
@@ -50,6 +50,13 @@ namespace Ticketing_System
             Form Queue = new TicketInformation();
             this.Close();
             Queue.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form Home = new Home_Page();
+            this.Hide();
+            Home.Show();
         }
     }
 }

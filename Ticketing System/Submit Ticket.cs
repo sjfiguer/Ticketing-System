@@ -240,9 +240,9 @@ namespace Ticketing_System
 
         private void label12_Click(object sender, EventArgs e)//INBOX
         {
-            Form Inbox = new Automated_Response_Page();
-            this.Close();
-            Inbox.Show();
+            //Form Inbox = new Automated_Response_Page();
+            //this.Close();
+            //Inbox.Show();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)//FAQ HYPERLINK
@@ -305,9 +305,9 @@ namespace Ticketing_System
 
 
             MessageBox.Show("Your Ticket has been Submitted and added to our que. Your ticket will be resolved shortly.");
-            Form Inbox = new Automated_Response_Page();
-            this.Close();
-            Inbox.Show();
+            //Form Inbox = new Automated_Response_Page();
+            //this.Close();
+            //Inbox.Show();
             //}
             //catch (Exception ex)
             //{
