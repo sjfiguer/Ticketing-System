@@ -41,10 +41,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1088, 42);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(816, 34);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(28, 26);
+            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
@@ -53,10 +52,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-16, -1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(-12, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1235, 176);
+            this.pictureBox1.Size = new System.Drawing.Size(926, 143);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -65,10 +63,9 @@
             // 
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(-69, 174);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(-52, 141);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1327, 513);
+            this.pictureBox3.Size = new System.Drawing.Size(995, 417);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 11;
             this.pictureBox3.TabStop = false;
@@ -76,13 +73,14 @@
             // 
             // SupportBtn
             // 
-            this.SupportBtn.BackColor = System.Drawing.Color.DarkRed;
+            this.SupportBtn.BackColor = System.Drawing.Color.Transparent;
+            this.SupportBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.SupportBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SupportBtn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.SupportBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.SupportBtn.Location = new System.Drawing.Point(680, 42);
-            this.SupportBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SupportBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SupportBtn.Location = new System.Drawing.Point(495, 58);
             this.SupportBtn.Name = "SupportBtn";
-            this.SupportBtn.Size = new System.Drawing.Size(231, 40);
+            this.SupportBtn.Size = new System.Drawing.Size(173, 24);
             this.SupportBtn.TabIndex = 26;
             this.SupportBtn.Text = "IT Support";
             this.SupportBtn.UseVisualStyleBackColor = false;
@@ -90,15 +88,14 @@
             // 
             // Home_Page
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1180, 564);
+            this.ClientSize = new System.Drawing.Size(885, 458);
             this.Controls.Add(this.SupportBtn);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox3);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Home_Page";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home_Page";
