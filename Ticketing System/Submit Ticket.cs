@@ -111,7 +111,7 @@ namespace Ticketing_System
             while (datareader.Read())
             {
                 int counter = Convert.ToInt32(datareader[0].ToString());
-                counter = counter + 1;
+                counter = counter + 2;
                 TicketIDtxt.Text = counter.ToString();
             }
 
@@ -256,15 +256,15 @@ namespace Ticketing_System
         {
 
 
-            //try
-            //{
+            try
+            {
                 connectionstring = "Data Source = isys4363.walton.uark.edu; Initial Catalog = TicketingSystem; User ID = isys4363a; Password = GohogsUA20";
                 connection = new SqlConnection(connectionstring);
                 int answer;
                 string sql2 = null;
                 sql = "SELECT CatID from Category where Category = '" + CategoryCB.ToString() + "'";
 
-                sql2 = "INSERT INTO Ticket VALUES (@UserID, @Status, @AssignedTo,  @Priority,  @DateIssued,  @DateR, @CatID, @Category, @Description) ";
+                sql2 = "INSERT INTO Ticket VALUES (@UserID, @Status, @AssignedTo,  @Priority,  @DateIssued,  @DateR, @CatID, @Category, @Description, @UserName) ";
                 connection.Open();
             string UID2 = "";
             string CatID2 = "";
@@ -280,7 +280,7 @@ namespace Ticketing_System
             command.Parameters.AddWithValue("@CatID", DBNull.Value);
             command.Parameters.AddWithValue("@Category", CategoryCB.SelectedItem.ToString());
                 command.Parameters.AddWithValue("@Description", DescribeTxt.Text);
-                //command.Parameters.AddWithValue("@AdminID", "");
+                command.Parameters.AddWithValue("@UserName", UserIDtxt.Text);
                
 
             answer = command.ExecuteNonQuery();
@@ -289,14 +289,14 @@ namespace Ticketing_System
                 
 
             connection = new SqlConnection(connectionstring);
-            sql = "UPDATE Ticket SET UserID = @UserID , CatID = @CATID";
+            sql = "UPDATE Ticket SET CatID = @CATID WHERE TicketID = @TID";
             connection.Open();
             command = new SqlCommand(sql, connection);
-            int UID = int.Parse(UserIDtxt.Text);
+           // int UID = int.Parse(UserIDtxt.Text);
 
-            int CATID = int.Parse(CATIDtxt.Text);
+            int CATID = int.Parse(CATIDtxt.Text) +1;
 
-            command.Parameters.AddWithValue("@UserID", UID);
+                command.Parameters.AddWithValue("@TID", TicketIDtxt.Text);
             command.Parameters.AddWithValue("@CATID", CATID);
 
             answer = command.ExecuteNonQuery();
@@ -304,78 +304,78 @@ namespace Ticketing_System
             connection.Close();
 
 
-            MessageBox.Show("Your Ticket has been Submitted and added to our que. Your ticket will be resolved shortly.");
-            //Form Inbox = new Automated_Response_Page();
-            //this.Close();
-            //Inbox.Show();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("An error occurred while inserting data " + ex);
-            //}
+            MessageBox.Show("Your Ticket has been Submitted and added to our queue. Your ticket will be resolved shortly.");
 
 
 
-            //    int answer;
-            //        string sql2 = null;
-            //        SqlConnection connection = new SqlConnection("Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
-            //        SqlCommand command = new SqlCommand(sql, connection);
-            //        sql2 = "SELECT CatID from Category where Category = '" + CategoryCB.Text.ToString() + "'";
-
-
-
-
-            //        string UID = UserIDtxt.ToString();
-            //        string Status = "Active";
-            //        string AssignedTo = "";
-            //        string PR = PriorityCB.ToString();
-            //        string DATEI = Datetxt.Text.ToString();
-            //        string DATER = "Ongoing";
-            //        string CATID = CATIDtxt.ToString();
-            //        string CAT = CategoryCB.ToString();
-            //        string Description = DescribeTxt.Text.ToString();
-            //        string AdminID = "";
-            //        Convert.ToInt32(CAT);
-            //        sql = "INSERT INTO Ticket VALUES ( @UserID,  @Status, @AssignedTo,  @Priority,  @DateIssued,  @DateR,  @CATID, @Category, @Description, @AdminID)";
-            //        connection.Open();
-
-            //        SqlCommand command2 = new SqlCommand(sql2, connection);
-
-            //       // command.Parameters.AddWithValue("@TicketID", TicketIDtxt.Text);
-            //    command.Parameters.AddWithValue("@UserID", UserIDtxt.Text);
-            //        command.Parameters.AddWithValue("@Status", Status); //
-            //        command.Parameters.AddWithValue("@AssignedTo", AssignedTo);
-            //        command.Parameters.AddWithValue("@Priority", PR);
-            //        command.Parameters.AddWithValue("@DateIssued",DATEI);
-            //        command.Parameters.AddWithValue("@DateR", DATER);
-            //        command.Parameters.AddWithValue("@CATID", CATID);
-            //        command.Parameters.AddWithValue("@Category", CAT);
-            //        command.Parameters.AddWithValue("@Description", Description);
-            //        command.Parameters.AddWithValue("@AdminID", AdminID);
-
-            //        answer = command.ExecuteNonQuery();
-
-            //    //close database
-
-            //    command.Dispose();
-            //    connection.Close();
-
-            //    //display a message
-
-            //    MessageBox.Show("Your Ticket has been Submitted");
-
-            //}
-
-            //    catch (Exception ex)
-
-            //    {
-
-            //        MessageBox.Show("You have encountered an error" + ex);
-
-            //    }
-
-            //////////////////////////////////////////
         }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while inserting data " + ex);
+            }
+
+
+
+    //    int answer;
+    //        string sql2 = null;
+    //        SqlConnection connection = new SqlConnection("Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
+    //        SqlCommand command = new SqlCommand(sql, connection);
+    //        sql2 = "SELECT CatID from Category where Category = '" + CategoryCB.Text.ToString() + "'";
+
+
+
+
+    //        string UID = UserIDtxt.ToString();
+    //        string Status = "Active";
+    //        string AssignedTo = "";
+    //        string PR = PriorityCB.ToString();
+    //        string DATEI = Datetxt.Text.ToString();
+    //        string DATER = "Ongoing";
+    //        string CATID = CATIDtxt.ToString();
+    //        string CAT = CategoryCB.ToString();
+    //        string Description = DescribeTxt.Text.ToString();
+    //        string AdminID = "";
+    //        Convert.ToInt32(CAT);
+    //        sql = "INSERT INTO Ticket VALUES ( @UserID,  @Status, @AssignedTo,  @Priority,  @DateIssued,  @DateR,  @CATID, @Category, @Description, @AdminID)";
+    //        connection.Open();
+
+    //        SqlCommand command2 = new SqlCommand(sql2, connection);
+
+    //       // command.Parameters.AddWithValue("@TicketID", TicketIDtxt.Text);
+    //    command.Parameters.AddWithValue("@UserID", UserIDtxt.Text);
+    //        command.Parameters.AddWithValue("@Status", Status); //
+    //        command.Parameters.AddWithValue("@AssignedTo", AssignedTo);
+    //        command.Parameters.AddWithValue("@Priority", PR);
+    //        command.Parameters.AddWithValue("@DateIssued",DATEI);
+    //        command.Parameters.AddWithValue("@DateR", DATER);
+    //        command.Parameters.AddWithValue("@CATID", CATID);
+    //        command.Parameters.AddWithValue("@Category", CAT);
+    //        command.Parameters.AddWithValue("@Description", Description);
+    //        command.Parameters.AddWithValue("@AdminID", AdminID);
+
+    //        answer = command.ExecuteNonQuery();
+
+    //    //close database
+
+    //    command.Dispose();
+    //    connection.Close();
+
+    //    //display a message
+
+    //    MessageBox.Show("Your Ticket has been Submitted");
+
+    //}
+
+    //    catch (Exception ex)
+
+    //    {
+
+    //        MessageBox.Show("You have encountered an error" + ex);
+
+    //    }
+
+    //////////////////////////////////////////
+}
 
         private void TicketIDtxt_TextChanged(object sender, EventArgs e)
         {
