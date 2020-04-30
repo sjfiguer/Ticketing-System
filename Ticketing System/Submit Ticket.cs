@@ -21,6 +21,7 @@ namespace Ticketing_System
         SqlCommand command;
         SqlDataReader datareader;
         DataSet DS;
+        public static string UserName = "";
 
 
         public Submit_Ticket()
@@ -177,7 +178,7 @@ namespace Ticketing_System
             command.Dispose();
             connection.Close();
 
-           
+            UserName = UserIDtxt.Text;
 
         }
 
@@ -315,71 +316,18 @@ namespace Ticketing_System
             }
 
 
-
-    //    int answer;
-    //        string sql2 = null;
-    //        SqlConnection connection = new SqlConnection("Data Source=isys4363.walton.uark.edu;Initial Catalog=TicketingSystem;User ID=isys4363a;Password=GohogsUA20");
-    //        SqlCommand command = new SqlCommand(sql, connection);
-    //        sql2 = "SELECT CatID from Category where Category = '" + CategoryCB.Text.ToString() + "'";
-
-
-
-
-    //        string UID = UserIDtxt.ToString();
-    //        string Status = "Active";
-    //        string AssignedTo = "";
-    //        string PR = PriorityCB.ToString();
-    //        string DATEI = Datetxt.Text.ToString();
-    //        string DATER = "Ongoing";
-    //        string CATID = CATIDtxt.ToString();
-    //        string CAT = CategoryCB.ToString();
-    //        string Description = DescribeTxt.Text.ToString();
-    //        string AdminID = "";
-    //        Convert.ToInt32(CAT);
-    //        sql = "INSERT INTO Ticket VALUES ( @UserID,  @Status, @AssignedTo,  @Priority,  @DateIssued,  @DateR,  @CATID, @Category, @Description, @AdminID)";
-    //        connection.Open();
-
-    //        SqlCommand command2 = new SqlCommand(sql2, connection);
-
-    //       // command.Parameters.AddWithValue("@TicketID", TicketIDtxt.Text);
-    //    command.Parameters.AddWithValue("@UserID", UserIDtxt.Text);
-    //        command.Parameters.AddWithValue("@Status", Status); //
-    //        command.Parameters.AddWithValue("@AssignedTo", AssignedTo);
-    //        command.Parameters.AddWithValue("@Priority", PR);
-    //        command.Parameters.AddWithValue("@DateIssued",DATEI);
-    //        command.Parameters.AddWithValue("@DateR", DATER);
-    //        command.Parameters.AddWithValue("@CATID", CATID);
-    //        command.Parameters.AddWithValue("@Category", CAT);
-    //        command.Parameters.AddWithValue("@Description", Description);
-    //        command.Parameters.AddWithValue("@AdminID", AdminID);
-
-    //        answer = command.ExecuteNonQuery();
-
-    //    //close database
-
-    //    command.Dispose();
-    //    connection.Close();
-
-    //    //display a message
-
-    //    MessageBox.Show("Your Ticket has been Submitted");
-
-    //}
-
-    //    catch (Exception ex)
-
-    //    {
-
-    //        MessageBox.Show("You have encountered an error" + ex);
-
-    //    }
-
-    //////////////////////////////////////////
+            ////////////////
+   
 }
 
         private void TicketIDtxt_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public string UserNameInfo
+        {
+            get { return UserIDtxt.Text; }
         }
     }
 }

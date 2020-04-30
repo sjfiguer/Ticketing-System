@@ -134,6 +134,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TicketQueueDatabase.xsd</DependentUpon>
     </Compile>
+    <Compile Include="User Ticket View Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Ticket View Screen.Designer.cs">
+      <DependentUpon>User Ticket View Screen.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin Homepage.resx">
       <DependentUpon>Admin Homepage.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +179,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="User Ticket View Screen.resx">
+      <DependentUpon>User Ticket View Screen.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="FAQDATABASE.xsc">
       <DependentUpon>FAQDATABASE.xsd</DependentUpon>
     </None>
