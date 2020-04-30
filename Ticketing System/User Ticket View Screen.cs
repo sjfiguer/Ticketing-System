@@ -37,6 +37,8 @@ namespace Ticketing_System
 
         private void User_Ticket_View_Screen_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'ticketQueueDatabase.Ticket' table. You can move, or remove it, as needed.
+            this.ticketTableAdapter.Fill(this.ticketQueueDatabase.Ticket);
             UserNameInfolbl.Text = Submit_Ticket.UserName;//DONOTREMOVEIF YOU WANT THE SQL TO WORK
 
             //sql = "SELECT * FROM Ticket WHERE Username = '" + UserNameInfolbl.Text + "'";
