@@ -47,7 +47,7 @@ namespace Ticketing_System
 
         private void Admin_Home_btn_Click(object sender, EventArgs e)
         {
-            Form Queue = new TicketInformation();
+            Form Queue = new TicketQueue();
             this.Close();
             Queue.Show();
         }
@@ -57,6 +57,13 @@ namespace Ticketing_System
             Form Home = new Home_Page();
             this.Hide();
             Home.Show();
+        }
+
+        private void faqpagebtn_Click(object sender, EventArgs e)
+        {
+            Form FAQ = new FAQ();
+            this.Hide();
+            FAQ.Show();
         }
     }
 }

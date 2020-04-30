@@ -35,6 +35,7 @@
             this.Third_Party_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.faqpagebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +45,7 @@
             this.Admin_Home_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.Admin_Home_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.Admin_Home_btn.Location = new System.Drawing.Point(592, 433);
-            this.Admin_Home_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Admin_Home_btn.Margin = new System.Windows.Forms.Padding(4);
             this.Admin_Home_btn.Name = "Admin_Home_btn";
             this.Admin_Home_btn.Size = new System.Drawing.Size(176, 156);
             this.Admin_Home_btn.TabIndex = 7;
@@ -58,7 +59,7 @@
             this.Class_Erollment_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.Class_Erollment_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.Class_Erollment_btn.Location = new System.Drawing.Point(408, 433);
-            this.Class_Erollment_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Class_Erollment_btn.Margin = new System.Windows.Forms.Padding(4);
             this.Class_Erollment_btn.Name = "Class_Erollment_btn";
             this.Class_Erollment_btn.Size = new System.Drawing.Size(176, 156);
             this.Class_Erollment_btn.TabIndex = 6;
@@ -72,7 +73,7 @@
             this.Create_Account_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.Create_Account_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.Create_Account_btn.Location = new System.Drawing.Point(592, 269);
-            this.Create_Account_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Create_Account_btn.Margin = new System.Windows.Forms.Padding(4);
             this.Create_Account_btn.Name = "Create_Account_btn";
             this.Create_Account_btn.Size = new System.Drawing.Size(176, 156);
             this.Create_Account_btn.TabIndex = 5;
@@ -86,7 +87,7 @@
             this.Third_Party_btn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
             this.Third_Party_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.Third_Party_btn.Location = new System.Drawing.Point(408, 269);
-            this.Third_Party_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Third_Party_btn.Margin = new System.Windows.Forms.Padding(4);
             this.Third_Party_btn.Name = "Third_Party_btn";
             this.Third_Party_btn.Size = new System.Drawing.Size(176, 156);
             this.Third_Party_btn.TabIndex = 4;
@@ -98,7 +99,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-1, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1192, 176);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -117,12 +118,27 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // faqpagebtn
+            // 
+            this.faqpagebtn.BackColor = System.Drawing.Color.DarkRed;
+            this.faqpagebtn.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.faqpagebtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.faqpagebtn.Location = new System.Drawing.Point(845, 340);
+            this.faqpagebtn.Margin = new System.Windows.Forms.Padding(4);
+            this.faqpagebtn.Name = "faqpagebtn";
+            this.faqpagebtn.Size = new System.Drawing.Size(176, 156);
+            this.faqpagebtn.TabIndex = 25;
+            this.faqpagebtn.Text = "FAQ";
+            this.faqpagebtn.UseVisualStyleBackColor = false;
+            this.faqpagebtn.Click += new System.EventHandler(this.faqpagebtn_Click);
+            // 
             // Admin_Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1191, 675);
+            this.Controls.Add(this.faqpagebtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Admin_Home_btn);
@@ -147,5 +163,6 @@
         private System.Windows.Forms.Button Third_Party_btn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button faqpagebtn;
     }
 }
