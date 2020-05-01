@@ -307,6 +307,10 @@ namespace Ticketing_System
 
             MessageBox.Show("Your Ticket has been Submitted and added to our queue. Your ticket will be resolved shortly.");
 
+                Form UserQueue = new User_Ticket_View_Screen();
+
+                this.Hide();
+                UserQueue.Show();
 
 
         }
@@ -328,6 +332,14 @@ namespace Ticketing_System
         public string UserNameInfo
         {
             get { return UserIDtxt.Text; }
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+            Form UserQueue = new User_Ticket_View_Screen();
+
+            this.Hide();
+            UserQueue.Show();
         }
     }
 }

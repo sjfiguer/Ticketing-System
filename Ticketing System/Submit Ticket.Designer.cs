@@ -54,6 +54,7 @@
             this.Datetxt = new System.Windows.Forms.TextBox();
             this.CATIDtxt = new System.Windows.Forms.TextBox();
             this.LoginIDlbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -322,12 +323,25 @@
             this.LoginIDlbl.TabIndex = 45;
             this.LoginIDlbl.Text = "LoginID";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
+            this.label1.Location = new System.Drawing.Point(700, 169);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 16);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "Previous Tickets";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
             // Submit_Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(924, 600);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.LoginIDlbl);
             this.Controls.Add(this.CATIDtxt);
             this.Controls.Add(this.Datetxt);
@@ -389,5 +403,6 @@
         private System.Windows.Forms.TextBox Datetxt;
         private System.Windows.Forms.TextBox CATIDtxt;
         private System.Windows.Forms.Label LoginIDlbl;
+        private System.Windows.Forms.Label label1;
     }
 }

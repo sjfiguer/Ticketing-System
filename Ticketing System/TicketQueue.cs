@@ -51,7 +51,7 @@ namespace Ticketing_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://app.powerbi.com/groups/me/reports/618df352-8ee7-4173-bb74-0fd98443d5e8/ReportSection?noSignUpCheck=1");
+            System.Diagnostics.Process.Start("https://app.powerbi.com/view?r=eyJrIjoiYTFlZjRlZTktNTc0Ni00ZjFlLWIyMDgtZTg1MjMwMjJiMmFjIiwidCI6Ijc5Yzc0MmM0LWU2MWMtNGZhNS1iZTg5LWEzY2I1NjZhODBkMSIsImMiOjN9");
         }
 
         private void TicketQueueDG_CellContentClick(object sender, DataGridViewCellEventArgs e)
